@@ -1,0 +1,130 @@
+Name,Description,Script
+Whoopie Cushion,Yep[;] it's useless,sfx(~_fart~);
+Lock Advocate,Lock [lock]1 dice,inflict(~lock~[;]1); sfx(~_lock~);
+Duplicate,Duplicate a random dice,var dicenumber = []; var diceamount = 0; for(mydice in self.dicepool){ if(mydice.available()){ dicenumber.push(mydice); diceamount++; } } if(dicenumber.length > 0){ givedice(rand(dicenumber)); }
+Final Countdown,Reduce countdowns by 5,boostcountdowns(5);
+Midnight Snake,Roll a 6 and a 1,givedice([6[;] 1]);
+Prickly Pear,Add [thorns]2 thorns,inflictself(~thorns~[;]2); sfx(~_thorns~);
+Mechanical Toxin,Inflict [poison]<dicerolled> poison,inflict(~poison~[;]self.roll_totaldice + 1); sfx(~_poison~);
+Curseathon,[75%][curse]2 to enemy[;] [curse] to self next turn,inflictself(~cursenext~[;]1); inflict(~curse~[;]2); sfx(~_curse~);
+Sniper Shot,Reduce Enemy health by 5,pierceattack(5); sfx(~_plasma~);
+Melting Ice,[95%]Inflict [fire] and [ice],inflict(~fire~); inflict(~ice~); sfx(~_fire~); sfx(~_ice~);
+Bonus Payout,Use an extra Jackpot ability[;] increase Jackpot range[;] stored on Error,if(self.roll_realtotal <= self.roll_target){ self.roll_jackpotbonus += 1; self.roll_range += 1; adjustrobotcounter(0); sfx(~stealgold~); } else { inflictself(~storedbonus~[;] 1); sfx(~stealgold~); }
+Firey Roll,Roll 2 burning dice,givedice([rand([1[;]2[;]3[;]4[;]5[;]6])[;]rand([1[;]2[;]3[;]4[;]5[;]6])]); self.dicepool[self.dicepool.length - 1].burnnow(); self.dicepool[self.dicepool.length - 2].burnnow(); sfx(~_fire~);
+Double Roll,Roll 2 dice,givedice([rand([1[;]2[;]3[;]4[;]5[;]6])[;]rand([1[;]2[;]3[;]4[;]5[;]6])]);
+Faulty Wiring,Inflict [shock]2 shock,inflict(~shock~[;]2); sfx(~_shock~);
+Icy Roll,Roll 2 ones,givedice([1[;]1]);
+Syringe,Drain [heart]3 health,drain(3); sfx(~_drain~);
+The 50/50,Duplicate or lose all dice,var randomchance = rand([1[;]2]); var diceamount = []; if(randomchance == 1){ for(mydice in self.dicepool){ if(mydice.available()){ diceamount.push(mydice.basevalue); } } givedice(diceamount); trace(diceamount); } if(randomchance == 2){ for(mydice in self.dicepool){ if(mydice.available()){ mydice.animate(~disappear~); } } }
+Guarded Fling,[95%]Throw a dice[;] gain [shield]3 shield,var dicegaming = 0; for(mydice in self.dicepool){ if(mydice.available()){ dicegaming++; } } if(dicegaming > 0){ throwdice(self[;]target); inflictself(~shield~[;]3); sfx(~_shield~); } else{ self.textparticle(~No dice!~); }
+Slingshot,Do 5 damage,attack(5); sfxdamage(5);
+Suit Up,Add [reduce]1 reduce,inflictself(~reduce~[;] 1); sfx(~_shield~);
+Slippery Shoes,Gain [dodge]1 dodge,inflictself(~dodge~); sfx(~_dodge~);
+Salvaging,[95%]Re-use your next equipment,inflictself(REEQUIPNEXT); sfx(~_recycle~);
+Uninnate,[90%]Remove the Enemy's Innate,/*storedprizeimmune*/ if(target.innate[0] == ~vampire~) removestatus(~vampire~); target.innate = []; sfx(~_thinghappens~);
+Lucky Roll,Roll a 7,givedice([7]);
+Dice Fubny,,self.setvar(~dicefubny~[;]1); if (self.dicepool.length > 0) for (mydice in self.dicepool) { if (mydice.basevalue > 10) { mydice.flash += 0.5; } }
+Perfect Spanner,[90%]Combine all dice into one,/*storedprizeimmune*/ var dicenumber = 0; for(mydice in self.dicepool){ if(mydice.available()){ dicenumber += mydice.basevalue; mydice.removedice(); } } if(dicenumber != 0){ givedice([dicenumber]); }
+Fifths Roll,[80%]Increase Jackpot range next turn,inflictself(~jackpotrangeup~);
+Stinger,Do [shock]3 damage,attack(3[;] SHOCK); sfxdamage(3);
+Full Heal,Remove status effects,/*storedprizeimmune*/ if(self.status.length > 0) { for(x in self.status) { removestatusself(x[;]ALL); } }
+Last Resort,[80%]Do [sword]6 to yourself[;] [sword]12 to enemy,attackself(6); attack(12); sfxdamage(12);
+Timebomb,[95%]Do [sword]15 damage in 3 turns,jinx(~Timebomb~[;]~take 15 damage~[;]~Take 15 damage~[;]~attack(15); sfxdamage(15);~[;] target[;] self[;] 3[;] d); sfx(~_shock~);
+Cthulhu's Shield,[90%]Add [shield]4 shield and [thorns]2 thorns,inflictself(~shield~[;]4); inflictself(~thorns~[;]2); sfx(~_shield~); sfx(~_thorns~);
+Ctrl + C,[95%]Copy one of your equipment,/*storedprizeimmune*/ var ownequipment = []; for (eq in self.equipment){ if(!eq.hastag(~cannotsteal~) && !eq.hastag(~nojackpotcopy~) && eq.ready){ ownequipment.push(eq); } } if(ownequipment.length > 0){ var randomequipment = rand(ownequipment); giveequipment(randomequipment.name + randomequipment.namemodifier); } sfx(~_thinghappens~);
+Nanomachines,Add [reduce]2 reduce,inflictself(~reduce~[;] 2); sfx(~_shield~);
+Stress,Inflict [weaken]1 weaken,inflict(WEAKEN); sfx(~_weaken~);
+Lifeblood,Heal [heal]5 health,attackself(-5); sfx(~_heal~);
+Ripper Mode,[80%]Next turn[;] deal [sword]2 extra damage,inflictself(~rippermodefail~[;] 2);
+Blood Arrow,[80%]Lose [heart]2 health[;] do [sword]10 damage,attackself(2); sfx(~_drain~); attack(10); sfxdamage(10);
+Feed,[65%]Do [sword]6 damage[;] +2 max health if fatal,if(target.hp + getstatus(SHIELD) + getstatus(~reduce~) < 7){ self.maxhp += 2; sfx(~_heal~); } attack(6); sfxdamage(6);
+Persona,Repeat next action,inflictself(~fury~); sfx(~_fury~);
+Ice Age,Freeze 2 dice,inflict(~ice~[;] 2); sfx(~_ice~);
+Leech,Drain [heart]5 health,drain(5); sfx(~_drain~);
+Dragon's Roll,Roll a 10,givedice([10]);
+Flamethrower,Do [fire]5 damage,attack(5[;] FIRE); sfx(~_fire~);
+Basil's Protection,Add 3[thorns] thorns,inflictself(~thorns~[;]3); sfx(~_thorns~);
+Prince's Steal,[80%]Borrow equipment and upgrade it,/*storedprizeimmune*/ var enemyequipment = []; for (eq in target.equipment){ if(!eq.hastag(~cannotsteal~)){ enemyequipment.push(eq); } } if(enemyequipment.length > 0){ var randomequipment = rand(enemyequipment); giveequipment(randomequipment.name + randomequipment.namemodifier + ~+~); }
+Containment Wave,[80%]Lock a random Enemy equipment,if(target != null) { var enemyequipment = []; for (eq in target.equipment){ if(!eq.hastag(~cannotsteal~) && eq.availablenextturn){ enemyequipment.push(eq); } } if(enemyequipment.length > 0){ var randomequipment = rand(enemyequipment); randomequipment.availablenextturn = false; randomequipment.unavailabletext = ~Locked!~; randomequipment.unavailabledetails = [~Locked until~[;]~next turn.~]; } } sfx(~_lock~);
+Sandvich,Heal [heal]3 health,attackself(-3); sfx(~_heal~);
+Mad Dog's Howl,Inflict [weaken]3 weaken,inflict(~weaken~[;]3); sfx(~_weaken~);
+Tri Attack,[95%]Inflict [fire][;] [ice] and [shock],inflict(FIRE); inflict(ICE); inflict(SHOCK); sfx(~_fire~); sfx(~_ice~); sfx(~_shock~);
+Run It Back,Start a new turn,inflictself(EXTRATURN); sfx(~_fury~); self.endturnnow();
+Manual Roll,Set your skill to Autoroll,/*storedprizeimmune*/ self.changelimitbreak(~Autoroll~); sfx(~_thinghappens~);
+Limit Break,[70%]Set an equipment to normal slots only,var unlimitcards = []; var unlimitslots = []; if(self.getvar(~unlimitcards~) != null){ if(self.getvar(~unlimitcards~).length > 0){ unlimitcards = unlimitcards.concat(self.getvar(~unlimitcards~)); unlimitslots = unlimitslots.concat(self.getvar(~unlimitslots~)); } } for (i in 0...1) { var selfequipment = []; for (eq in self.equipment) { if (eq.slots.indexOf(~COUNTDOWN~) < 0 && eq.slots.length > 0 && eq.ready && eq.hastag(~skillcard~) == false) { var normalslotamount = 0; var extraslots = 0; for (slot in eq.getslots()) { if (slot == ~NORMAL~){ normalslotamount++; } if (slot.indexOf(~FREE~) > -1 # slot.indexOf(~SPARE~) > -1){ extraslots++; } } if ((normalslotamount + extraslots) < eq.slots.length) selfequipment.push(eq); } } if (selfequipment.length > 0) { var limitbreakcard = rand(selfequipment); unlimitcards.push(limitbreakcard); unlimitslots.push(limitbreakcard.slots); self.setvar(~unlimitcards~[;] unlimitcards); self.setvar(~unlimitslots~[;] unlimitslots); var newslots = []; for (k in limitbreakcard.getslots()) { if (k.indexOf(~FREE~) != -1 # k.indexOf(~SPARE~) != -1) newslots.push(i); else { newslots.push(~NORMAL~); } { limitbreakcard.changeslots(newslots); limitbreakcard.animate(~slotschanged~); sfx(~_thinghappens~); } if (selfequipment.length == 0) { self.textparticle(~No equipment!~); } } } }
+Dead Ringer,[90%]Survive one fatal blow this turn,inflictself(~survive~); sfx(~_fury~); inflictself(~survivenomorehehe~);
+Reshuffle,Reroll jackpot options,/*storedprizeimmune*/ runscript(~jackpotofalltrades/rerolljackpot~); resetjackpot(self); self.roll_jackpotbonus += 1;
+Debatable Damage,[90%]Randomly do [sword]1-10 damage,var damage = rand([for(i in 1...11) i]); attack(damage); sfxdamage(damage);
+Stars And Time,[75%]Revert [heart] to last turn ([heart]<var:previousroundplayerhp>[;] [heart]<var:previousroundenemyhp>[]),/*storedprizeimmune*/ if(self.getvar(~previousroundplayerhp~) != 0){ self.hp = self.getvar(~previousroundplayerhp~); target.hp = self.getvar(~previousroundenemyhp~); sfx(~_loop~); }
+Borrow,Borrow equipment,/* Use this instead of the usual Steal skill[;] this one doesn't get disabled if the player is holding a full inventory already. */ /*storedprizeimmune*/ var enemyequipment = []; for (eq in target.equipment){ if(!eq.hastag(~cannotsteal~)){ enemyequipment.push(eq); } } if(enemyequipment.length > 0){ var randomequipment = rand(enemyequipment); giveequipment(randomequipment.name + randomequipment.namemodifier); }
+Used Syringe,[80%]Inflict a random bad status effect,var NegativeStatusList = [~ice~[;] ~ice_all~[;] ~fire~[;] ~fire_all~[;] ~shock~[;] ~weaken~[;] ~silence~[;] ~poison~[;] ~lock~[;] ~curse~[;] ~confuse~]; for(i in 0...NegativeStatusList.length){ NegativeStatusList.push(~alternate_~ + NegativeStatusList[i]); }  NegativeStatusList.push(~counter_~ + rand([1[;]2[;]3[;]4[;]5[;]6])); NegativeStatusList.push(~dice_trigger_~ + rand([1[;]2[;]3[;]4[;]5[;]6])); NegativeStatusList.push(~vanish~); NegativeStatusList.push(~blind~); var PickedStatus = rand(NegativeStatusList); inflict(PickedStatus[;] 1); sfx(~_~ + PickedStatus);
+Botulinum Dose,[65%]Inflict every single negative status effect,var NegativeStatusList = [~ice~[;] ~ice_all~[;] ~fire~[;] ~fire_all~[;] ~shock~[;] ~weaken~[;] ~silence~[;] ~blind~[;] ~poison~[;] ~lock~[;] ~curse~[;] ~confuse~]; for(i in 0...NegativeStatusList.length){ NegativeStatusList.push(~alternate_~ + NegativeStatusList[i]); }  NegativeStatusList.push(~counter_~ + rand([1[;]2[;]3[;]4[;]5[;]6])); NegativeStatusList.push(~dice_trigger_~ + rand([1[;]2[;]3[;]4[;]5[;]6])); NegativeStatusList.push(~vanish~); for(i in 0...NegativeStatusList.length){ inflict(NegativeStatusList[i]); sfx(~_~ + NegativeStatusList[i]); }
+Jimbo's Trick,x1.5 mult all your dice,var c = 0; var extradice = []; if(self != null) { if(self.dicepool != null) { if (self.dicepool.length > 0) { for (mydice in self.dicepool){ if (mydice.available()){ if(mydice.basevalue * 1.5 > 6){ extradice.push((mydice.basevalue * 1.5) - 6); } mydice.animatereroll((mydice.basevalue * 1.5)[;] self.screenposition()[;] c * 0.05); c++; } }  givedice(extradice); sfx(~_xmult~); } } }
+Ka... Ching!,[90%] Gain 1 Guaranteed Autoroll,inflictself(~manualroll~[;] 1); sfx(~stealgold~);
+Stored Prize,Next Jackpot skill goes twice,/*storedprizeimmune*/ inflictself(~storedprize~[;] 1); sfx(~stealgold~);
+Split Path,[80%]Trigger both other jackpot abilities,/*storedprizeimmune*/ var avoidSlot = 0; for(i in 0...self.getskillcard().skills.length){ if(self.getskillcard().skills[i].name == ~Split Path~){ avoidSlot = i; } } var storedSkillIndex = -1; for(j in 0...3){ if(j != avoidSlot){ if(self.getskillcard().skills[j].name.indexOf(~Reshuffle~) != -1){ storedSkillIndex = j; continue; } else{ if(self.getskillcard().skillsavailable[j]){ self.getskillcard().skills[j].execute(self[;] target); self.getskillcard().skillsavailable[j] = false; } } } }  if(storedSkillIndex != -1){ self.getskillcard().skills[storedSkillIndex].execute(self[;] target); }
+Basil's Protection+,Add [yellow]5[][thorns] thorns,inflictself(~thorns~[;]5); sfx(~_thorns~);
+Blood Arrow+,[80%]Lose [heart][yellow]1[] health[;] do [sword]10 damage,attackself(1); sfx(~_drain~); attack(10); sfxdamage(10);
+Bonus Payout+,Use an extra Jackpot ability[;] increase Jackpot range [yellow]by 2[][;] stored on Error,if(self.roll_realtotal <= self.roll_target){ self.roll_jackpotbonus += 1; self.roll_range += 2; adjustrobotcounter(0); sfx(~stealgold~); } else { inflictself(~storedbonus~[;] 1); sfx(~stealgold~); }
+Borrow+,Borrow[yellow](?)[] equipment,/*storedprizeimmune*/ var enemyequipment = []; for (eq in target.equipment){ if(!eq.hastag(~cannotsteal~)){ enemyequipment.push(eq); } } if(enemyequipment.length > 0){ var randomequipment = rand(enemyequipment); randomequipment.availablenextturn = false; randomequipment.unavailabletext = ~Borrowed!~; randomequipment.unavailabledetails = [~\~Borrowed\~ until~[;]~next turn.~]; giveequipment(randomequipment.name + randomequipment.namemodifier); }
+Botulinum Dose+,[60%]Inflict every single negative status effect [yellow]x2[],var NegativeStatusList = [~ice~[;] ~ice_all~[;] ~fire~[;] ~fire_all~[;] ~shock~[;] ~weaken~[;] ~silence~[;] ~blind~[;] ~poison~[;] ~lock~[;] ~curse~[;] ~confuse~]; for(i in 0...NegativeStatusList.length){ NegativeStatusList.push(~alternate_~ + NegativeStatusList[i]); }  NegativeStatusList.push(~counter_~ + rand([1[;]2[;]3[;]4[;]5[;]6])); NegativeStatusList.push(~dice_trigger_~ + rand([1[;]2[;]3[;]4[;]5[;]6])); NegativeStatusList.push(~vanish~); for(i in 0...NegativeStatusList.length){ inflict(NegativeStatusList[i][;] 2); sfx(~_~ + NegativeStatusList[i]); }
+Cthulhu's Shield+,[90%]Add [shield][yellow]5[] shield and [thorns][yellow]3[] thorns,inflictself(~shield~[;]5); inflictself(~thorns~[;]3); sfx(~_shield~); sfx(~_thorns~);
+Curseathon+,[yellow][curse]2 to enemy[],inflict(~curse~[;]2); sfx(~_curse~);
+Ctrl + C+,[70%]Copy [yellow]+ upgrade[] one of your equipment,/*storedprizeimmune*/ var ownequipment = []; for (eq in self.equipment){ if(!eq.hastag(~cannotsteal~) && !eq.hastag(~nojackpotcopy~) && eq.ready){ ownequipment.push(eq); } } if(ownequipment.length > 0){ var randomequipment = rand(ownequipment); giveequipment(randomequipment.name + randomequipment.namemodifier + ~+~); } sfx(~_thinghappens~);
+Dead Ringer+,[70%]Survive 1 fatal blow this [yellow]and next[] turn,inflictself(~survive~); inflictself(~survivenextturn~); sfx(~_fury~); inflictself(~survivenomorehehe~);
+Debatable Damage+,[90%]Randomly do [sword][yellow]5[]-10 damage,var damage = rand([for(i in 6...11) i]); attack(damage); sfxdamage(damage);
+Double Roll+,Roll 2 dice [yellow]higher than 2[],givedice([rand([3[;]4[;]5[;]6])[;]rand([3[;]4[;]5[;]6])]);
+Dragon's Roll+,Roll [yellow]2[] 10[yellow]s[],givedice([10[;] 10]);
+Duplicate+,Duplicate [yellow]2[] random dice,var dicenumber = []; var diceamount = 0; for(mydice in self.dicepool){ if(mydice.available()){ dicenumber.push(mydice.value); } } if(dicenumber.length == 1){ givedice(dicenumber[0][;] dicenumber[0]); } if(dicenumber.length > 1){ givedice(rand(dicenumber)[;] rand(dicenumber)); }
+Faulty Wiring+,Inflict [shock][yellow]3[] shock,inflict(~shock~[;]3); sfx(~_shock~);
+Feed+,[65%]Do [sword][yellow]7[] damage[;] [yellow]+3[] max health if fatal,if(target.hp + getstatus(SHIELD) + getstatus(~reduce~) < 8){ self.maxhp += 3; sfx(~_heal~); } attack(7); sfxdamage(7);
+Fifths Roll+,[70%]Increase Jackpot range [yellow]by 2[] next turn,inflictself(~jackpotrangeup~[;] 2);
+Final Countdown+,Reduce countdowns by [yellow]8[],boostcountdowns(8);
+Firey Roll+,Roll [yellow]3[] burning dice,givedice([rand([1[;]2[;]3[;]4[;]5[;]6])[;]rand([1[;]2[;]3[;]4[;]5[;]6])[;]rand([1[;]2[;]3[;]4[;]5[;]6])]); self.dicepool[self.dicepool.length - 1].burnnow(); self.dicepool[self.dicepool.length - 2].burnnow(); self.dicepool[self.dicepool.length - 3].burnnow(); sfx(~_fire~);
+Flamethrower+,Do [fire][yellow]7[] damage,attack(7[;] FIRE); sfx(~_fire~);
+Guarded Fling+,[95%]Throw a dice[;] gain [shield][yellow]5[] shield,var dicegaming = 0; for(mydice in self.dicepool){ if(mydice.available()){ dicegaming++; } } if(dicegaming > 0){ throwdice(self[;]target); inflictself(~shield~[;]5); sfx(~_shield~); } else{ self.textparticle(~No dice!~); }
+Icy Roll+,Roll [yellow]3[] ones,givedice([1[;]1[;]1]);
+Jimbo's Trick+,[yellow]x2[] mult all your dice,var c = 0; var extradice = []; if(self != null) { if(self.dicepool != null) { if (self.dicepool.length > 0) { for (mydice in self.dicepool){ if (mydice.available()){ if(mydice.basevalue * 2 > 6){ extradice.push((mydice.basevalue * 2) - 6); } mydice.animatereroll((mydice.basevalue * 2)[;] self.screenposition()[;] c * 0.05); c++; } }  givedice(extradice); sfx(~_xmult~); } } }
+Ka... Ching!+,[90%] Gain [yellow]2[] Guaranteed Autoroll,inflictself(~manualroll~[;] 2); sfx(~stealgold~);
+Last Resort+,[80%]Do [sword][yellow]3[] to yourself[;] [sword]12 to enemy,attackself(3); attack(12); sfxdamage(12);
+Leech+,Drain [heart][yellow]7[] health,drain(7); sfx(~_drain~);
+Lifeblood+,Heal [heal][yellow]7[] health,attackself(-7); sfx(~_heal~);
+Limit Break+,[70%]Set [yellow]2[] equipment to normal slots only,var unlimitcards = []; var unlimitslots = []; if(self.getvar(~unlimitcards~) != null){ if(self.getvar(~unlimitcards~).length > 0){ unlimitcards = unlimitcards.concat(self.getvar(~unlimitcards~)); unlimitslots = unlimitslots.concat(self.getvar(~unlimitslots~)); } } for (i in 0...2) { var selfequipment = []; for (eq in self.equipment) { if (eq.slots.indexOf(~COUNTDOWN~) < 0 && eq.slots.length > 0 && eq.ready && eq.hastag(~skillcard~) == false) { var normalslotamount = 0; var extraslots = 0; for (slot in eq.getslots()) { if (slot == ~NORMAL~){ normalslotamount++; } if (slot.indexOf(~FREE~) > -1 # slot.indexOf(~SPARE~) > -1){ extraslots++; } } if ((normalslotamount + extraslots) < eq.slots.length) selfequipment.push(eq); } } if (selfequipment.length > 0) { var limitbreakcard = rand(selfequipment); unlimitcards.push(limitbreakcard); unlimitslots.push(limitbreakcard.slots); self.setvar(~unlimitcards~[;] unlimitcards); self.setvar(~unlimitslots~[;] unlimitslots); var newslots = []; for (k in limitbreakcard.getslots()) { if (k.indexOf(~FREE~) != -1 # k.indexOf(~SPARE~) != -1) newslots.push(i); else { newslots.push(~NORMAL~); } { limitbreakcard.changeslots(newslots); limitbreakcard.animate(~slotschanged~); sfx(~_thinghappens~); } if (selfequipment.length == 0) { self.textparticle(~No equipment!~); } } } }
+Lock Advocate+,Lock [lock][yellow]2[] dice,inflict(~lock~[;]2); sfx(~_lock~);
+Lucky Roll+,Roll [yellow]2[] 7[yellow]s[],givedice([7[;] 7]);
+Mad Dog's Howl+,Inflict [weaken][yellow]4[] weaken,inflict(~weaken~[;]4); sfx(~_weaken~);
+Autoroll+,Jackpot guaranteed[;] roll 1 dice,robotroll(true); givedice();
+Manual Roll+,Set your skill to Autoroll[yellow]+[],/*storedprizeimmune*/ self.changelimitbreak(~Autoroll+~); sfx(~_thinghappens~);
+Mechanical Toxin+,Inflict [poison]<dicerolled>[yellow]+2[] poison,inflict(~poison~[;]self.roll_totaldice + 1 + 2); sfx(~_poison~);
+Ice Age+,Freeze [yellow]all[] dice,inflict(ICE[;] ALL); sfx(~_ice~);
+Melting Ice+,[95%]Inflict [yellow]2[][fire] and [yellow]2[][ice],inflict(~fire[;]2~); inflict(~ice[;]2~); sfx(~_fire~); sfx(~_ice~);
+Midnight Snake+,Roll a 6[;] and a 1[;][yellow] and a 7[],givedice([6[;] 1[;] 7]);
+Nanomachines+,Add [reduce][yellow]3[] reduce,inflictself(~reduce~[;] 3); sfx(~_shield~);
+Perfect Spanner+,[75%]Combine all dice into one[yellow][;] clone result[],/*storedprizeimmune*/ var dicenumber = 0; for(mydice in self.dicepool){ if(mydice.available()){ dicenumber += mydice.basevalue; mydice.removedice(); } } if(dicenumber != 0){ givedice([dicenumber[;] dicenumber]); }
+Persona+,Repeat next [yellow]two[] action[yellow]s[],inflictself(~fury~[;] 2); sfx(~_fury~);
+Prickly Pear+,Add [thorns][yellow]3[] thorns,inflictself(~thorns~[;]3); sfx(~_thorns~);
+Prince's Steal+,[80%]Borrow(?) equipment and upgrade it,/*storedprizeimmune*/ var enemyequipment = []; for (eq in target.equipment){ if(!eq.hastag(~cannotsteal~)){ enemyequipment.push(eq); } } if(enemyequipment.length > 0){ var randomequipment = rand(enemyequipment); randomequipment.availablenextturn = false; randomequipment.unavailabletext = ~Borrowed!~; randomequipment.unavailabledetails = [~\~Borrowed\~ until~[;]~next turn.~]; giveequipment(randomequipment.name + randomequipment.namemodifier + ~+~); }
+Reshuffle+,[80%]Reroll jackpot options[;] [yellow]upgrade all[],/*storedprizeimmune*/ runscript(~jackpotofalltrades/rerolljackpot~[;] [true]); resetjackpot(self); self.roll_jackpotbonus += 1;
+Ripper Mode+,[80%]Next turn[;] deal [sword][yellow]3[] extra damage,inflictself(~rippermodefail~[;] 3);
+Run It Back+,[80%]Start a new turn [yellow]after this one[],inflictself(EXTRATURN); sfx(~_fury~);
+Salvaging+,[85%]Re-use your next [yellow]2[] equipment,inflictself(REEQUIPNEXT[;] 2); sfx(~_recycle~);
+Sandvich+,Heal [heal][yellow]4[] health,attackself(-4); sfx(~_heal~);
+Slingshot+,Do 7 damage,attack(7); sfxdamage(7);
+Slippery Shoes+,Gain [dodge][yellow]2[] dodge,inflictself(~dodge~[;] 2); sfx(~_dodge~);
+Sniper Shot+,Reduce Enemy health by [yellow]7[],pierceattack(7); sfx(~_plasma~);
+Split Path+,[70%]Trigger both other jackpot abilities[yellow][;] reroll[],/*storedprizeimmune*/ var avoidSlot = 0; for(i in 0...self.getskillcard().skills.length){ if(self.getskillcard().skills[i].name == ~Split Path~){ avoidSlot = i; self.getskillcard().skillsavailable[avoidSlot] = true; } } var storedSkillIndex = -1; for(j in 0...3){ if(j != avoidSlot){ if(self.getskillcard().skills[j].name.indexOf(~Reshuffle~) != -1){ storedSkillIndex = j; continue; } else{ if(self.getskillcard().skillsavailable[j]){ self.getskillcard().skills[j].execute(self[;] target); self.getskillcard().skillsavailable[j] = false; } } } else{ self.getskillcard().skillsavailable[j] = true; } }  if(storedSkillIndex != -1){ self.getskillcard().skills[storedSkillIndex].execute(self[;] target); } self.roll_jackpotbonus += 1; runscript(~jackpotofalltrades/rerolljackpot~); resetjackpot(self);
+Stars And Time+,[75%]Revert [yellow]own[] [heart] to last turn ([heart]<var:previousroundplayerhp>[]),/*storedprizeimmune*/ if(self.getvar(~previousroundplayerhp~) != 0){ self.hp = self.getvar(~previousroundplayerhp~); sfx(~_loop~); }
+Stinger+,Do [shock][yellow]4[] damage,attack(4[;] SHOCK); sfxdamage(4);
+Stored Prize+,[90%]Next Jackpot skill goes [yellow]thrice[],/*storedprizeimmune*/ inflictself(~storedprize~[;] 2); sfx(~stealgold~);
+Stress+,Inflict [weaken][yellow]2[] weaken,inflict(WEAKEN[;] 2); sfx(~_weaken~);
+Suit Up+,Add [reduce][yellow]2[] reduce,inflictself(~reduce~[;] 2); sfx(~_shield~);
+Syringe+,Drain [heart][yellow]4[] health,drain(4); sfx(~_drain~);
+The 75/25,Duplicate or lose all dice,var randomchance = rand([1[;]2[;]3[;]4]); var diceamount = []; if(randomchance != 1){ for(mydice in self.dicepool){ if(mydice.available()){ diceamount.push(mydice.basevalue); } } givedice(diceamount); trace(diceamount); } if(randomchance == 2){ for(mydice in self.dicepool){ if(mydice.available()){ mydice.animate(~disappear~); } } }
+Timebomb+,[95%]Do [sword]15 damage in [yellow]2 turns,jinx(~Timebomb+~[;]~take 15 damage~[;]~Take 15 damage~[;]~attack(15); sfxdamage(15);~[;] target[;] self[;] 2[;] d); sfx(~_shock~);
+Tri Attack+,[90%]Inflict [yellow]2[][fire][;] [yellow]2[][ice] and [yellow]2[][shock],inflict(FIRE[;]2); inflict(ICE[;]2); inflict(SHOCK[;]2); sfx(~_fire~); sfx(~_ice~); sfx(~_shock~);
+The 50/50+,[70%](Shouldn't appear! If it does[;] it's a bug!),
+Uninnate+,[yellow]Steal[] the Enemy's Innate,/*storedprizeimmune*/ self.innate.push(target.innate[0]); if(target.innate[0] == ~vampire~){ removestatus(~vampire~); inflictself(~vampire~); } else{ inflictself(~placeholder~); } target.innate = []; sfx(~_thinghappens~);
+Used Syringe+,[75%]Inflict [yellow]2[] random bad status effect[yellow]s[],var NegativeStatusList = [~ice~[;] ~ice_all~[;] ~fire~[;] ~fire_all~[;] ~shock~[;] ~weaken~[;] ~silence~[;] ~blind~[;] ~poison~[;] ~lock~[;] ~curse~[;] ~confuse~]; for(i in 0...NegativeStatusList.length){ NegativeStatusList.push(~alternate_~ + NegativeStatusList[i]); }   NegativeStatusList.push(~counter_~ + rand([1[;]2[;]3[;]4[;]5[;]6])); NegativeStatusList.push(~dice_trigger_~ + rand([1[;]2[;]3[;]4[;]5[;]6])); NegativeStatusList.push(~vanish~); for(i in 0...2){ var PickedStatus = rand(NegativeStatusList); inflict(PickedStatus[;] 1); sfx(~_~ + PickedStatus); }
+Whoopie Cushion+,Inflict [poison]1 poison,sfx(~_fart~); inflict(~poison~[;]1);
+PC Fans,Gain [ice]3 freeze,inflictself(~icenextturn~[;] 3); sfx(~_ice~);
+PC Fans+,Freeze [yellow]all your dice[],inflictself(~iceallnextturn~); sfx(~_ice~);

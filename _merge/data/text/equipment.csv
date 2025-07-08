@@ -1,0 +1,11 @@
+Name,Description,Size,Script: On Execute,Gadget,Slots,NEED TOTAL?,Colour,Upgrade,Weaken,Alternate Status Trigger,SFX,Uses?,Cast Backwards?,Single use?,Tags,Witch Spell,Script: Before Combat,Script: After Combat,Script: Before Start Turn,Script: On Start Turn,Script: On any equipment use,Script: On any countdown reduce,Script: End Turn,Script: Before execute,Script: On Snap,Script: On Fury,Script: On Dodge
+Call for Backup Warrior_downgraded,Pea Gun|Do [sword]3 damage,2,attack(3);,Lucky Shot,,,BRIGHTCYAN,,,,none,0,NO,NO,excludefromrandomlists|powercard|curseavoid,,,,,,,,,,,,
+Call for Backup Thief_downgraded,Snake Eyes|Roll 2 ones,2,givedice([1[;] 1]);,Steal,,,GREEN,,,,none,0,YES,NO,excludefromrandomlists|powercard|curseavoid,,,,,,,,,,,,
+Call for Backup Robot_downgraded,Regenerate|Heal [heal]3 health,2,attackself(-3);,Reversal,,,GRAY,,,,none,0,YES,NO,excludefromrandomlists|powercard|curseavoid,,,,,,,,,,,,
+Call for Backup Witch_downgraded,Magic Dice|Roll an extra dice,2,givedice();,Regenerate,,,PURPLE,,,,none,0,YES,NO,excludefromrandomlists|powercard|curseavoid,,,,,,,,,,,,
+Call for Backup Inventor_downgraded,Barricade|Shield +[shield]3,2,inflictself(SHIELD[;] 3);,Time Stop,,,ORANGE,,,,none,0,YES,NO,excludefromrandomlists|powercard|curseavoid,,,,,,,,,,,,
+Call for Backup Warrior?_downgraded,Pea Gun|Do [sword]3 damage,2,attack(3);,Lucky Shot,,,BRIGHTCYAN,,,,none,0,NO,NO,excludefromrandomlists|powercard|curseavoid,,,,,,,,,,,,
+Call for Backup Thief?_downgraded,Snake Eyes|Roll 2 ones,2,givedice([1[;] 1]);,Steal,,,GREEN,,,,none,0,YES,NO,excludefromrandomlists|powercard|curseavoid,,,,,,,,,,,,
+Call for Backup Robot?_downgraded,Regenerate|Heal [heal]3 health,2,attackself(-3);,Reversal,,,GRAY,,,,none,0,YES,NO,excludefromrandomlists|powercard|curseavoid,,,,,,,,,,,,
+Call for Backup Witch?_downgraded,Magic Dice|Roll an extra dice,2,givedice();,Regenerate,,,PURPLE,,,,none,0,YES,NO,excludefromrandomlists|powercard|curseavoid,,,,,,,,,,,,
+Call for Backup Inventor?_downgraded,Barricade|Shield +[shield]3,2,inflictself(SHIELD[;] 3);,Time Stop,,,ORANGE,,,,none,0,YES,NO,excludefromrandomlists|powercard|curseavoid,,,,,,,,,,,,

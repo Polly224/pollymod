@@ -1,0 +1,12 @@
+var commonlist_basic = ["Healing Crystal", "Bump", "Nudge", "Cheat Code"];
+var commonlist_advanced = ["Juggling Ball", "Spanner", "Spiked Shield", "Doppeldice", "Short Circuit"];
+var floor2basic = ["Double Down", "Errorsurance"];
+var floor2advanced = ["Forcefield", "Midnight Charm"];
+var floor2items = ["Empty Slot"];
+var floor3basic = ["Hive Network", "Pop Off"];
+var floor3advanced = ["Bonus Slot", "Retuner"];
+var tradeoffer = ["Rng Manipulation","Trickle Charge", "Double Down", "Errorsurance","any"];
+var traderesult = ["Jacked Switch", "Salt In The Wound"];
+var vampireitem = ["Wooden Stake"];
+var myitempools = [commonlist_basic,commonlist_advanced,floor2basic,floor2advanced,floor2items,floor3basic,floor3advanced,tradeoffer,traderesult,vampireitem];
+return myitempools;
