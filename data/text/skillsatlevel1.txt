@@ -1,0 +1,21 @@
+[150%]CURRENT ROLLABLE SKILLS FOR JACKPOT (UPDATES ON LEVEL-UP!)
+-------------------------------------------------------------------------------------------------------------------
+[120%][jackpot][]Normal Skills[jackpot]
+
+[dice] Duplicate -- Duplicate a random dice // [shock] Faulty Wiring -- Inflict [shock]2 shock   .
+[d6] Final Countdown -- Reduce countdowns by 5 // [fire][dice] Firey Roll -- Roll 2 burning dice                  .
+[ice][dice] Icy Roll -- Roll 2 ones // [dice] Lucky Roll -- Roll a 7    .
+[fire][ice] Melting Ice -- Inflict [fire] and [ice] // [dice] Midnight Snake -- Roll a 6 and a 1
+   [thorns] Prickly Pear -- Gain [thorns]2 thorns // [recycle] Reshuffle -- Reroll jackpot options
+[heal] Sandvich -- Heal [heal]3 health // [sword] Slingshot -- Do [sword]5 damage
+[sword] Sniper Shot -- Reduce enemy health by [heart]5 // [reduce] Suit Up -- Gain [reduce]1 reduce                              .
+       [heart] Syringe -- Drain [heart]3 health // [poison] Whoopie Cushion -- Lol. Lmao[;] even.
+
+[120%][confuse][]Rare Skills (1 in 4 chance to roll)[confuse]
+
+[gold] Stored Prize -- Next jackpot skill goes twice
+[gold] Split Path -- Trigger all other jackpot abilities
+
+
+
+

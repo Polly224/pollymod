@@ -1,0 +1,22 @@
+[130%]CURRENT ROLLABLE SKILLS FOR JACKPOT (UPDATES ON LEVEL-UP!)
+-------------------------------------------------------------------------------------------------------------------
+[120%][jackpot][]Normal Skills[jackpot]
+[75%][dice] Duplicate -- Duplicate a random dice // [shock] Faulty Wiring -- Inflict [shock]2 shock  .
+[75%][d6] Final Countdown -- Reduce countdowns by 5 // [fire][dice] Firey Roll -- Roll 2 burning dice                 .
+[75%][ice][dice] Icy Roll -- Roll 2 ones // [dice] Lucky Roll -- Roll a 7   .
+ [75%][fire][ice] Melting Ice -- Inflict [fire] and [ice] // [dice] Midnight Snake -- Roll a 6 and a 1
+    [75%][thorns] Prickly Pear -- Gain [thorns]2 thorns // [recycle] Reshuffle -- Reroll jackpot options
+ [75%][heal] Sandvich -- Heal [heal]3 health // [sword] Slingshot -- Do [sword]5 damage
+[75%][sword] Sniper Shot -- Reduce enemy health by [heart]5 // [reduce] Suit Up -- Gain [reduce]1 reduce                            .
+        [75%][heart] Syringe -- Drain [heart]3 health // [poison] Whoopie Cushion -- Lol. Lmao[;] even.
+                 [75%][jinx] Borrow -- Borrow equipment // [curse] Curseathon -- [curse]2 to enemy, [curse] to self next turn
+[75%][sword] Debatable Damage -- Randomly do [sword]1-10 damage // [shield] Guarded Fling -- Throw a dice, gain [shield]3 shield           .
+               [75%][fire] Flamethrower -- Do [fire]6 damage // [poison] Mechanical Toxin -- Inflict [poison]1 poison per dice rolled
+[75%][recycle] Salvaging -- Re-use next equipment // [dodge] Slippery Shoes -- Gain [dodge]1 dodge       .
+        [75%][weaken] Stress -- Inflict [weaken]1 weaken // [dice] The 50/50 -- Duplicate or lose all dice
+[75%][potion] Used Syringe -- Inflict a random bad status effect
+[120%][confuse][]Rare Skills (1 in 4 chance to roll)[confuse]
+[75%][gold] Stored Prize -- Next jackpot skill goes twice // [gold] Split Path -- Trigger all other jackpot abilities
+[75%][jackpot] Fifths roll -- Increase jackpot range next turn // [lock] Containment Wave -- Lock a random enemy equipment
+
+

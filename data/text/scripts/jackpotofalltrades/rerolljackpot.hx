@@ -43,7 +43,7 @@ if(self.level > 2)
 	{
 		JackpotOptions.push("Manual Roll");
 	}
-	var RemoveOptions2 = ["Syringe", "Prickly Pear", "Slingshot", "Suit Up", "Sandvich", "Melting Ice"];
+	var RemoveOptions2 = ["Final Countdown", "Duplicate", "Stress", "Icy Roll", "Syringe", "Prickly Pear", "Slingshot", "Suit Up", "Sandvich", "Melting Ice", "Faulty Wiring"];
 	for(i in RemoveOptions2)
 	{
 		JackpotOptions.remove(i);

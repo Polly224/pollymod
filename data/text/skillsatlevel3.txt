@@ -1,0 +1,22 @@
+[130%]CURRENT ROLLABLE SKILLS FOR JACKPOT (UPDATES ON LEVEL-UP!)
+-------------------------------------------------------------------------------------------------------------------
+[120%][jackpot][]Normal Skills[jackpot]
+[75%][fire][dice] Firey Roll -- Roll 2 burning dice // [dice] Lucky Roll -- Roll a 7                    .
+ [75%][dice] Midnight Snake -- Roll a 6 and a 1 // [recycle] Reshuffle -- Reroll jackpot options
+[75%][sword] Sniper Shot -- Reduce enemy health by [heart]5 // [poison] Whoopie Cushion -- Lol. Lmao[;] even.           .
+                 [75%][jinx] Borrow -- Borrow equipment // [curse] Curseathon -- [curse]2 to enemy, [curse] to self next turn
+[75%][sword] Debatable Damage -- Randomly do [sword]1-10 damage // [shield] Guarded Fling -- Throw a dice, gain [shield]3 shield          .
+               [75%][fire] Flamethrower -- Do [fire]6 damage // [poison] Mechanical Toxin -- Inflict [poison]1 poison per dice rolled
+[75%][recycle] Salvaging -- Re-use next equipment // [dodge] Slippery Shoes -- Gain [dodge]1 dodge       .
+         [75%][dice] The 50/50 -- Duplicate or lose all dice // [potion] Used Syringe -- Inflict a random bad status effect
+[75%][recycle] Ctrl + C -- Copy one of your equipment // [ice] Ice Age -- Freeze [ice]2 dice                        .
+[75%][sword] Last Resort -- Do [sword]6 to yourself, [sword]12 to enemy // [heart] Leech -- Drain [heart] 5 health                                           .   
+[75%][confuse] Manual Roll -- Set your skill to Autoroll // [reduce] Nanomachines -- Gain [reduce]2 reduce           .
+         [75%][ice] PC Fans -- Gain [ice]3 freeze // [fire] Timebomb -- Do [fire]15 damage in 3 turns
+[120%][confuse][]Rare Skills (1 in 4 chance to roll)[confuse]
+[75%][gold] Stored Prize -- Next jackpot skill goes twice // [gold] Split Path -- Trigger all other jackpot abilities  .
+       [75%][jackpot] Fifths roll -- Increase jackpot range next turn // [lock] Containment Wave -- Lock a random enemy equipment
+                   [75%][heal] Lifeblood -- Heal [heal]5 health // [jinx] Limit Break -- Set an equipment to normal slots only
+
+
+
