@@ -61,3 +61,4 @@ Retuner_downgraded,On error[;] replace this |with a random equipment[;]|and weak
 Bonus Slot,Get an extra jackpot skill to|choose from whenever|you hit a jackpot,1,,,,,PINK,change_power,,,,0,NO,NO,extrajackpotskill|weakenimmune|nojackpotcopy|excludefromrandomlists,,inflictself(~extrajackpotskill~[;] 1);,,,,,,,,,,
 Bonus Slot_upgraded,Get 2 extra jackpot skills to|choose from whenever|you hit a jackpot,1,,,,,PINK,change_power,,,,0,NO,NO,extrajackpotskill|weakenimmune,,inflictself(~extrajackpotskill~[;] 2);,,,,,,,,,,
 Salt In The Wound,Do [sword]<d6> damage[;] on|jackpot[;] [poison]<d6> instead,1,if(self.roll_jackpot){ inflict(~poison~[;]d); sfx(~_poison~); } else{ attack(d); sfxdamage(d); },,NORMAL,,YELLOW,add1,complicate,,,0,NO,NO,robotonly,,,,,,,,,,,,
+Slimy Payload,Add [virus]3 virus,1,inflict(~virus~[;] 3); sfx(~roboterror~);,,ODD,,GRAY,,,,,0,NO,NO,,,,,,,,,,,,,
