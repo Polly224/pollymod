@@ -16,4 +16,4 @@ jackpotshard,Jackpot_Shard,jackpotshard,4 Jackpot Shards combine into an automat
 iceallnextturn,Frozen_all,ice,Turns the highest dice rolled into a 1.,NO,NO,NO,NO,NO,,,inflictself(~ice_all~); removestatusself(~iceallnextturn~);,,,,,,,,
 icenextturn,Frozen,ice,Turns the highest dice rolled into a 1.,YES,NO,NO,NO,NO,,,inflictself(~ice~[;] getstatusself(~icenextturn~)); removestatusself(~icenextturn~[;] ALL);,,,,,,,,
 extrajackpotskill,Bonus_Slot,gold,Your jackpot has <value> extra options. Shouldn't show up! If it does[;] it's buggin... and that ain't thuggin...,YES,NO,NO,YES,NO,,,,,,,,,,,
-virus,Virus,virus,Take <value> damage every time you trigger an error.,YES,NO,NO,NO,NO,,,,,if(self.roll_realtotal > self.roll_target){ attackself(getstatusself(~virus~)); sfxdamage(getstatusself(~virus~)); },,,,,,
+virus,Virus,virus,Take <value> damage at the end of your turn if you triggered an error during it.,YES,NO,NO,NO,NO,,,,,,,if(self.roll_error){ attackself(getstatusself(~virus~)); sfxdamage(getstatusself(~virus~)); sfx() },,,,

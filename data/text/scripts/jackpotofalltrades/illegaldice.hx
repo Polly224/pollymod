@@ -16,7 +16,11 @@ if(skipsetup) trace("skipping setup");
 			if (mydice.available()) {
 				if ((mydice.basevalue >= 7 || mydice.basevalue <= 0)) {
 					var sprite = 0;
-					if (mydice.basevalue == 0) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice0\",0,0);
+					if((mydice.basevalue < 1 && mydice.basevalue > -7) || (mydice.basevalue < 13 && mydice.basevalue > 6))
+					{
+						sprite = new displayobjects.HaxegonSprite(0, 0,\"dicesprites/dice\" + mydice.basevalue,0,0);
+                    }
+					/*if (mydice.basevalue == 0) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice0\",0,0);
 					if (mydice.basevalue == 7) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice7\",0,0);
                     if (mydice.basevalue == 8) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice8\",0,0);
                     if (mydice.basevalue == 9) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice9\",0,0);
@@ -27,6 +31,7 @@ if(skipsetup) trace("skipping setup");
                     if (mydice.basevalue == -4) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice-4\",0,0);
                     if (mydice.basevalue == -5) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice-5\",0,0);
                     if (mydice.basevalue == -6) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice-6\",0,0);
+					if (mydice.basevalue == 11) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice11\",0,0);*/
 
                     if (sprite + 1 == \"HaxegonSprite1\") { 
 						mydice.showoverlayimage = true; 
