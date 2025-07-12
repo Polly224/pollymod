@@ -52,7 +52,7 @@ if(self.level > 2)
 
 if(self.level > 3) 
 {
-	JackpotOptions = JackpotOptions.concat(["Lock Advocate","Dragon's Roll","Tri Attack","Basil's Protection","Blood Arrow","Ripper Mode","Persona"]);
+	JackpotOptions = JackpotOptions.concat(["Headshot","Lock Advocate","Dragon's Roll","Tri Attack","Basil's Protection","Blood Arrow","Ripper Mode","Persona"]);
 	
 	if(target.innate.length > 0)
 	{
@@ -60,7 +60,16 @@ if(self.level > 3)
 	}
 	JackpotOptions.remove("Lucky Roll");
 	JackpotOptions.remove("Used Syringe");
-	RareJackpotOptions = RareJackpotOptions.concat(["Feed", "Cthulhu's Shield", "Perfect Spanner", "Ka... Ching!"]);
+    JackpotOptions.remove("Sniper Shot");
+    JackpotOptions.remove("Flamethrower");
+    JackpotOptions.remove("The 50/50");
+    JackpotOptions.remove("Firey Roll");
+    JackpotOptions.remove("Guarded Fling");
+    JackpotOptions.remove("Manual Roll");
+	JackpotOptions.remove("Ripper Mode");
+    JackpotOptions.remove("Mechanical Toxin");
+    RareJackpotOptions.remove("Fifths Roll");
+    RareJackpotOptions = RareJackpotOptions.concat(["Feed", "Cthulhu's Shield", "Perfect Spanner", "Ka... Ching!"]);
 
 	if (self.getvar("firstturnpassed") && (self.getvar("currentroundplayerhp") - self.hp) > (self.getvar("currentroundenemyhp") - target.hp)) 
 	{
@@ -71,7 +80,8 @@ if(self.level > 3)
 if(self.level > 4) 
 {
 	JackpotOptions.remove("Borrow");
-	JackpotOptions = JackpotOptions.concat(["Mad Dog's Howl","Prince's Steal","Megabump", "Jimbo's Trick", "Double Roll"]);
+    JackpotOptions.remove("Midnight Snake");
+    JackpotOptions = JackpotOptions.concat(["Mad Dog's Howl","Prince's Steal", "Jimbo's Trick", "Double Roll"]);
 	if(self.hp < self.maxhp / 2)
 	{
 		RareJackpotOptions.push("Dead Ringer");

@@ -1,5 +1,4 @@
-[130%]CURRENT ROLLABLE SKILLS FOR JACKPOT (UPDATES ON LEVEL-UP!)
--------------------------------------------------------------------------------------------------------------------
+[130%]----- CURRENT ROLLABLE SKILLS FOR JACKPOT (UPDATES ON LEVEL-UP!) -----
 [120%][jackpot][]Normal Skills[jackpot]
 [75%][fire][dice] Firey Roll -- Roll 2 burning dice // [dice] Lucky Roll -- Roll a 7                    .
  [75%][dice] Midnight Snake -- Roll a 6 and a 1 // [recycle] Reshuffle -- Reroll jackpot options

@@ -1,0 +1,21 @@
+[130%]----- CURRENT ROLLABLE SKILLS FOR JACKPOT (UPDATES ON LEVEL-UP!) -----
+[120%][jackpot][]Normal Skills[jackpot]
+ [75%][recycle] Reshuffle -- Reroll jackpot options // [poison] Whoopie Cushion -- Lol. Lmao[;] even.
+[75%][curse] Curseathon -- [curse]2 to enemy, [curse] to self next turn // [sword] Debatable Damage -- Randomly do [sword]1-10 damage
+[75%][recycle] Salvaging -- Re-use next equipment // [dodge] Slippery Shoes -- Gain [dodge]1 dodge        .
+[75%][recycle] Ctrl + C -- Copy one of your equipment // [ice] Ice Age -- Freeze [ice]2 dice                       .
+[75%][sword] Last Resort -- Do [sword]4 to yourself, [sword]12 to enemy // [heart] Leech -- Drain [heart] 5 health                                          .
+[75%][reduce] Nanomachines -- Gain [reduce]2 reduce // [ice] PC Fans -- Gain [ice]3 freeze              .
+[75%][fire] Timebomb -- Do [fire]15 damage in 3 turns // [thorns] Basil's Protection -- Gain [thorns]3 thorns           .
+[75%][heart] Blood Arrow -- Lose [heart]2 health, do [sword]10 damage // [dice] Dragon's Roll -- Roll a 10                                             .
+[75%][sword] Headshot -- Reduce enemy health by [heart]7 // [lock] Lock Advocate -- Lock [lock]1 dice                      .
+   [75%][fury] Persona -- Repeat next action // [fire][ice][shock] Tri Attack -- Inflict [fire][], [ice] and [shock]
+       [75%][dice] Double Roll -- Roll 2 dice // [dice] Jimbo's Trick -- x1.5 mult all your dice
+      [75%][weaken] Mad Dog's Howl -- Inflict [weaken]3 weaken // [jinx] Prince's Steal -- Borrow equipment and upgrade it
+[120%][confuse][]Rare Skills (1 in 4 chance to roll)[confuse]
+[75%][gold] Stored Prize -- Next jackpot skill goes twice // [gold] Split Path -- Trigger all other jackpot abilities // [lock] Containment Wave -- Lock a random enemy equipment
+        [75%][heal] Lifeblood -- Heal [heal]8 // [jinx] Limit Break -- Set an equipment to normal slots only // [confuse] Ka... Ching! -- Gain [star]1 Guaranteed Autoroll
+[75%][sword][health] Feed -- Do [sword]6 damage, +2 max health if fatal // [shield][thorns] Cthulhu's Shield -- Gain [shield]4 shield and [thorns]2 thorns
+[75%][dice] Perfect Spanner -- Combine all dice into one // [heart] Stars And Time -- Revert [heart] to last turn // [curse] Dead Ringer -- Survive one fatal blow this turn                  .
+
+

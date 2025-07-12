@@ -1,5 +1,4 @@
-[150%]CURRENT ROLLABLE SKILLS FOR JACKPOT (UPDATES ON LEVEL-UP!)
--------------------------------------------------------------------------------------------------------------------
+[130%]----- CURRENT ROLLABLE SKILLS FOR JACKPOT (UPDATES ON LEVEL-UP!) -----
 [120%][jackpot][]Normal Skills[jackpot]
 
 [dice] Duplicate -- Duplicate a random dice // [shock] Faulty Wiring -- Inflict [shock]2 shock   .

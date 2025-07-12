@@ -1,5 +1,4 @@
-[130%]CURRENT ROLLABLE SKILLS FOR JACKPOT (UPDATES ON LEVEL-UP!)
--------------------------------------------------------------------------------------------------------------------
+[130%]----- CURRENT ROLLABLE SKILLS FOR JACKPOT (UPDATES ON LEVEL-UP!) -----
 [120%][jackpot][]Normal Skills[jackpot]
 [75%][dice] Duplicate -- Duplicate a random dice // [shock] Faulty Wiring -- Inflict [shock]2 shock  .
 [75%][d6] Final Countdown -- Reduce countdowns by 5 // [fire][dice] Firey Roll -- Roll 2 burning dice                 .

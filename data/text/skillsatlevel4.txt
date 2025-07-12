@@ -1,0 +1,21 @@
+[130%]----- CURRENT ROLLABLE SKILLS FOR JACKPOT (UPDATES ON LEVEL-UP!) -----
+[120%][jackpot][]Normal Skills[jackpot]
+[75%][dice] Midnight Snake -- Roll a 6 and a 1 // [recycle] Reshuffle -- Reroll jackpot options
+[75%][poison] Whoopie Cushion -- Lol. Lmao[;] even. // [jinx] Borrow -- Borrow equipment               .
+[75%][curse] Curseathon -- [curse]2 to enemy, [curse] to self next turn // [sword] Debatable Damage -- Randomly do [sword]1-10 damage
+[75%][recycle] Salvaging -- Re-use next equipment // [fire][ice][shock] Tri Attack -- Inflict [fire][], [ice] and [shock]
+    [75%][dodge] Slippery Shoes -- Gain [dodge]1 dodge // [recycle] Ctrl + C -- Copy one of your equipment
+                 [75%][ice] Ice Age -- Freeze [ice]2 dice // [sword] Last Resort -- Do [sword]4 to yourself, [sword]12 to enemy
+    [75%][heart] Leech -- Drain [heart] 5 health // [reduce] Nanomachines -- Gain [reduce]2 reduce
+        [75%][ice] PC Fans -- Gain [ice]3 freeze // [fire] Timebomb -- Do [fire]15 damage in 3 turns
+       [75%][thorns] Basil's Protection -- Gain [thorns]3 thorns // [heart] Blood Arrow -- Lose [heart]2 health, do [sword]10 damage
+         [75%][dice] Dragon's Roll -- Roll a 10 // [sword] Headshot -- Reduce enemy health by [heart]7
+[75%][lock] Lock Advocate -- Lock [lock]1 dice // [fury] Persona -- Repeat next action          .
+[120%][confuse][]Rare Skills (1 in 4 chance to roll)[confuse]
+[75%][gold] Stored Prize -- Next jackpot skill goes twice // [gold] Split Path -- Trigger all other jackpot abilities      . 
+[75%][lock] Containment Wave -- Lock a random enemy equipment // [heal] Lifeblood -- Heal [heal]8 health                                                      .
+[75%][jinx] Limit Break -- Set an equipment to normal slots only // [shield][thorns] Cthulhu's Shield -- Gain [shield]4 shield and [thorns]2 thorns         .
+[75%][sword][health] Feed -- Do [sword]6 damage, +2 max health if fatal // [confuse] Ka... Ching! -- Gain [star]1 Guaranteed Autoroll            .
+[75%][dice] Perfect Spanner -- Combine all dice into one // [health] Stars And Time -- Revert [heart] to last turn                   .
+
+
