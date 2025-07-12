@@ -13,7 +13,7 @@ if(skipsetup) trace("skipping setup");
 	}
 	if (self.dicepool.length > 0) {
 		for (mydice in self.dicepool) {
-			if (mydice.available()) {
+			if (mydice.available() && !mydice.blind) {
 				if ((mydice.basevalue >= 7 || mydice.basevalue <= 0)) {
 					var sprite = 0;
 					if((mydice.basevalue < 1 && mydice.basevalue > -7) || (mydice.basevalue < 17 && mydice.basevalue > 6))
@@ -21,9 +21,9 @@ if(skipsetup) trace("skipping setup");
 						sprite = new displayobjects.HaxegonSprite(0, 0,\"dicesprites/dice\" + mydice.basevalue,0,0);
                     }
 					if(mydice.basevalue > 16)
-				{
+					{
                     sprite = new displayobjects.HaxegonSprite(0, 0,\"dicesprites/dicehigh\",0,0);
-                }
+					}
 					/*if (mydice.basevalue == 0) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice0\",0,0);
 					if (mydice.basevalue == 7) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice7\",0,0);
                     if (mydice.basevalue == 8) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice8\",0,0);

@@ -1,5 +1,5 @@
 var commonlist_basic = ["Healing Crystal", "Bump", "Nudge", "Cheat Code"];
-var commonlist_advanced = ["Juggling Ball", "Spanner", "Spiked Shield", "Doppeldice", "Short Circuit"];
+var commonlist_advanced = ["Juggling Ball", "Inhibited Blade", "Spiked Shield", "Patched Blade", "Short Circuit"];
 var floor2basic = ["Double Down", "Errorsurance"];
 var floor2advanced = ["Forcefield", "Midnight Charm"];
 var floor2items = ["Empty Slot"];

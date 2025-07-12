@@ -1,4 +1,4 @@
-var JackpotOptions = ["Duplicate", "Midnight Snake", "Sandvich", "Suit Up", "Slingshot", "Syringe", "Lucky Roll", "Prickly Pear", "Sniper Shot", "Melting Ice", "Firey Roll", "Faulty Wiring", "Icy Roll", "Whoopie Cushion", "Reshuffle", "Reshuffle"];
+var JackpotOptions = ["Duplicate", "Midnight Snake", "Sandvich", "Suit Up", "Slingshot", "Syringe", "Lucky Roll", "Prickly Pear", "Sniper Shot", "Melting Ice", "Firey Roll", "Faulty Wiring", "Icy Roll", "Reshuffle", "Whoopie Cushion", "Reshuffle"];
 var RareJackpotOptions = ["Stored Prize", "Split Path"];
 var UpgradeAll = false;
 var SkillsCount = 3;
@@ -52,7 +52,7 @@ if(self.level > 2)
 
 if(self.level > 3) 
 {
-	JackpotOptions = JackpotOptions.concat(["Headshot","Lock Advocate","Dragon's Roll","Tri Attack","Basil's Protection","Blood Arrow","Ripper Mode","Persona"]);
+	JackpotOptions = JackpotOptions.concat(["Headshot","Lock Advocate","Dragon's Roll","Tri Attack","Basil's Protection","Blood Arrow","Persona"]);
 	
 	if(target.innate.length > 0)
 	{
@@ -66,7 +66,6 @@ if(self.level > 3)
     JackpotOptions.remove("Firey Roll");
     JackpotOptions.remove("Guarded Fling");
     JackpotOptions.remove("Manual Roll");
-	JackpotOptions.remove("Ripper Mode");
     JackpotOptions.remove("Mechanical Toxin");
     RareJackpotOptions.remove("Fifths Roll");
     RareJackpotOptions = RareJackpotOptions.concat(["Feed", "Cthulhu's Shield", "Perfect Spanner", "Ka... Ching!"]);
@@ -132,11 +131,9 @@ for(i in 0...SkillsCount)
 	{
 		if (self.getvar("skillscanbeupgraded"))
 		{
-			var r = rand([1, 2]);
-			trace(r);
+			var r = rand([1, 2, 3]);
 			if (r == 1)
 			{
-				trace("successfully upgraded skill in slot " + i);
 				ChosenJackpotSkills[i] += "+";
 			}
 		}
@@ -146,8 +143,8 @@ for(i in 0...SkillsCount)
 /*DEBUG STUFF, COMMENT OUT WHEN PLAYTESTING.*/
 
 /*ChosenJackpotSkills[2] = "Stars And Time+";
-ChosenJackpotSkills[1] = "PC Fans";
-ChosenJackpotSkills[0] = "PC Fans+";*/
+ChosenJackpotSkills[1] = "PC Fans";*/
+ChosenJackpotSkills[0] = "Timebomb";
 
 for (i in 0...SkillsCount)
 {
