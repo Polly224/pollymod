@@ -143,8 +143,8 @@ for(i in 0...SkillsCount)
 /*DEBUG STUFF, COMMENT OUT WHEN PLAYTESTING.*/
 
 /*ChosenJackpotSkills[2] = "Stars And Time+";
-ChosenJackpotSkills[1] = "PC Fans";*/
-ChosenJackpotSkills[0] = "Timebomb";
+ChosenJackpotSkills[1] = "PC Fans";
+ChosenJackpotSkills[0] = "Timebomb";*/
 
 for (i in 0...SkillsCount)
 {

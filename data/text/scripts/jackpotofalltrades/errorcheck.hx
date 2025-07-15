@@ -14,6 +14,7 @@ if (self.hp <= 0 || self.graphic == null || target == null || target.graphic == 
 }
 if (self.roll_realtotal > self.roll_target && !self.hasstatus(\"bsodtriggered\"))
 {
+    runscript(\"jackpotofalltrades/rerolljackpot\", [true]);
     self.roll_range += self.roll_target;
     adjustrobotcounter(0);
     inflictself(\"bsodtriggered\");

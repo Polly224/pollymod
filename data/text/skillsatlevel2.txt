@@ -1,4 +1,5 @@
 [130%]----- CURRENT ROLLABLE SKILLS FOR JACKPOT (UPDATES ON LEVEL-UP!) -----
+
 [120%][jackpot][]Normal Skills[jackpot]
 [75%][dice] Duplicate -- Duplicate a random dice // [shock] Faulty Wiring -- Inflict [shock]2 shock  .
 [75%][d6] Final Countdown -- Reduce countdowns by 5 // [fire][dice] Firey Roll -- Roll 2 burning dice                 .
@@ -16,6 +17,6 @@
 [75%][potion] Used Syringe -- Inflict a random bad status effect
 [120%][confuse][]Rare Skills (1 in 4 chance to roll)[confuse]
 [75%][gold] Stored Prize -- Next jackpot skill goes twice // [gold] Split Path -- Trigger all other jackpot abilities
-[75%][jackpot] Fifths roll -- Increase jackpot range next turn // [lock] Containment Wave -- Lock a random enemy equipment
+        [75%][jackpot] Fifths roll -- Increase jackpot range next turn // [lock] Containment Wave -- Lock a random enemy equipment
 
 
