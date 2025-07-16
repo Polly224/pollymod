@@ -2,9 +2,9 @@
 
 var act = new motion.actuators.SimpleActuator(null, 0.001, null);
 var s = new elements.DiceyScript("
-if (self.roll_jackpot > 0 && self.getskillcard().skills.length >= 3 && self.hasstatus('extrajackpotskill'))
+if (self.roll_jackpot > 0 && self.getskillcard().skills.length >= 3)
 {
-    if (self.getskillcard().skills.length < (3 + self.getvar('bonusjackpotskills').length) && self.getskillcard().y == self.getskillcard().finalpos.y && !self.hasstatus('bsodtriggered'))
+    if (self.hasstatus('extrajackpotskill') && self.getskillcard().skills.length < (3 + self.getvar('bonusjackpotskills').length) && self.getskillcard().y == self.getskillcard().finalpos.y && !self.hasstatus('bsodtriggered'))
     {
         self.getskillcard().animate('flashandshake');
         for (i in 0...self.getvar('bonusjackpotskills').length)
@@ -15,6 +15,10 @@ if (self.roll_jackpot > 0 && self.getskillcard().skills.length >= 3 && self.hass
             self.getskillcard().y -= 142.5;
         }
         sfx('_thinghappens');
+    }
+    if((self.getvar('currentjackpotskills').indexOf('The Blue Devil') != -1 || self.getvar('currentjackpotskills').indexOf('The Blue Devil+') != -1) && !self.hasstatus('bluedevilcredits'))
+    {
+        inflictself('bluedevilcredits');
     }
 }
 if (self.hp <= 0 || self.graphic == null || target == null || target.graphic == null || target.hp <= 0) 
@@ -28,4 +32,5 @@ s.set("act", act);
 s.set("self", self);
 s.set("target", target);
 s.set("sfx", sfx);
+s.set("inflictself", inflictself);
 act.move();

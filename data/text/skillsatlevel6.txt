@@ -15,7 +15,7 @@
 [120%][confuse][]Rare Skills (1 in 4 chance to roll)[confuse]
 [75%][gold] Stored Prize -- Next jackpot skill goes twice // [gold] Split Path -- Trigger all other jackpot abilities // [lock] Containment Wave -- Lock a random enemy equipment
         [75%][heal] Lifeblood -- Heal [heal]8 // [jinx] Limit Break -- Set an equipment to normal slots only // [confuse] Ka... Ching! -- Gain [star]1 Guaranteed Autoroll
-[75%][sword][health] Feed -- Do [sword]6 damage, +2 max health if fatal // [shield][thorns] Cthulhu's Shield -- Gain [shield]4 shield and [thorns]2 thorns
+[75%][sword][health] Feed -- Do [sword]6 damage, +2 max health if fatal // [shield][thorns] Cthulhu's Shield -- Gain [shield]4 shield and [thorns]2 thorns // [devilfire] The Blue Devil -- Burn all dice                                   .
 [75%][dice] Perfect Spanner -- Combine all dice into one // [heart] Stars And Time -- Revert [heart] to last turn // [curse] Dead Ringer -- Survive one fatal blow this turn                  .
 [75%][fire][ice][shock][blind][weaken] Botulinum Dose -- Inflict every single negative status effect // [dodge] Run It Back -- Start a new turn                                                                          .
 

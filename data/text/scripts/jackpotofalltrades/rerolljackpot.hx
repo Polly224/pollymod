@@ -1,6 +1,7 @@
 var JackpotOptions = ["Duplicate", "Midnight Snake", "Sandvich", "Suit Up", "Slingshot", "Syringe", "Lucky Roll", "Prickly Pear", "Sniper Shot", "Melting Ice", "Firey Roll", "Faulty Wiring", "Icy Roll", "Reshuffle", "Whoopie Cushion", "Reshuffle"];
 var RareJackpotOptions = ["Stored Prize", "Split Path"];
 var UpgradeAll = false;
+var CreditJamie = false;
 var SkillsCount = 3;
 
 if (self.hasstatus("extrajackpotskill"))
@@ -11,6 +12,11 @@ if (self.hasstatus("extrajackpotskill"))
 if(args.length == 1)
 {
 	UpgradeAll = args[0];
+}
+
+if(args.length == 2)
+{
+	CreditJamie = args[1];
 }
 
 var ctdowncheck = false;
@@ -85,6 +91,7 @@ if(self.level > 4)
 	{
 		RareJackpotOptions.push("Dead Ringer");
 	}
+	RareJackpotOptions.push("The Blue Devil");
 }    
 
 if(self.level == 6) 
@@ -143,8 +150,8 @@ for(i in 0...SkillsCount)
 /*DEBUG STUFF, COMMENT OUT WHEN PLAYTESTING.*/
 
 /*ChosenJackpotSkills[2] = "Stars And Time+";
-ChosenJackpotSkills[1] = "PC Fans";
-ChosenJackpotSkills[0] = "Timebomb";*/
+ChosenJackpotSkills[1] = "The Blue Devil";
+ChosenJackpotSkills[0] = "The Blue Devil+";*/
 
 for (i in 0...SkillsCount)
 {
@@ -167,6 +174,11 @@ if (ChosenJackpotSkills.indexOf("Split Path") != -1 && ChosenJackpotSkills.index
 	ChosenJackpotSkills[1] = "Split Path";
 }
 
+/*Ensures that Jamie gets credited if the skill is rolled*/
+if ((ChosenJackpotSkills.indexOf('The Blue Devil') != -1 || ChosenJackpotSkills.indexOf('The Blue Devil+') != -1) && !self.hasstatus("bluedevilcredits") && CreditJamie)
+{
+    inflictself("bluedevilcredits");
+}
 
 
 
