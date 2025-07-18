@@ -26828,5 +26828,172 @@
 				}
 			}
 		]
+	},
+	"backpack_close": {
+		"playsounds": [
+			{
+				"folder": "sfx/weapontype/whoosh"
+			}
+		]
+	},
+	"backpack_open": {
+		"playsounds": [
+			{
+				"folder": "sfx/weapontype/whoosh"
+			}
+		]
+	},
+	"blacksmith_backpack_close": {
+		"playsounds": [
+			{
+				"channel": 0,
+				"delay": 0,
+				"effect": "",
+				"filter": "",
+				"folder": "sfx/weapontype/whoosh",
+				"loop": false,
+				"panning": {
+					"fade": 0,
+					"max": 0,
+					"min": 0,
+					"random": false,
+					"value": 0
+				},
+				"pitch": {
+					"fade": 0,
+					"max": 1,
+					"min": 0,
+					"random": false,
+					"value": 1
+				},
+				"position": 0,
+				"syncbpm": 0,
+				"tag": "",
+				"volume": {
+					"fade": 0,
+					"max": 1,
+					"min": 0,
+					"random": false,
+					"value": 1
+				}
+			}
+		]
+	},
+	"blacksmith_backpack_open": {
+		"playsounds": [
+			{
+				"channel": 0,
+				"delay": 0,
+				"effect": "",
+				"filter": "",
+				"folder": "sfx/weapontype/whoosh",
+				"loop": false,
+				"panning": {
+					"fade": 0,
+					"max": 0,
+					"min": 0,
+					"random": false,
+					"value": 0
+				},
+				"pitch": {
+					"fade": 0,
+					"max": 1,
+					"min": 0,
+					"random": false,
+					"value": 1
+				},
+				"position": 0,
+				"syncbpm": 0,
+				"tag": "",
+				"volume": {
+					"fade": 0,
+					"max": 1,
+					"min": 0,
+					"random": false,
+					"value": 1
+				}
+			}
+		]
+	},
+	"enteranvil1": {
+		"changeparams": [
+			{
+				"tag": "atmos",
+				"volume": {
+					"fade": 2,
+					"max": 1,
+					"min": 0,
+					"random": false,
+					"value": 0
+				}
+			},
+			{
+				"tag": "combatmusic",
+				"volume": {
+					"fade": 1,
+					"max": 1,
+					"min": 0,
+					"random": false,
+					"value": 0
+				}
+			}
+		],
+		"playsounds": [
+			{
+				"channel": 0,
+				"delay": 0,
+				"effect": "",
+				"file": "sfx/overworld/enteranvil",
+				"filter": "",
+				"loop": false,
+				"panning": {
+					"fade": 0,
+					"max": 0,
+					"min": 0,
+					"random": false,
+					"value": 0
+				},
+				"pitch": {
+					"fade": 0,
+					"max": 1,
+					"min": 0,
+					"random": false,
+					"value": 1
+				},
+				"position": 0,
+				"syncbpm": 0,
+				"tag": "",
+				"volume": {
+					"fade": 0,
+					"max": 1,
+					"min": 0,
+					"random": false,
+					"value": 1
+				}
+			}
+		],
+		"stopsounds": [
+			{
+				"tag": "shoptheme"
+			}
+		]
+	},
+	"enteranvil2": {
+		"playsounds": [
+			{
+				"channel": 1,
+				"delay": 0.01,
+				"file": "music/shops/blacksmith",
+				"loop": true,
+				"tag": "shoptheme",
+				"volume": {
+					"fade": 2,
+					"max": 1,
+					"min": 0,
+					"random": false,
+					"value": 1
+				}
+			}
+		]
 	}
 }

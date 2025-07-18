@@ -1,7 +1,5 @@
 Name,Description,Size,Script: On Execute,Gadget,Slots,NEED TOTAL?,Colour,Upgrade,Weaken,Alternate Status Trigger,SFX,Uses?,Cast Backwards?,Single use?,Tags,Witch Spell,Script: Before Combat,Script: After Combat,Script: Before Start Turn,Script: On Start Turn,Script: On any equipment use,Script: On any countdown reduce,Script: End Turn,Script: Before execute,Script: On Snap,Script: On Fury,Script: On Dodge
-Bump,Dice value +1,1,givedice([d + 1]);,Megabump,NORMAL,,GREEN,change_power,complicate,,,0,YES,NO,,1,,,,,,,,,,,
 Bump_upgraded,Dice value +1|[gray](Reuseable),1,givedice([d + 1]);,Megabump,NORMAL,,GREEN,,,,,2,YES,NO,,,,,,,,,,,,,
-Bumpblade,Do [sword]1 damage[;] get|new dice (value +1),1,attack(1); givedice([d + 1]);,Megabump,MAX5,,YELLOW,change_power,complicate,,,0,NO,NO,,1,,,,,,,,,,,givedice(d + 1);
 Bumpblade_upgraded,[sword]1 damage[;] bump dice|[gray](Reuseable),1,attack(1); givedice([d + 1]);,Megabump,MAX5,,YELLOW,,,,,2,NO,NO,,,,,,,,,,,,,givedice(d + 1);
 Call for Backup Warrior_downgraded,Pea Gun|Do [sword]3 damage,2,attack(3);,Lucky Shot,,,BRIGHTCYAN,,,,none,0,NO,NO,excludefromrandomlists|powercard|curseavoid,,,,,,,,,,,,
 Call for Backup Thief_downgraded,Snake Eyes|Roll 2 ones,2,givedice([1[;] 1]);,Steal,,,GREEN,,,,none,0,YES,NO,excludefromrandomlists|powercard|curseavoid,,,,,,,,,,,,
@@ -13,5 +11,4 @@ Call for Backup Thief?_downgraded,Snake Eyes|Roll 2 ones,2,givedice([1[;] 1]);,S
 Call for Backup Robot?_downgraded,Regenerate|Heal [heal]3 health,2,attackself(-3);,Reversal,,,GRAY,,,,none,0,YES,NO,excludefromrandomlists|powercard|curseavoid,,,,,,,,,,,,
 Call for Backup Witch?_downgraded,Magic Dice|Roll an extra dice,2,givedice();,Regenerate,,,PURPLE,,,,none,0,YES,NO,excludefromrandomlists|powercard|curseavoid,,,,,,,,,,,,
 Call for Backup Inventor?_downgraded,Barricade|Shield +[shield]3,2,inflictself(SHIELD[;] 3);,Time Stop,,,ORANGE,,,,none,0,YES,NO,excludefromrandomlists|powercard|curseavoid,,,,,,,,,,,,
-Scrap Bump,Dice value +1|(Always offered as scrap),1,givedice([d + 1]);,Magic Six,MAX5,,GRAY,change_power,complicate,,,0,YES,NO,appearsforparts,,,,,,,,,,,,
 Scrap Bump_upgraded,Dice value +1|(Always offered as scrap),1,givedice([d + 1]);,Magic Six,NORMAL,,GRAY,,,,,0,YES,NO,appearsforparts,,,,,,,,,,,,

@@ -16,7 +16,7 @@ jackpotshard,Jackpot_Shard,jackpotshard,4 Jackpot Shards combine into an automat
 iceallnextturn,Frozen_all,ice,Turns the highest dice rolled into a 1.,NO,NO,NO,NO,NO,,,inflictself(~ice_all~); removestatusself(~iceallnextturn~);,,,,,,,,
 icenextturn,Frozen,ice,Turns the highest dice rolled into a 1.,YES,NO,NO,NO,NO,,,inflictself(~ice~[;] getstatusself(~icenextturn~)); removestatusself(~icenextturn~[;] ALL);,,,,,,,,
 extrajackpotskill,Bonus_Slot,gold,Your jackpot has <value> extra options. Shouldn't show up! If it does[;] it's buggin... and that ain't thuggin...,YES,NO,NO,YES,NO,,,,,,,,,,,
-virus,Virus,virus,Take <value> damage at the end of your turn if you triggered an error during it.,YES,NO,NO,NO,NO,,,,,,,if(self.roll_error){ attackself(getstatusself(~virus~)); sfxdamage(getstatusself(~virus~)); sfx() },,,,
+virus,Virus,virus,Take <value> damage at the end of your turn if you triggered an error during it.,YES,NO,NO,NO,NO,,,,,,,if(self.roll_error){ attackself(getstatusself(~virus~)); sfxdamage(getstatusself(~virus~)); sfx() } /*A leftover thingy from when I wanted to add custom enemies to the game. This one ain't that great. Turns Slime into an unloseable fight.*/,,,,
 bsodtriggered,ShouldntAppear!,virus,You know the gist. It's invisible[;] BITCH!!!! What're you poking around for[;] damn!!!!,NO,NO,YES,YES,NO,,,,,,,,,,,
 bigberthavisual,Big_Bertha,star,Every jackpot skill has a 33% chance to be upgraded when rolled.,NO,NO,NO,NO,NO,,,,,,,,,,,
 bsodvisual,BSOD,star,When you trigger an error[;] you can still use 1 upgraded jackpot skill.,NO,NO,NO,NO,NO,,,,,,,,,,,
