@@ -134,3 +134,4 @@ Headshot,[90%]Reduce enemy health by [heart]7,pierceattack(7); sfx(~_plasma~);
 Headshot+,[90%]Reduce enemy health by [heart][yellow]9[],pierceattack(9); sfx(~_plasma~);
 The Blue Devil,Burn all dice,inflict(~fire~[;] ALL); sfx(~_fire~);
 The Blue Devil+,[90%]Burn all dice[;] [yellow]inflict [blind][yellow]2 [yellow]blind[][][],inflict(~fire~[;] ALL); sfx(~_fire~); inflict(~blind~[;] 2); sfx(~_blind~);
+bigbertha,This equipment's effects are|passive[;] gained on pickup,
