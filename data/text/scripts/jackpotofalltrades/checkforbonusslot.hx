@@ -6,7 +6,6 @@ if (self.roll_jackpot > 0 && self.getskillcard().skills.length >= 3)
 {
     if (self.hasstatus('extrajackpotskill') && self.getskillcard().skills.length < (3 + self.getvar('bonusjackpotskills').length) && self.getskillcard().y == self.getskillcard().finalpos.y && !self.hasstatus('bsodtriggered'))
     {
-        self.getskillcard().animate('flashandshake');
         for (i in 0...self.getvar('bonusjackpotskills').length)
         {
             self.getskillcard().skills.push(new elements.Skill(self.getvar('bonusjackpotskills')[i]));
@@ -14,6 +13,7 @@ if (self.roll_jackpot > 0 && self.getskillcard().skills.length >= 3)
             self.getskillcard().height += 285;
             self.getskillcard().y -= 142.5;
         }
+        self.getskillcard().animate('flashandshake');
         sfx('_thinghappens');
     }
     if((self.getvar('currentjackpotskills').indexOf('The Blue Devil') != -1 || self.getvar('currentjackpotskills').indexOf('The Blue Devil+') != -1) && !self.hasstatus('bluedevilcredits'))

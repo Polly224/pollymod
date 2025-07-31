@@ -10,26 +10,12 @@ if (self.hp <= 0 || self.graphic == null || target == null || target.graphic == 
 {
     self.getvar(\"bsodcheckact\").stop();    
     self.resetvar(\"bsodcheckact\"); 
-
 }
 if (self.roll_realtotal > self.roll_target && !self.hasstatus(\"bsodtriggered\"))
 {
-    runscript(\"jackpotofalltrades/rerolljackpot\", [true]);
     self.roll_range += self.roll_target;
     adjustrobotcounter(0);
     inflictself(\"bsodtriggered\");
-    var s = new elements.Skill(\"Against All Odds_old\");
-    var act = new motion.actuators.SimpleActuator(null, 0.7, null);
-    act.onComplete(s.execute, [self, target]);
-    s.script = \"
-    var eq = self.getskillcard();
-    eq.skills = [eq.skills[0]];
-    eq.skillsavailable = [eq.skillsavailable[0]];
-    eq.height = 510;
-    eq.finalpos.y = eq.finalpos.y + 510; 
-    \"
-    ;
-    act.move();
     
 }
 "

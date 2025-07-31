@@ -130,7 +130,7 @@ for(i in 0...SkillsCount)
 
 for(i in 0...SkillsCount)
 {
-	if (UpgradeAll)
+	if (UpgradeAll || self.hasstatus("bsodtriggered"))
 	{
 		ChosenJackpotSkills[i] += "+";
 	} 
@@ -149,7 +149,7 @@ for(i in 0...SkillsCount)
 
 /*DEBUG STUFF, COMMENT OUT WHEN PLAYTESTING.*/
 
-/*ChosenJackpotSkills[2] = "Stars And Time+";
+/*ChosenJackpotSkills[2] = "Reshuffle";
 ChosenJackpotSkills[1] = "The Blue Devil";
 ChosenJackpotSkills[0] = "The Blue Devil+";*/
 
@@ -180,7 +180,10 @@ if ((ChosenJackpotSkills.indexOf('The Blue Devil') != -1 || ChosenJackpotSkills.
     inflictself("bluedevilcredits");
 }
 
-
+if (self.hasstatus("bsodtriggered"))
+{
+	ChosenJackpotSkills = [ChosenJackpotSkills[0]];
+}
 
 
 
