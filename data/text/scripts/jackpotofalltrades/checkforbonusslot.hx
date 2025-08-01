@@ -12,6 +12,7 @@ if (self.roll_jackpot > 0 && self.getskillcard().skills.length >= 3)
             self.getskillcard().skillsavailable.push(true);
             self.getskillcard().height += 285;
             self.getskillcard().y -= 142.5;
+            self.getskillcard().finalpos.y -= 142.5;
         }
         self.getskillcard().animate('flashandshake');
         sfx('_thinghappens');
@@ -33,4 +34,5 @@ s.set("self", self);
 s.set("target", target);
 s.set("sfx", sfx);
 s.set("inflictself", inflictself);
+s.set("s", s);
 act.move();

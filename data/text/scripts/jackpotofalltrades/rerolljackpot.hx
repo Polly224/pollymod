@@ -1,7 +1,7 @@
 var JackpotOptions = ["Duplicate", "Midnight Snake", "Sandvich", "Suit Up", "Slingshot", "Syringe", "Lucky Roll", "Prickly Pear", "Sniper Shot", "Melting Ice", "Firey Roll", "Faulty Wiring", "Icy Roll", "Reshuffle", "Whoopie Cushion", "Reshuffle"];
 var RareJackpotOptions = ["Stored Prize", "Split Path"];
 var UpgradeAll = false;
-var CreditJamie = false;
+var IsReroll = false;
 var SkillsCount = 3;
 
 if (self.hasstatus("extrajackpotskill"))
@@ -16,7 +16,7 @@ if(args.length == 1)
 
 if(args.length == 2)
 {
-	CreditJamie = args[1];
+	IsReroll = args[1];
 }
 
 var ctdowncheck = false;
@@ -175,7 +175,7 @@ if (ChosenJackpotSkills.indexOf("Split Path") != -1 && ChosenJackpotSkills.index
 }
 
 /*Ensures that Jamie gets credited if the skill is rolled*/
-if ((ChosenJackpotSkills.indexOf('The Blue Devil') != -1 || ChosenJackpotSkills.indexOf('The Blue Devil+') != -1) && !self.hasstatus("bluedevilcredits") && CreditJamie)
+if ((ChosenJackpotSkills.indexOf('The Blue Devil') != -1 || ChosenJackpotSkills.indexOf('The Blue Devil+') != -1) && !self.hasstatus("bluedevilcredits") && IsReroll)
 {
     inflictself("bluedevilcredits");
 }

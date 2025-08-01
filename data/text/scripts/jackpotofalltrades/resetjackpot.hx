@@ -1,4 +1,5 @@
 runscript("jackpotofalltrades/rerolljackpot", args);
+trace(args);
 resetjackpot(self);
 var act = new motion.actuators.SimpleActuator(null, 0.6, null);
 var s = new elements.DiceyScript("
