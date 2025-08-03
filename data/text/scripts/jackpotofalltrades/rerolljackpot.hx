@@ -150,8 +150,8 @@ for(i in 0...SkillsCount)
 /*DEBUG STUFF, COMMENT OUT WHEN PLAYTESTING.*/
 
 /*ChosenJackpotSkills[2] = "Reshuffle";*/
-ChosenJackpotSkills[1] = "PC Fans";
-ChosenJackpotSkills[0] = "PC Fans+";
+ChosenJackpotSkills[1] = "Jimbo's Trick+";
+ChosenJackpotSkills[0] = "Jimbo's Trick";
 
 for (i in 0...SkillsCount)
 {
