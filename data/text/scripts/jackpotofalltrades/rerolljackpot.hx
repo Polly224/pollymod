@@ -9,7 +9,7 @@ if (self.hasstatus("extrajackpotskill"))
 	SkillsCount += self.getstatus("extrajackpotskill").value;
 }
 
-if(args.length == 1)
+if(args.length > 0)
 {
 	UpgradeAll = args[0];
 }
@@ -149,9 +149,9 @@ for(i in 0...SkillsCount)
 
 /*DEBUG STUFF, COMMENT OUT WHEN PLAYTESTING.*/
 
-/*ChosenJackpotSkills[2] = "Reshuffle";
-ChosenJackpotSkills[1] = "The Blue Devil";
-ChosenJackpotSkills[0] = "The Blue Devil+";*/
+/*ChosenJackpotSkills[2] = "Reshuffle";*/
+ChosenJackpotSkills[1] = "PC Fans";
+ChosenJackpotSkills[0] = "PC Fans+";
 
 for (i in 0...SkillsCount)
 {
