@@ -1,4 +1,4 @@
-var commonlist_basic = ["Healing Crystal", "Bumpdacious", "Nudge", "Bonus Slot"];
+var commonlist_basic = ["Healing Crystal", "Bumpdacious", "Wraparound", "Bonus Slot"];
 var commonlist_advanced = ["Juggling Ball", "Reroll", "Bugfixing", "Short Circuit"];
 var floor2basic = ["Double Down", "Errorsurance"];
 var floor2advanced = ["Forcefield", "Midnight Charm"];
