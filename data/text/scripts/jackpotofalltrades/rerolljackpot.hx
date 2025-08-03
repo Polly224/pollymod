@@ -149,9 +149,9 @@ for(i in 0...SkillsCount)
 
 /*DEBUG STUFF, COMMENT OUT WHEN PLAYTESTING.*/
 
-/*ChosenJackpotSkills[2] = "Reshuffle";*/
+/*ChosenJackpotSkills[2] = "Reshuffle";
 ChosenJackpotSkills[1] = "Jimbo's Trick+";
-ChosenJackpotSkills[0] = "Jimbo's Trick";
+ChosenJackpotSkills[0] = "Jimbo's Trick";*/
 
 for (i in 0...SkillsCount)
 {
@@ -166,10 +166,19 @@ for (i in 0...SkillsCount)
 /*--- EQUIPMENT/SKILL SPECIFIC FIXES ---*/
 
 /*Ensures that Split Path will only ever show up in the 2nd jackpot slot.*/
-if (ChosenJackpotSkills.indexOf("Split Path") != -1 && ChosenJackpotSkills.indexOf("Split Path") != 1)
+if (ChosenJackpotSkills.indexOf("Split Path") != -1 || ChosenJackpotSkills.indexOf("Split Path+") != 1)
 {
 	var otherAbility = ChosenJackpotSkills[1];
-	var splitSlot = ChosenJackpotSkills.indexOf("Split Path");
+	var splitSlot = 0;
+
+    for (i in 0...ChosenJackpotSkills.length)
+	{
+		if (ChosenJackpotSkills[i] == "Split Path" || ChosenJackpotSkills[i] == "Split Path+")
+		{
+			splitSlot = i;
+		}
+	}
+	
 	ChosenJackpotSkills[splitSlot] = otherAbility;
 	ChosenJackpotSkills[1] = "Split Path";
 }

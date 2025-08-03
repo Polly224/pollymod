@@ -13,7 +13,7 @@
 [75%][confuse] Manual Roll -- Set your skill to Autoroll // [reduce] Nanomachines -- Gain [reduce]2 reduce           .
          [75%][ice] PC Fans -- Gain [ice]3 freeze // [fire] Timebomb -- Do [fire]15 damage in 3 turns
 [120%][confuse][]Rare Skills (1 in 4 chance to roll)[confuse]
-[75%][gold] Stored Prize -- Next jackpot skill goes twice // [gold] Split Path -- Trigger all other jackpot abilities  .
+[75%][gold] Stored Prize -- Next jackpot skill goes twice // [gold] Split Path -- Trigger adjacent jackpot skills          .
        [75%][jackpot] Fifths roll -- Increase jackpot range next turn // [lock] Containment Wave -- Lock a random enemy equipment
                    [75%][heal] Lifeblood -- Heal [heal]5 health // [jinx] Limit Break -- Set an equipment to normal slots only
 

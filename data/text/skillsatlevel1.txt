@@ -13,7 +13,7 @@
 [120%][confuse][]Rare Skills (1 in 4 chance to roll)[confuse]
 
 [gold] Stored Prize -- Next jackpot skill goes twice
-[gold] Split Path -- Trigger all other jackpot abilities
+[gold] Split Path -- Trigger adjacent jackpot skills
 
 
 

@@ -16,7 +16,7 @@
         [75%][weaken] Stress -- Inflict [weaken]1 weaken // [dice] The 50/50 -- Duplicate or lose all dice
 [75%][potion] Used Syringe -- Inflict a random bad status effect
 [120%][confuse][]Rare Skills (1 in 4 chance to roll)[confuse]
-[75%][gold] Stored Prize -- Next jackpot skill goes twice // [gold] Split Path -- Trigger all other jackpot abilities
+[75%][gold] Stored Prize -- Next jackpot skill goes twice // [gold] Split Path -- Trigger adjacent jackpot skills
         [75%][jackpot] Fifths roll -- Increase jackpot range next turn // [lock] Containment Wave -- Lock a random enemy equipment
 
 
