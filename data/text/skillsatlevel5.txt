@@ -12,7 +12,7 @@
    [75%][fury] Persona -- Repeat next action // [fire][ice][shock] Tri Attack -- Inflict [fire][], [ice] and [shock]
        [75%][dice] Double Roll -- Roll 2 dice // [dice] Jimbo's Trick -- x1.5 mult all your dice
       [75%][weaken] Mad Dog's Howl -- Inflict [weaken]3 weaken // [jinx] Prince's Steal -- Borrow equipment and upgrade it
-[120%][confuse][]Rare Skills (1 in 4 chance to roll)[confuse]
+[120%][confuse][]Rare Skills (1 in 6 chance to roll)[confuse]
 [75%][gold] Stored Prize -- Next jackpot skill goes twice // [gold] Split Path -- Trigger adjacent jackpot skills // [lock] Containment Wave -- Lock a random enemy equipment
         [75%][heal] Lifeblood -- Heal [heal]8 // [jinx] Limit Break -- Set an equipment to normal slots only // [confuse] Ka... Ching! -- Gain [star]1 Guaranteed Autoroll
 [75%][sword][health] Feed -- Do [sword]6 damage, +2 max health if fatal // [shield][thorns] Cthulhu's Shield -- Gain [shield]4 shield and [thorns]2 thorns // [devilfire] The Blue Devil -- Burn all dice                                   .

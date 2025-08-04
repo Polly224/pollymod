@@ -102,7 +102,7 @@ var ChosenJackpotSkills = [];
 
 for(i in 0...SkillsCount)
 {
-	if(rand([1,2,3,4]) == 1 && RareJackpotOptions.length > 0)
+	if(rand([1,2,3,4,5,6]) == 1 && RareJackpotOptions.length > 0)
 	{
 		var s = rand(RareJackpotOptions);
         ChosenJackpotSkills.push(s);

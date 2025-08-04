@@ -11,7 +11,7 @@
        [75%][thorns] Basil's Protection -- Gain [thorns]3 thorns // [heart] Blood Arrow -- Lose [heart]2 health, do [sword]10 damage
          [75%][dice] Dragon's Roll -- Roll a 10 // [sword] Headshot -- Reduce enemy health by [heart]7
 [75%][lock] Lock Advocate -- Lock [lock]1 dice // [fury] Persona -- Repeat next action          .
-[120%][confuse][]Rare Skills (1 in 4 chance to roll)[confuse]
+[120%][confuse][]Rare Skills (1 in 6 chance to roll)[confuse]
 [75%][gold] Stored Prize -- Next jackpot skill goes twice // [gold] Split Path -- Trigger adjacent jackpot skills      . 
 [75%][lock] Containment Wave -- Lock a random enemy equipment // [heal] Lifeblood -- Heal [heal]8 health                                                      .
 [75%][jinx] Limit Break -- Set an equipment to normal slots only // [shield][thorns] Cthulhu's Shield -- Gain [shield]4 shield and [thorns]2 thorns         .

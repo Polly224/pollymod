@@ -10,7 +10,7 @@
 [sword] Sniper Shot -- Reduce enemy health by [heart]5 // [reduce] Suit Up -- Gain [reduce]1 reduce                              .
        [heart] Syringe -- Drain [heart]3 health // [poison] Whoopie Cushion -- Lol. Lmao[;] even.
 
-[120%][confuse][]Rare Skills (1 in 4 chance to roll)[confuse]
+[120%][confuse][]Rare Skills (1 in 6 chance to roll)[confuse]
 
 [gold] Stored Prize -- Next jackpot skill goes twice
 [gold] Split Path -- Trigger adjacent jackpot skills
