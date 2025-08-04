@@ -1,4 +1,4 @@
-var JackpotOptions = ["Duplicate", "Midnight Snake", "Sandvich", "Suit Up", "Slingshot", "Syringe", "Lucky Roll", "Prickly Pear", "Sniper Shot", "Melting Ice", "Firey Roll", "Faulty Wiring", "Icy Roll", "Reshuffle", "Whoopie Cushion", "Reshuffle"];
+var JackpotOptions = ["Duplicate", "Midnight Snake", "Sandvich", "Suit Up", "Slingshot", "Syringe", "Lucky Roll", "Prickly Pear", "Sniper Shot", "Melting Ice", "Firey Roll", "Faulty Wiring", "Icy Roll", "Whoopie Cushion", "Reshuffle"];
 var RareJackpotOptions = ["Stored Prize", "Split Path"];
 var UpgradeAll = false;
 var IsReroll = false;
@@ -29,7 +29,6 @@ for(eq in self.equipment)
 }
 if (ctdowncheck)
 {
-    JackpotOptions.push("Final Countdown");
 	JackpotOptions.push("Final Countdown");
 }
 
@@ -130,7 +129,7 @@ for(i in 0...SkillsCount)
 
 for(i in 0...SkillsCount)
 {
-	if (UpgradeAll || self.hasstatus("bsodtriggered"))
+	if (UpgradeAll)
 	{
 		ChosenJackpotSkills[i] += "+";
 	} 
@@ -166,21 +165,23 @@ for (i in 0...SkillsCount)
 /*--- EQUIPMENT/SKILL SPECIFIC FIXES ---*/
 
 /*Ensures that Split Path will only ever show up in the 2nd jackpot slot.*/
-if (ChosenJackpotSkills.indexOf("Split Path") != -1 || ChosenJackpotSkills.indexOf("Split Path+") != 1)
+if (ChosenJackpotSkills.indexOf("Split Path") != -1 || ChosenJackpotSkills.indexOf("Split Path+") != -1)
 {
 	var otherAbility = ChosenJackpotSkills[1];
 	var splitSlot = 0;
+	var skillSet = "";
 
     for (i in 0...ChosenJackpotSkills.length)
 	{
 		if (ChosenJackpotSkills[i] == "Split Path" || ChosenJackpotSkills[i] == "Split Path+")
 		{
 			splitSlot = i;
+			skillSet = ChosenJackpotSkills[i];
 		}
 	}
 	
 	ChosenJackpotSkills[splitSlot] = otherAbility;
-	ChosenJackpotSkills[1] = "Split Path";
+	ChosenJackpotSkills[1] = skillSet;
 }
 
 /*Ensures that Jamie gets credited if the skill is rolled*/
@@ -191,7 +192,7 @@ if ((ChosenJackpotSkills.indexOf('The Blue Devil') != -1 || ChosenJackpotSkills.
 
 if (self.hasstatus("bsodtriggered"))
 {
-	ChosenJackpotSkills = [ChosenJackpotSkills[0]];
+	ChosenJackpotSkills = [ChosenJackpotSkills[0], ChosenJackpotSkills[1], ChosenJackpotSkills[2]];
 }
 
 

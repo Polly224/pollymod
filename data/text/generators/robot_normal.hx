@@ -140,6 +140,6 @@ if (getfinalboss() == "Drake"){
 lastfloor
   .additems(items, gooditems)
   .setlocation('BOSS')
-  .setmusic("music_boss_audrey")
+  .setmusic(pick(["music_boss_audrey", "music_boss_aoife", "music_boss_beatrice"]))
   .addotherstuff(otherstuff, goodotherstuff)
   .generate();

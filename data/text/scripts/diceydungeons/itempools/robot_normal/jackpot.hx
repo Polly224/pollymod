@@ -1,12 +1,12 @@
-var commonlist_basic = ["Healing Crystal", "Bumpdacious", "Wraparound", "Bonus Slot"];
-var commonlist_advanced = ["Juggling Ball", "Reroll", "Bugfixing", "Short Circuit", "Rng Manipulation"];
-var floor2basic = ["Double Down", "Errorsurance"];
+var commonlist_basic = ["Bumpdacious", "Wraparound", "Bonus Slot"];
+var commonlist_advanced = ["Reroll", "Bugfixing", "Short Circuit", "Rng Manipulation", "Empty Slot"];
+var floor2basic = ["Double Down", "Errorsurance", "Salt In The Wound"];
 var floor2advanced = ["Forcefield", "Midnight Charm"];
-var floor2items = ["Empty Slot"];
+var floor2items = ["Trickle Charge"];
 var floor3basic = ["Hive Network", "Pop Off"];
-var floor3advanced = ["Safety Knife", "Egg Basket", "Sunken Costs"];
+var floor3advanced = ["Safety Knife", "Sunken Costs"];
 var tradeoffer = ["Rng Manipulation","Trickle Charge", "Double Down", "Errorsurance","any"];
-var traderesult = ["Insider Info", "Salt In The Wound"];
+var traderesult = ["Insider Info", "Egg Basket"];
 var vampireitem = ["Wooden Stake"];
 var myitempools = [commonlist_basic,commonlist_advanced,floor2basic,floor2advanced,floor2items,floor3basic,floor3advanced,tradeoffer,traderesult,vampireitem];
 return myitempools;
