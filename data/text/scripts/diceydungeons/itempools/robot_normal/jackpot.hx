@@ -1,10 +1,10 @@
-var commonlist_basic = ["Bumpdacious", "Wraparound", "Bonus Slot"];
+var commonlist_basic = ["Bumpdacious", "Wraparound", "Safety Knife"];
 var commonlist_advanced = ["Reroll", "Bugfixing", "Short Circuit", "Rng Manipulation", "Empty Slot"];
-var floor2basic = ["Double Down", "Errorsurance", "Salt In The Wound"];
-var floor2advanced = ["Forcefield", "Midnight Charm"];
+var floor2basic = ["Double Down", "Errorsurance", "Salt In The Wound", "Exchange Rates"];
+var floor2advanced = ["Interest Gain", "Midnight Charm"];
 var floor2items = ["Trickle Charge"];
 var floor3basic = ["Hive Network", "Pop Off"];
-var floor3advanced = ["Safety Knife", "Sunken Costs"];
+var floor3advanced = ["Bonus Slot", "Sunken Costs"];
 var tradeoffer = ["Rng Manipulation","Trickle Charge", "Double Down", "Errorsurance","any"];
 var traderesult = ["Insider Info", "Egg Basket"];
 var vampireitem = ["Wooden Stake"];

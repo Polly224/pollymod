@@ -102,7 +102,8 @@ gooditems = [pick([commonlist_advanced.pop(), commonlist_advanced.pop()])];
 
 otherstuff = [health(), health()];
 goodotherstuff = [
-  trade(tradeoffer,traderesult)
+  trade(tradeoffer,traderesult),
+  shop([commonlist_basic.pop(), commonlist_basic.pop(), commonlist_advanced.pop()])
 ];
 
 addfloor("normal")
