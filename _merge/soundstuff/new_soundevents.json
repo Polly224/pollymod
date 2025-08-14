@@ -1,0 +1,78 @@
+{
+    "chat_pirate_voice": {
+        "playsounds": [
+            {
+                "channel": 2,
+                "folder": "voiceovers/pirate/action",
+                "sequential": true,
+                "tag": "action"
+            },
+            {
+                "channel": 2,
+                "folder": "sfx/chat/pirate/action",
+                "sequential": true,
+                "tag": "determined"
+            },
+            {
+                "channel": 2,
+                "folder": "voiceovers/pirate/personality",
+                "sequential": true,
+                "tag": "normal"
+            },
+            {
+                "channel": 2,
+                "folder": "voiceovers/pirate/personality",
+                "sequential": true,
+                "tag": "personality"
+            },
+            {
+                "channel": 2,
+                "folder": "voiceovers/pirate/personality",
+                "sequential": true,
+                "tag": "thinking"
+            },
+            {
+                "channel": 2,
+                "folder": "voiceovers/pirate/action",
+                "sequential": true,
+                "tag": "worried"
+            }
+        ]
+    },
+    "chat_pirate": {
+        "playsounds": [
+            {
+                "channel": 0,
+                "delay": 0,
+                "effect": "",
+                "file": "sfx/chat/monster2/chat",
+                "filter": "",
+                "loop": false,
+                "panning": {
+                    "fade": 0,
+                    "max": 0,
+                    "min": 0,
+                    "random": false,
+                    "value": 0
+                },
+                "pitch": {
+                    "fade": 0,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 1
+                },
+                "position": 0,
+                "syncbpm": 0,
+                "tag": "",
+                "volume": {
+                    "fade": 0,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 1
+                }
+            }
+        ]
+    }
+}
