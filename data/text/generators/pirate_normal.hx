@@ -43,7 +43,7 @@ var goodotherstuff = [];
 
 //Floor 1:
 items = [];
-gooditems = [commonlist_basic.pop()];
+gooditems = [pick(["Hooked Roll", "Fruit Barrel", "Rocking Waves"])];
 otherstuff = [];
 goodotherstuff = [];
 
