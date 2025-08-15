@@ -43,7 +43,7 @@ var goodotherstuff = [];
 
 //Floor 1:
 items = [];
-gooditems = [pick(["Hooked Roll", "Fruit Barrel", "Rocking Waves"])];
+gooditems = [pick(["Hooked Roll", "Rolling Barrel", "Rocking Waves"])];
 otherstuff = [];
 goodotherstuff = [];
 
