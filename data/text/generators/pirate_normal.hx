@@ -40,10 +40,16 @@ var items = [];
 var gooditems = [];
 var otherstuff = [];
 var goodotherstuff = [];
+var dicemanipstuff = ["Hooked Roll", "Rolling Barrel", "Rocking Waves", "Pick Leg"];
+var attackstuff = ["Pocket Hook", "Which Way, Captain?", "Keelhaul"];
+var passivestuff = ["Reinyarrrnation", "Daily Doubloons", "Landlubber's Hack"];
+shuffle(dicemanipstuff);
+shuffle(attackstuff);
+shuffle(passivestuff);
 
 //Floor 1:
 items = [];
-gooditems = [pick(["Hooked Roll", "Rolling Barrel", "Rocking Waves"])];
+gooditems = [dicemanipstuff.pop()];
 otherstuff = [];
 goodotherstuff = [];
 
@@ -61,7 +67,7 @@ shuffle(commonlist_advanced);
 
 items = [];
 
-gooditems = [pick(floor2items)];
+gooditems = [attackstuff.pop()];
 otherstuff = [health(), health()];
 goodotherstuff = [
   shop(shuffle([commonlist_advanced.pop(), commonlist_basic.pop(), commonlist_advanced.pop()]))
