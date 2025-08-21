@@ -41,7 +41,7 @@ var gooditems = [];
 var otherstuff = [];
 var goodotherstuff = [];
 var dicemanipstuff = ["Hooked Roll", "Rolling Barrel", "Rocking Waves", "Pick Leg"];
-var attackstuff = ["Pocket Hook", "Which Way, Captain?", "Keelhaul"];
+var attackstuff = ["Pocket Hook", "Which Way, Captain?", "Keelhaul", "Pillage"];
 var passivestuff = ["Reinyarrrnation", "Daily Doubloons", "Landlubber's Hack"];
 shuffle(dicemanipstuff);
 shuffle(attackstuff);
