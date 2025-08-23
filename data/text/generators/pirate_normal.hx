@@ -1,51 +1,17 @@
-var thisgenerator = "robot_normal";
-var commonlist_basic = [];
-var commonlist_advanced = [];
-var floor2basic = [];
-var floor2advanced = [];
-var floor2items = [];
-var floor3basic = [];
-var floor3advanced = [];
-var tradeoffer = [];
-var traderesult = [];
-var vampireitem = [];
-var itempools = [commonlist_basic,commonlist_advanced,floor2basic,floor2advanced,floor2items,floor3basic,floor3advanced,tradeoffer,traderesult,vampireitem]; //Initialize lists like this for clarity
-
-/*NOTICE TO MODDERS:
-  All you need to do to get your items in here is append the name of your mod to:
-    diceydungeons/itempools/[this generator's name minus file extension]/scriptstorun.txt
-  Then add a .hx script of the appropriate name to that directory that returns an array containing arrays of items
-  you want to add to each of the generator's item pools. Use the vanilla script for this generator for reference -
-  it's important you return the right amount of arrays!
-  
-  (If you want to replace the generator entirely, in case you have an extremely specific item pool in mind, you should
-  get rid of declaring itempools and add items directly to the above lists (or replace pops from them with strings).
-  Note however that other mods will no longer be able to add items here.)*/
-  
-itempools = runscript("diceydungeons/flexible_generator",[thisgenerator,itempools]);
-var commonlist_basic = itempools[0];
-var commonlist_advanced = itempools[1];
-var floor2basic = itempools[2];
-var floor2advanced = itempools[3];
-var floor2items = itempools[4];
-var floor3basic = itempools[5];
-var floor3advanced = itempools[6];
-var tradeoffer = itempools[7];
-var traderesult = itempools[8];
-var vampireitem = itempools[9];
-
 usestandardenemies();
 
 var items = [];
 var gooditems = [];
 var otherstuff = [];
 var goodotherstuff = [];
-var dicemanipstuff = ["Hooked Roll", "Rolling Barrel", "Rocking Waves", "Pick Leg"];
-var attackstuff = ["Pocket Hook", "Which Way, Captain?", "Keelhaul", "Pillage"];
-var passivestuff = ["Reinyarrrnation", "Daily Doubloons", "Landlubber's Hack"];
+var attackstuff = ["Pocket Hook", "Which Way, Captain?", "Keelhaul", "Pillage", "Walk The Plank", "Man O War"];
+var dicemanipstuff = ["Hooked Roll", "Rolling Barrel", "Rocking Waves", "Pick Leg", "Capsize"];
+var passivestuff = ["Reinyarrrnation", "Daily Doubloons", "Landlubber's Hack", "Buried Treasure"];
+var strongstuff = ["Strengthen The Hull", "Treasure Trove"];
 shuffle(dicemanipstuff);
 shuffle(attackstuff);
 shuffle(passivestuff);
+shuffle(strongstuff);
 
 //Floor 1:
 items = [];
@@ -59,18 +25,12 @@ addfloor("tiny")
   .generate();
   
 //Floor 2:
-commonlist_basic = commonlist_basic.concat(floor2basic);
-shuffle(commonlist_basic);
-
-commonlist_advanced = commonlist_advanced.concat(floor2advanced);
-shuffle(commonlist_advanced);
-
 items = [];
 
-gooditems = [attackstuff.pop()];
+gooditems = ["Charge 'N Load"];
 otherstuff = [health(), health()];
 goodotherstuff = [
-  shop(shuffle([commonlist_advanced.pop(), commonlist_basic.pop(), commonlist_advanced.pop()]))
+  shop(shuffle([attackstuff.pop(), "health", passivestuff.pop()]))
 ];
 
 addfloor("normal")
@@ -79,13 +39,7 @@ addfloor("normal")
   .generate();
   
 //Floor 3:
-commonlist_basic = commonlist_basic.concat(floor3basic);
-shuffle(commonlist_basic);
-
-commonlist_advanced = commonlist_advanced.concat(floor3advanced);
-shuffle(commonlist_advanced);
-
-items = [commonlist_basic.pop()];
+items = [dicemanipstuff.pop()];
 gooditems = [];
 
 otherstuff = [
@@ -93,7 +47,7 @@ otherstuff = [
   health()
 ];
 goodotherstuff = [
-  shop([commonlist_basic.pop(), commonlist_basic.pop(), commonlist_advanced.pop()]), 
+  shop([attackstuff.pop(), passivestuff.pop(), "health"]), 
   upgrade()
 ];
 
@@ -104,12 +58,12 @@ addfloor("normal")
   
 //Floor 4:
 items = [];
-gooditems = [pick([commonlist_advanced.pop(), commonlist_advanced.pop()])];
+gooditems = [pick([attackstuff.pop(), dicemanipstuff.pop()])];
 
 otherstuff = [health(), health()];
 goodotherstuff = [
-  trade(tradeoffer,traderesult),
-  shop([commonlist_basic.pop(), commonlist_basic.pop(), commonlist_advanced.pop()])
+  trade(["Charge 'N Load", "Pirate Hook", "Rocking Waves", "Rolling Barrel", "Pick Leg", "any"],[strongstuff.pop()]),
+  shop([dicemanipstuff.pop(), "upgrade", passivestuff.pop()])
 ];
 
 addfloor("normal")
@@ -119,11 +73,11 @@ addfloor("normal")
   
 //Floor 5:
 items = [];
-gooditems = [commonlist_basic.pop()];
+gooditems = [attackstuff.pop()];
 
 otherstuff = [health(), health()];
 goodotherstuff = [
-  shop(shuffle(["health", commonlist_advanced.pop(), commonlist_advanced.pop()])), 
+  shop(shuffle(["health", "upgrade", strongstuff.pop()])), 
   upgrade()
 ];
 
@@ -141,7 +95,7 @@ goodotherstuff = [];
 var lastfloor = addfloor("boss");
 
 if (getfinalboss() == "Drake"){
-  items.push(vampireitem.pop());
+  items.push("Wooden Stake");
 }
 
 lastfloor

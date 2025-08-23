@@ -136,3 +136,4 @@ The Blue Devil,Burn all dice,inflict(~fire~[;] ALL); sfx(~_fire~);
 The Blue Devil+,[90%]Burn all dice[;] [yellow]inflict [blind][yellow]2 [yellow]blind[][][],inflict(~fire~[;] ALL); sfx(~_fire~); inflict(~blind~[;] 2); sfx(~_blind~);
 bigbertha,This equipment's effects are|passive[;] gained on pickup,
 Play Hooky,Turn all [recycle]re-uses into [retrigger]re-triggers this turn (and vice versa),inflictself(~retriggerall~[;] 1); sfx(~_fury~); runscript(~pirate/retriggerdescreplace~[;] [~recycle~[;] ~placeholder~]); runscript(~pirate/retriggerdescreplace~[;] [~re-use~[;] ~placeholdy~]); runscript(~pirate/retriggerdescreplace~[;] [~re-trigger~[;] ~re-use~]); runscript(~pirate/retriggerdescreplace~[;] [~retrigger~[;] ~recycle~]); runscript(~pirate/retriggerdescreplace~[;] [~placeholder~[;] ~retrigger~]); runscript(~pirate/retriggerdescreplace~[;] [~placeholdy~[;] ~re-trigger~]);
+goldenflintlock,Do [sword]<double> damage[;]|[recycle] on 6,
