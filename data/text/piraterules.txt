@@ -1,0 +1,12 @@
+Pirate is a character heavily based on the original enemy's two equipment,
+with gimmicks revolving around [recycle]re-uses and the newly added [retrigger]re-triggers!
+Whenever you see an equipment with the text "[recycle] on n", that means
+you can use that equipment a 2nd time if you insert a dice with the value n.
+Think of Pirate Hook in the base-game!
+
+[retrigger]Re-triggers function similarly. Instead of letting you put in a 2nd dice,
+[retrigger]re-triggers trigger the same equipment again with the same dice inserted!
+This also still triggers any "on [recycle][]" effects.
+
+Have fun~! 
+- [jinx] Polly [jinx]

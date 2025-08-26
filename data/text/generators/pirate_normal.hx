@@ -5,20 +5,26 @@ var gooditems = [];
 var otherstuff = [];
 var goodotherstuff = [];
 var attackstuff = ["Pocket Hook", "Which Way, Captain?", "Keelhaul", "Pillage", "Walk The Plank", "Man O War"];
-var dicemanipstuff = ["Hooked Roll", "Rolling Barrel", "Rocking Waves", "Pick Leg", "Capsize", "Raft Up"];
+var dicemanipstuff = ["Hooked Roll", "Rolling Barrel", "Rocking Waves", "Pick Leg", "Capsize", "Raft Up", "Lucky Pull"];
 var passivestuff = ["Reinyarrrnation", "Daily Doubloons", "Landlubber's Hack", "Buried Treasure"];
-var strongstuff = ["Strengthen The Hull", "Treasure Trove", "Safety Net"];
+var strongstuff = ["Strengthen The Hull", "Treasure Trove", "Safety Net", "Reel It In"];
 shuffle(dicemanipstuff);
 shuffle(attackstuff);
 shuffle(passivestuff);
 shuffle(strongstuff);
+var fickleadded = false;
 
 //Floor 1:
 items = [];
 gooditems = [dicemanipstuff.pop()];
 otherstuff = [];
 goodotherstuff = [];
-
+if((dicemanipstuff.indexOf("Lucky Pull") == -1 || passivestuff.indexOf("Landlubber's Hack") == -1) && !fickleadded)
+{
+    attackstuff.push("Fickle Chain");
+    shuffle(attackstuff);
+    fickleadded = true;
+}
 addfloor("tiny")
   .additems(items, gooditems)
   .addotherstuff(otherstuff, goodotherstuff)
@@ -27,12 +33,17 @@ addfloor("tiny")
 //Floor 2:
 items = [];
 
-gooditems = ["Charge 'N Load"];
+gooditems = [attackstuff.pop()];
 otherstuff = [health(), health()];
 goodotherstuff = [
   shop(shuffle([attackstuff.pop(), "health", passivestuff.pop()]))
 ];
-
+if ((dicemanipstuff.indexOf("Lucky Pull") == -1 || passivestuff.indexOf("Landlubber's Hack") == -1) && !fickleadded)
+{
+    attackstuff.push("Fickle Chain");
+    shuffle(attackstuff);
+    fickleadded = true;
+}
 addfloor("normal")
   .additems(items, gooditems)
   .addotherstuff(otherstuff, goodotherstuff)
@@ -50,7 +61,12 @@ goodotherstuff = [
   shop([attackstuff.pop(), passivestuff.pop(), "health"]), 
   upgrade()
 ];
-
+if ((dicemanipstuff.indexOf("Lucky Pull") == -1 || passivestuff.indexOf("Landlubber's Hack") == -1) && !fickleadded)
+{
+    attackstuff.push("Fickle Chain");
+    shuffle(attackstuff);
+    fickleadded = true;
+}
 addfloor("normal")
   .additems(items, gooditems)
   .addotherstuff(otherstuff, goodotherstuff)
@@ -65,16 +81,26 @@ goodotherstuff = [
   trade(["Charge 'N Load", "Pirate Hook", "Rocking Waves", "Rolling Barrel", "Pick Leg", "any"],[strongstuff.pop()]),
   shop([dicemanipstuff.pop(), "upgrade", passivestuff.pop()])
 ];
-
+if ((dicemanipstuff.indexOf("Lucky Pull") == -1 || passivestuff.indexOf("Landlubber's Hack") == -1) && !fickleadded)
+{
+    attackstuff.push("Fickle Chain");
+    shuffle(attackstuff);
+    fickleadded = true;
+}
 addfloor("normal")
   .additems(items, gooditems)
   .addotherstuff(otherstuff, goodotherstuff)
   .generate();
-  
+
 //Floor 5:
+if (!fickleadded)
+{
+    attackstuff.push("Fickle Chain");
+    shuffle(attackstuff);
+    fickleadded = true;
+}
 items = [];
 gooditems = [attackstuff.pop()];
-
 otherstuff = [health(), health()];
 goodotherstuff = [
   shop(shuffle(["health", "upgrade", strongstuff.pop()])), 
