@@ -6,8 +6,8 @@ var otherstuff = [];
 var goodotherstuff = [];
 var attackstuff = ["Pocket Hook", "Which Way, Captain?", "Keelhaul", "Pillage", "Walk The Plank", "Man O War"];
 var dicemanipstuff = ["Hooked Roll", "Rolling Barrel", "Rocking Waves", "Pick Leg", "Capsize", "Raft Up", "Lucky Pull"];
-var passivestuff = ["Reinyarrrnation", "Daily Doubloons", "Landlubber's Hack", "Buried Treasure"];
-var strongstuff = ["Strengthen The Hull", "Treasure Trove", "Safety Net", "Reel It In"];
+var passivestuff = ["Reinyarrrnation", "Daily Doubloons", "Landlubber's Hack", "Clap of Thunder", "Buried Treasure"];
+var strongstuff = ["Strengthen The Hull", "Treasure Trove", "Safety Net", "Reel It In", "Bottomless Barrel"];
 shuffle(dicemanipstuff);
 shuffle(attackstuff);
 shuffle(passivestuff);
@@ -52,6 +52,8 @@ addfloor("normal")
 //Floor 3:
 items = [dicemanipstuff.pop()];
 gooditems = [];
+attackstuff.push("Muzzleloading");
+shuffle(attackstuff);
 
 otherstuff = [
   health(), 
