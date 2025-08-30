@@ -37,14 +37,13 @@ if(skipsetup) trace("skipping setup");
                     if (mydice.basevalue == -6) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice-6\",0,0);
 					if (mydice.basevalue == 11) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice11\",0,0);*/
 
-                    if (sprite + 1 == \"HaxegonSprite1\") { 
 						mydice.showoverlayimage = true; 
 						mydice.overlayimage_xoff = 0; 
 						mydice.overlayimage_yoff = 0; 
 						mydice.overlayimage_animate = 1; 
 						mydice.overlayimage_repeat = 1; 
 						mydice.graphic.overlayimage = sprite; 
-					}
+					
 				}
 			}
 		}
