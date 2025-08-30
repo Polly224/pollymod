@@ -6,3 +6,4 @@ virus,virus,0x000000,IMAGE
 devilfire,devilfire,0x000070,IMAGE
 slot,slot,0xFFFFFF,IMAGE
 retrigger,retrigger,0xEA4340,IMAGE
+reuseblock,reuseblock,0xFF000C,IMAGE
