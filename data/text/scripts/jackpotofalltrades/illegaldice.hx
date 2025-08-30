@@ -14,13 +14,17 @@ if(skipsetup) trace("skipping setup");
 	if (self.dicepool.length > 0) {
 		for (mydice in self.dicepool) {
 			if (mydice.available() && !mydice.blind) {
-				if ((mydice.basevalue >= 7 || mydice.basevalue <= 0)) {
+				if ((mydice.basevalue + mydice.modifier >= 7 || mydice.basevalue + mydice.modifier <= 0)) {
+					if(mydice.basevalue < 1 || mydice.basevalue > 6) {
+						mydice.modifier = mydice.basevalue - 6;
+						mydice.basevalue = 6;
+					}
 					var sprite = 0;
-					if((mydice.basevalue < 1 && mydice.basevalue > -7) || (mydice.basevalue < 17 && mydice.basevalue > 6))
+					if((mydice.basevalue + mydice.modifier < 1 && mydice.basevalue + mydice.modifier > -7) || (mydice.basevalue + mydice.modifier < 17 && mydice.basevalue + mydice.modifier > 6))
 					{
-						sprite = new displayobjects.HaxegonSprite(0, 0,\"dicesprites/dice\" + mydice.basevalue,0,0);
+						sprite = new displayobjects.HaxegonSprite(0, 0,\"dicesprites/dice\" + (mydice.basevalue + mydice.modifier),0,0);
                     }
-					if(mydice.basevalue > 16)
+					if(mydice.basevalue + mydice.modifier > 16)
 					{
                     sprite = new displayobjects.HaxegonSprite(0, 0,\"dicesprites/dicehigh\",0,0);
 					}
@@ -54,32 +58,52 @@ if(skipsetup) trace("skipping setup");
 	}
 	if (target.dicepool.length > 0) {
 		for (mydice in target.dicepool) {
-			if ((mydice.basevalue >= 7 || mydice.basevalue <= 0)) {
-				var sprite = 0;
-					if (mydice.basevalue == 0) sprite = new displayobjects.HaxegonSprite(0, 0,\"dicesprites/dice0\",0,0);
+            if (mydice.available() && !mydice.blind)
+            {
+                if ((mydice.basevalue + mydice.modifier >= 7 || mydice.basevalue + mydice.modifier <= 0))
+                {
+                    if (mydice.basevalue < 1 || mydice.basevalue > 6)
+                    {
+                        mydice.modifier = mydice.basevalue - 6;
+                        mydice.basevalue = 6;
+                    }
+                    var sprite = 0;
+                    if ((mydice.basevalue + mydice.modifier < 1 && mydice.basevalue + mydice.modifier > -7) || (mydice.basevalue + mydice.modifier < 17 && mydice.basevalue + mydice.modifier > 6))
+                    {
+                        sprite = new displayobjects.HaxegonSprite(0, 0,\"dicesprites/dice\" + (mydice.basevalue + mydice.modifier),0,0);
+                        }
+                    if (mydice.basevalue + mydice.modifier > 16)
+                    {
+                        sprite = new displayobjects.HaxegonSprite(0, 0,\"dicesprites/dicehigh\",0,0);
 
-                    if (mydice.basevalue == 7) sprite = new displayobjects.HaxegonSprite(0, 0,\"dicesprites/dice7\",0,0);
-                    if (mydice.basevalue == 8) sprite = new displayobjects.HaxegonSprite(0, 0,\"dicesprites/dice8\",0,0);
-                    if (mydice.basevalue == 9) sprite = new displayobjects.HaxegonSprite(0, 0,\"dicesprites/dice9\",0,0);
+                        }
+                    /*if (mydice.basevalue == 0) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice0\",0,0);
+                    if (mydice.basevalue == 7) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice7\",0,0);
+                    if (mydice.basevalue == 8) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice8\",0,0);
+                    if (mydice.basevalue == 9) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice9\",0,0);
+                    if (mydice.basevalue == 10) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice10\",0,0);
+                    if (mydice.basevalue == -1) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice-1\",0,0);
+                    if (mydice.basevalue == -2) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice-2\",0,0);
+                    if (mydice.basevalue == -3) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice-3\",0,0);
+                    if (mydice.basevalue == -4) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice-4\",0,0);
+                    if (mydice.basevalue == -5) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice-5\",0,0);
+                    if (mydice.basevalue == -6) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice-6\",0,0);
+                    if (mydice.basevalue == 11) sprite = new displayobjects.HaxegonSprite(0,0,\"dicesprites/dice11\",0,0);*/
 
-                    if (mydice.basevalue == 10) sprite = new displayobjects.HaxegonSprite(0, 0,\"dicesprites/dice10\",0,0);
-                    if (mydice.basevalue == -1) sprite = new displayobjects.HaxegonSprite(0, 0,\"dicesprites/dice-1\",0,0);
-                    if (mydice.basevalue == -2) sprite = new displayobjects.HaxegonSprite(0, 0,\"dicesprites/dice-2\",0,0);
-                    if (mydice.basevalue == -3) sprite = new displayobjects.HaxegonSprite(0, 0,\"dicesprites/dice-3\",0,0);
-                    if (mydice.basevalue == -4) sprite = new displayobjects.HaxegonSprite(0, 0,\"dicesprites/dice-4\",0,0);
-                    if (mydice.basevalue == -5) sprite = new displayobjects.HaxegonSprite(0, 0,\"dicesprites/dice-5\",0,0);
-                    if (mydice.basevalue == -6) sprite = new displayobjects.HaxegonSprite(0, 0,\"dicesprites/dice-6\",0,0);
+                    mydice.showoverlayimage = true;
+                    mydice.overlayimage_xoff = 0;
+                    mydice.overlayimage_yoff = 0;
+                    mydice.overlayimage_animate = 1;
+                    mydice.overlayimage_repeat = 1;
+                    mydice.graphic.overlayimage = sprite;
 
-                if (sprite + 1 == \"HaxegonSprite1\") { 
-					mydice.showoverlayimage = true; 
-					mydice.overlayimage_xoff = 0; 
-					mydice.overlayimage_yoff = 0; 
-					mydice.overlayimage_animate = 1; 
-					mydice.overlayimage_repeat = 1; 
-					mydice.graphic.overlayimage = sprite; 
-				}
-			}
-		}
+                }
+            }
+            else
+            {
+                mydice.showoverlayimage = false;
+            }
+        }
 	}";
 	
 	if(self.isplayer) s.execute(self,target);
