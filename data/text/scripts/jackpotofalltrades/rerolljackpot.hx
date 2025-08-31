@@ -150,7 +150,7 @@ for(i in 0...SkillsCount)
 
 /*ChosenJackpotSkills[2] = "Reshuffle";
 ChosenJackpotSkills[1] = "Jimbo's Trick+";
-ChosenJackpotSkills[0] = "Jimbo's Trick";*/
+ChosenJackpotSkills[0] = "The Blue Devil";*/
 
 for (i in 0...SkillsCount)
 {
