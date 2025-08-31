@@ -5,7 +5,7 @@ var gooditems = [];
 var otherstuff = [];
 var goodotherstuff = [];
 var attackstuff = ["Pocket Hook", "Which Way Captain?", "Keelhaul", "Pillage", "Walk The Plank", "Man O War"];
-var dicemanipstuff = ["Hooked Roll", "Rolling Barrel", "Rocking Waves", "Pick Leg", "Capsize", "Raft Up", "Lucky Pull"];
+var dicemanipstuff = ["Hooked Roll", "Rolling Barrel", "Rocking Waves", "Capsize", "Raft Up"];
 var passivestuff = ["Reinyarrrnation", "Daily Doubloons", "Landlubber's Hack", "Clap of Thunder", "Buried Treasure"];
 var strongstuff = ["Strengthen The Hull", "Treasure Trove", "Safety Net", "Reel It In", "Bottomless Barrel"];
 shuffle(dicemanipstuff);
@@ -32,7 +32,10 @@ addfloor("tiny")
   
 //Floor 2:
 items = [];
-
+dicemanipstuff = dicemanipstuff.concat(["Hack And Slash", "Pick Leg"]);
+attackstuff.push("Glowing Cutlass");
+shuffle(dicemanipstuff);
+shuffle(attackstuff);
 gooditems = [attackstuff.pop()];
 otherstuff = [health(), health()];
 goodotherstuff = [
@@ -48,8 +51,10 @@ addfloor("normal")
   .additems(items, gooditems)
   .addotherstuff(otherstuff, goodotherstuff)
   .generate();
-  
+
 //Floor 3:
+dicemanipstuff.push("Lucky Pull");
+shuffle(dicemanipstuff);
 items = [dicemanipstuff.pop()];
 gooditems = [];
 attackstuff.push("Muzzleloading");
