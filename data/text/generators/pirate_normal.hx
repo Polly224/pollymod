@@ -4,12 +4,14 @@ var items = [];
 var gooditems = [];
 var otherstuff = [];
 var goodotherstuff = [];
-var attackstuff = ["Pocket Hook", "Which Way Captain?", "Keelhaul", "Pillage", "Walk The Plank", "Man O War"];
+var attackstuff = ["Pocket Hook", "Keelhaul", "Pillage", "Walk The Plank", "Man O War"];
+var defensestuff = ["Patch Up", "Which Way Captain?", "Reinforced Leg"];
 var dicemanipstuff = ["Hooked Roll", "Rolling Barrel", "Rocking Waves", "Capsize", "Raft Up"];
 var passivestuff = ["Reinyarrrnation", "Daily Doubloons", "Landlubber's Hack", "Clap of Thunder", "Buried Treasure"];
-var strongstuff = ["Strengthen The Hull", "Treasure Trove", "Safety Net", "Reel It In", "Bottomless Barrel"];
+var strongstuff = ["Strengthen The Hull", "Treasure Trove", "Safety Net", "Reel It In", "Bottomless Barrel", "Scabbarded Stabber"];
 shuffle(dicemanipstuff);
 shuffle(attackstuff);
+shuffle(defensestuff);
 shuffle(passivestuff);
 shuffle(strongstuff);
 var fickleadded = false;
@@ -36,7 +38,7 @@ dicemanipstuff = dicemanipstuff.concat(["Hack And Slash", "Pick Leg"]);
 attackstuff.push("Glowing Cutlass");
 shuffle(dicemanipstuff);
 shuffle(attackstuff);
-gooditems = [attackstuff.pop()];
+gooditems = [defensestuff.pop()];
 otherstuff = [health(), health()];
 goodotherstuff = [
   shop(shuffle([attackstuff.pop(), "health", passivestuff.pop()]))
@@ -81,7 +83,7 @@ addfloor("normal")
   
 //Floor 4:
 items = [];
-gooditems = [pick([attackstuff.pop(), dicemanipstuff.pop()])];
+gooditems = [pick([defensestuff.pop(), dicemanipstuff.pop()])];
 
 otherstuff = [health(), health()];
 goodotherstuff = [
