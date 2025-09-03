@@ -7,3 +7,9 @@ devilfire,devilfire,0x000070,IMAGE
 slot,slot,0xFFFFFF,IMAGE
 retrigger,retrigger,0xEA4340,IMAGE
 reuseblock,reuseblock,0xFF000C,IMAGE
+reuseon1,reuseon1,0x98EA40,IMAGE
+reuseon2,reuseon2,0x98EA40,IMAGE
+reuseon3,reuseon3,0x98EA40,IMAGE
+reuseon4,reuseon4,0x98EA40,IMAGE
+reuseon5,reuseon5,0x98EA40,IMAGE
+reuseon6,reuseon6,0x98EA40,IMAGE
