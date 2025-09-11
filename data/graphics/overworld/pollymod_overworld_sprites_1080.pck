@@ -4,10 +4,10 @@
 <TextureAtlas imagePath="pollymod_overworld_sprites_1080.png" width="300" height="300">
     <SubTexture name="enemies/jimbo_01" x="0" y="0" rotated="false" width="150" height="150"/>
     <SubTexture name="enemies/jimbo_02" x="750" y="0" rotated="false" width="150" height="150"/>
-    <SubTexture name="overworld/christmastree" x="0" y="0" rotated="false" width="150" height="150"/>
-    <SubTexture name="enemies/elf_01" x="150" y="0" rotated="false" width="150" height="150"/>
-    <SubTexture name="enemies/elf_02" x="900" y="0" rotated="false" width="150" height="150"/>
-    <SubTexture name="overworld/elf" x="150" y="0" rotated="false" width="150" height="150"/>
+    <SubTexture name="overworld/jimbo" x="0" y="0" rotated="false" width="150" height="150"/>
+    <SubTexture name="enemies/swordfish_01" x="150" y="0" rotated="false" width="150" height="150"/>
+    <SubTexture name="enemies/swordfish_02" x="900" y="0" rotated="false" width="150" height="150"/>
+    <SubTexture name="overworld/swordfish" x="150" y="0" rotated="false" width="150" height="150"/>
     <SubTexture name="enemies/ghostsofchristmas_01" x="300" y="0" rotated="false" width="150" height="150"/>
     <SubTexture name="enemies/ghostsofchristmas_02" x="1050" y="0" rotated="false" width="150" height="150"/>
     <SubTexture name="overworld/ghostsofchristmas" x="300" y="0" rotated="false" width="150" height="150"/>

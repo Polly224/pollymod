@@ -7,13 +7,14 @@ var goodotherstuff = [];
 var attackstuff = ["Pocket Hook", "Keelhaul", "Pillage", "Walk The Plank", "Man O War"];
 var defensestuff = ["Patch Up", "Which Way Captain?", "Reinforced Leg"];
 var dicemanipstuff = ["Hooked Roll", "Rolling Barrel", "Rocking Waves", "Capsize", "Raft Up"];
-var passivestuff = ["Reinyarrrnation", "Daily Doubloons", "Landlubber's Hack", "Clap of Thunder", "Buried Treasure"];
+var passivestuff = ["Reinyarrrnation", "Daily Doubloons", "Landlubber's Hack", "Clap of Thunder", "Buried Treasure", "Spray And Pray"];
 var strongstuff = ["Strengthen The Hull", "Treasure Trove", "Safety Net", "Reel It In", "Bottomless Barrel", "Scabbarded Stabber"];
 shuffle(dicemanipstuff);
 shuffle(attackstuff);
 shuffle(defensestuff);
 shuffle(passivestuff);
 shuffle(strongstuff);
+var allstuff = attackstuff.concat(defensestuff).concat(dicemanipstuff).concat(passivestuff).concat(strongstuff);
 var fickleadded = false;
 
 //Floor 1:
@@ -87,7 +88,7 @@ gooditems = [pick([defensestuff.pop(), dicemanipstuff.pop()])];
 
 otherstuff = [health(), health()];
 goodotherstuff = [
-  trade(["Charge 'N Load", "Pirate Hook", "Rocking Waves", "Rolling Barrel", "Pick Leg", "any"],[strongstuff.pop()]),
+  trade(allstuff.concat(["Charge 'N Load", "Pirate Hook"]),[strongstuff.pop()]),
   shop([dicemanipstuff.pop(), "upgrade", passivestuff.pop()])
 ];
 if ((dicemanipstuff.indexOf("Lucky Pull") == -1 || passivestuff.indexOf("Landlubber's Hack") == -1) && !fickleadded)
