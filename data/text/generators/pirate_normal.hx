@@ -8,7 +8,7 @@ var attackstuff = ["Pocket Hook", "Keelhaul", "Pillage", "Walk The Plank", "Man 
 var defensestuff = ["Patch Up", "Which Way Captain?", "Reinforced Leg"];
 var dicemanipstuff = ["Hooked Roll", "Rolling Barrel", "Rocking Waves", "Capsize", "Raft Up"];
 var passivestuff = ["Reinyarrrnation", "Daily Doubloons", "Landlubber's Hack", "Clap of Thunder", "Buried Treasure", "Spray And Pray"];
-var strongstuff = ["Strengthen The Hull", "Treasure Trove", "Safety Net", "Reel It In", "Bottomless Barrel", "Scabbarded Stabber"];
+var strongstuff = ["Lucky Pull", "Strengthen The Hull", "Treasure Trove", "Safety Net", "Reel It In", "Bottomless Barrel", "Scabbarded Stabber"];
 shuffle(dicemanipstuff);
 shuffle(attackstuff);
 shuffle(defensestuff);
@@ -113,7 +113,7 @@ items = [];
 gooditems = [attackstuff.pop()];
 otherstuff = [health(), health()];
 goodotherstuff = [
-  shop(shuffle(["health", "upgrade", strongstuff.pop()])), 
+  shop(shuffle([strongstuff.pop(), "upgrade", strongstuff.pop()])), 
   upgrade()
 ];
 
