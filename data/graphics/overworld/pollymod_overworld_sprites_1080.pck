@@ -8,9 +8,9 @@
     <SubTexture name="enemies/swordfish_01" x="150" y="0" rotated="false" width="150" height="150"/>
     <SubTexture name="enemies/swordfish_02" x="900" y="0" rotated="false" width="150" height="150"/>
     <SubTexture name="overworld/swordfish" x="150" y="0" rotated="false" width="150" height="150"/>
-    <SubTexture name="enemies/ghostsofchristmas_01" x="300" y="0" rotated="false" width="150" height="150"/>
-    <SubTexture name="enemies/ghostsofchristmas_02" x="1050" y="0" rotated="false" width="150" height="150"/>
-    <SubTexture name="overworld/ghostsofchristmas" x="300" y="0" rotated="false" width="150" height="150"/>
+    <SubTexture name="enemies/polly_01" x="300" y="0" rotated="false" width="150" height="150"/>
+    <SubTexture name="enemies/polly_02" x="1050" y="0" rotated="false" width="150" height="150"/>
+    <SubTexture name="overworld/polly" x="300" y="0" rotated="false" width="150" height="150"/>
 	<SubTexture name="enemies/gingerbreadman_01" x="450" y="0" rotated="false" width="150" height="150"/>
     <SubTexture name="enemies/gingerbreadman_02" x="1200" y="0" rotated="false" width="150" height="150"/>
     <SubTexture name="overworld/gingerbreadman" x="450" y="0" rotated="false" width="150" height="150"/>
