@@ -1,0 +1,79 @@
+// SETUP
+
+#include intrographics_warrior1.txt
+#include ladyluckbiggraphics.txt
+
+setdatapath("data/graphics/cutscenes/warrior/");
+
+var warriorgraphics = {
+	idle: {
+		animation: "warrior_idle.json",
+		pack: "warrior.pck",
+		loop: true
+	},
+	transform: {
+		animation: "warrior_transform.json",
+		pack: "warrior.pck",
+		speed: 2,
+		loop: false
+	}
+}
+var warrior = addsprite("warrior", 1, warriorgraphics);
+
+// HELPER FUNCTIONS	
+
+function signanimate(sign) {
+	var s = sign.show("turn");
+	//s.onComplete(function() { resume(); sign.show("loop"); });
+	//pause();
+	while(!s.completed) {
+		// do nothing
+	}
+	sign.show("loop");
+}
+
+function fadein_sprite(sprite, time) {
+	return;
+	sprite.alpha = 0.0;
+	Actuate.tween(sprite, time, { alpha: 1.0 });
+	wait(time);
+}
+
+function fadeout_sprite(sprite, time) {
+	return;
+	Actuate.tween(sprite, time, { alpha: 0.0 });
+	wait(time);
+}
+
+var fade_time = 0.4;
+
+// ACTORS
+
+actor("Lady Luck", screenwidthmid + 800, 550, Col.YELLOW, CENTER, BOTTOM, "chat_ladyluck", "characters/misc/charicon_ladyluck");
+
+// INTRO
+
+play("music_cutscene_cheery");
+
+changebackground("intro_sign");
+
+sign.y = -screenheight;
+ladyluck_sign.y = -screenheight;
+sign.show("loop");
+ladyluck_sign.show("idle");
+
+Actuate.tween(sign, 2, { y: 0 }).ease(Expo.easeOut);
+Actuate.tween(ladyluck_sign, 2, { y: 0 }).ease(Expo.easeOut);
+
+wait(0.5);
+
+fadein();
+
+wait(1.5);
+
+ladyluck_sign.show("talking", true);
+speak("Lady Luck", "This is placeholder cutscene[;] the game crashes if i won't add it.", "normal");
+speak("Lady Luck", "Terry plz fix!", "normal");
+ladyluck_sign.show("idle", true);
+
+startgamefromcutscene();

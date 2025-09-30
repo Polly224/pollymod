@@ -17,8 +17,8 @@
 	<SubTexture name="enemies/grinch_01" x="600" y="0" rotated="false" width="150" height="150"/>
     <SubTexture name="enemies/grinch_02" x="1350" y="0" rotated="false" width="150" height="150"/>
     <SubTexture name="overworld/grinch" x="600" y="0" rotated="false" width="150" height="150"/>
-    <SubTexture name="enemies/johndenver_01" x="0" y="150" rotated="false" width="150" height="150"/>
-    <SubTexture name="enemies/johndenver_02" x="750" y="150" rotated="false" width="150" height="150"/>
+	<SubTexture name="enemies/osa_01" x="0" y="150" width="150" height="150"/>
+	<SubTexture name="enemies/osa_02" x="0" y="150" width="150" height="150"/>
     <SubTexture name="overworld/johndenver" x="0" y="150" rotated="false" width="150" height="150"/>
     <SubTexture name="enemies/lightning_01" x="150" y="150" rotated="false" width="150" height="150"/>
     <SubTexture name="enemies/lightning_02" x="900" y="150" rotated="false" width="150" height="150"/>
@@ -59,4 +59,6 @@
 	<SubTexture name="enemies/conductor_01" x="450" y="450" rotated="false" width="150" height="150"/>
     <SubTexture name="enemies/conductor_02" x="1200" y="450" rotated="false" width="150" height="150"/>
     <SubTexture name="overworld/conductor" x="450" y="450" rotated="false" width="150" height="150"/>
+	<SubTexture name="enemies/mummy_01" x="0" y="588" width="114" height="162" frameX="-3" frameY="0" frameWidth="117" frameHeight="162"/>
+	<SubTexture name="enemies/mummy_02" x="119" y="592" width="109" height="158" frameX="0" frameY="-4" frameWidth="117" frameHeight="162"/>
 </TextureAtlas>
