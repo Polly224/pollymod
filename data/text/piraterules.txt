@@ -9,4 +9,4 @@ Think of Pirate Hook in the base-game!
 This also still triggers any "on [recycle][]" effects.
 
 Have fun~! 
-- [jinx] Polly [jinx]
+- [vortex] Polly [vortex]

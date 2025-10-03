@@ -7,8 +7,8 @@ var goodotherstuff = [];
 var attackstuff = ["Pocket Hook", "Keelhaul", "Pillage", "Walk The Plank", "Man O War"];
 var defensestuff = ["Patch Up", "Which Way Captain?", "Reinforced Leg"];
 var dicemanipstuff = ["Hooked Roll", "Rolling Barrel", "Rocking Waves", "Capsize", "Raft Up"];
-var passivestuff = ["Reinyarrrnation", "Daily Doubloons", "Landlubber's Hack", "Clap of Thunder", "Buried Treasure", "Spray And Pray"];
-var strongstuff = ["Lucky Pull", "Strengthen The Hull", "Treasure Trove", "Safety Net", "Reel It In", "Bottomless Barrel", "Scabbarded Stabber"];
+var passivestuff = ["Reinyarrrnation", "Daily Doubloons", "Landlubber's Hack", "Clap of Thunder", "Spray And Pray"];
+var strongstuff = ["Strengthen The Hull", "Treasure Trove", "Safety Net", "Reel It In", "Bottomless Barrel", "Scabbarded Stabber"];
 shuffle(dicemanipstuff);
 shuffle(attackstuff);
 shuffle(defensestuff);
@@ -22,12 +22,6 @@ items = [];
 gooditems = [dicemanipstuff.pop()];
 otherstuff = [];
 goodotherstuff = [];
-if((dicemanipstuff.indexOf("Lucky Pull") == -1 || passivestuff.indexOf("Landlubber's Hack") == -1) && !fickleadded)
-{
-    attackstuff.push("Fickle Chain");
-    shuffle(attackstuff);
-    fickleadded = true;
-}
 addfloor("tiny")
   .additems(items, gooditems)
   .addotherstuff(otherstuff, goodotherstuff)
@@ -44,12 +38,7 @@ otherstuff = [health(), health()];
 goodotherstuff = [
   shop(shuffle([attackstuff.pop(), "health", passivestuff.pop()]))
 ];
-if ((dicemanipstuff.indexOf("Lucky Pull") == -1 || passivestuff.indexOf("Landlubber's Hack") == -1) && !fickleadded)
-{
-    attackstuff.push("Fickle Chain");
-    shuffle(attackstuff);
-    fickleadded = true;
-}
+
 addfloor("normal")
   .additems(items, gooditems)
   .addotherstuff(otherstuff, goodotherstuff)
@@ -71,12 +60,6 @@ goodotherstuff = [
   shop([attackstuff.pop(), passivestuff.pop(), "health"]), 
   upgrade()
 ];
-if ((dicemanipstuff.indexOf("Lucky Pull") == -1 || passivestuff.indexOf("Landlubber's Hack") == -1) && !fickleadded)
-{
-    attackstuff.push("Fickle Chain");
-    shuffle(attackstuff);
-    fickleadded = true;
-}
 addfloor("normal")
   .additems(items, gooditems)
   .addotherstuff(otherstuff, goodotherstuff)
@@ -84,6 +67,7 @@ addfloor("normal")
   
 //Floor 4:
 items = [];
+attackstuff.push("Buried Treasure");
 gooditems = [pick([defensestuff.pop(), dicemanipstuff.pop()])];
 
 otherstuff = [health(), health()];
@@ -91,24 +75,12 @@ goodotherstuff = [
   trade(allstuff.concat(["Charge 'N Load", "Pirate Hook"]),[strongstuff.pop()]),
   shop([dicemanipstuff.pop(), "upgrade", passivestuff.pop()])
 ];
-if ((dicemanipstuff.indexOf("Lucky Pull") == -1 || passivestuff.indexOf("Landlubber's Hack") == -1) && !fickleadded)
-{
-    attackstuff.push("Fickle Chain");
-    shuffle(attackstuff);
-    fickleadded = true;
-}
 addfloor("normal")
   .additems(items, gooditems)
   .addotherstuff(otherstuff, goodotherstuff)
   .generate();
 
 //Floor 5:
-if (!fickleadded)
-{
-    attackstuff.push("Fickle Chain");
-    shuffle(attackstuff);
-    fickleadded = true;
-}
 items = [];
 gooditems = [attackstuff.pop()];
 otherstuff = [health(), health()];
