@@ -45,7 +45,6 @@ addfloor("normal")
   .generate();
 
 //Floor 3:
-dicemanipstuff.push("Lucky Pull");
 shuffle(dicemanipstuff);
 items = [dicemanipstuff.pop()];
 gooditems = [];

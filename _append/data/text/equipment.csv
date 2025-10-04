@@ -217,4 +217,7 @@ What,What,2,,,NORMAL|FREE6|MAX1|EVEN,24,,reuseable,noeffect,,,0,NO,NO,excludefro
 _upgraded,,1,,,,,,,,,,0,NO,NO,,,,,,,,,,,,,
 Landlubber's Hack_upgraded,Twice per turn[;] you can [recycle]|any equipment on 1/2/3,1,,,,,BLUE,change_power,change_power,,,0,NO,NO,weakenavoid|excludefromrandomlists,,,e.fulldescription = e.getvar(~ogdescription~);,e.fulldescription = e.getvar(~ogdescription~);,inflictself(~landlubbershack~[;] 2);,,,,,,,
 Glowing Cutlass_upgraded,Do [sword]<d6> + [star]<var:limitcharge>[] damage[;]|[star] = limit charge,1,attack(d + self.limitvalue); sfxdamage(d + self.limitvalue);,,MAX2,,YELLOW,change_power,doublerequirements,,,0,NO,NO,,,inflictself(~limittracker~);,,e.setvar(~redice~[;] []);,,,,,if(e.getvar(~redice~).indexOf(d) != -1 && !e.getvar(~fury~)) { inflictself(~reequippolly~); },,e.setvar(~fury~[;] true);,
-!test,,1,,,,,,,,,,0,NO,NO,,,,,,,,,,,,,
+!test,,1,,,,,,,,,,0,NO,NO,,,inflictself(~bluescorch~[;] 3);,,inflictself(~fire~[;] 3);,,,,,,,,
+Hellfire,Do [fire]<d6> damage[;]|inflict [curse]1 and [fire]1,2,attack(d[;] FIRE); inflict(~curse~[;] 1); inflict(FIRE[;] 1); sfxdamage(6); sfx(~_curse~); sfx(~_fire~[;]~~[;]0.2);,,NORMAL|NORMAL,8,BLUE,,,,,0,NO,NO,,,,,,,,,,,,,
+Scorch,Inflict [fire]1 burn[;] reroll dice|(Reuseable),1,inflict(~fire~); sfx(~_fire~); givedice();,,MAX3,,RED,,,,,2,NO,NO,,,,,,,,,,,,,
+Sear,Increase cost of burned dice|by [heart]2 for next turn,1,inflict(~bluescorch~[;] 2); sfx(~burn~);,,COUNTDOWN,10,BLUE,,,,,0,NO,NO,,,,,,,,,,,,,

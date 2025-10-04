@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker https://www.codeandweb.com/texturepacker -->
+<!-- $TexturePacker:SmartUpdate:88990da6dceb580edf93eb9ff79dccd6:b8ab8bcea483fe61187cc9eb04c2660a:274e0bf99717da8a420fe02161adec01$ -->
+<TextureAtlas imagePath="devilscorch.png" width="1999" height="1798">
+    <SubTexture name="ui/dice/hellburn/flame20000" x="929" y="214" width="289" height="393" frameX="-6" frameY="-3" frameWidth="309" frameHeight="412"/>
+    <SubTexture name="ui/dice/hellburn/flame20001" x="929" y="214" width="289" height="393" frameX="-6" frameY="-3" frameWidth="309" frameHeight="412"/>
+    <SubTexture name="ui/dice/hellburn/flame20002" x="929" y="214" width="289" height="393" frameX="-6" frameY="-3" frameWidth="309" frameHeight="412"/>
+    <SubTexture name="ui/dice/hellburn/flame20003" x="1635" y="1" rotated="true" width="363" height="293" frameX="-2" frameY="-36" frameWidth="309" frameHeight="412"/>
+    <SubTexture name="ui/dice/hellburn/flame20004" x="1635" y="1" rotated="true" width="363" height="293" frameX="-2" frameY="-36" frameWidth="309" frameHeight="412"/>
+    <SubTexture name="ui/dice/hellburn/flame20005" x="1635" y="1" rotated="true" width="363" height="293" frameX="-2" frameY="-36" frameWidth="309" frameHeight="412"/>
+    <SubTexture name="ui/dice/hellburn/flame20006" x="353" y="1460" width="289" height="336" frameX="-4" frameY="-65" frameWidth="309" frameHeight="412"/>
+    <SubTexture name="ui/dice/hellburn/flame20007" x="353" y="1460" width="289" height="336" frameX="-4" frameY="-65" frameWidth="309" frameHeight="412"/>
+    <SubTexture name="ui/dice/hellburn/flame20008" x="353" y="1460" width="289" height="336" frameX="-4" frameY="-65" frameWidth="309" frameHeight="412"/>
+    <SubTexture name="ui/dice/hellburn/flame20009" x="1547" y="296" rotated="true" width="356" height="284" frameX="-7" frameY="-42" frameWidth="309" frameHeight="412"/>
+    <SubTexture name="ui/dice/hellburn/flame20010" x="1547" y="296" rotated="true" width="356" height="284" frameX="-7" frameY="-42" frameWidth="309" frameHeight="412"/>
+    <SubTexture name="ui/dice/hellburn/flame20011" x="1547" y="296" rotated="true" width="356" height="284" frameX="-7" frameY="-42" frameWidth="309" frameHeight="412"/>
+    <SubTexture name="ui/dice/hellburn/flame20012" x="1241" y="1" rotated="true" width="392" height="286" frameX="-7" frameY="-7" frameWidth="309" frameHeight="412"/>
+    <SubTexture name="ui/dice/hellburn/flame20013" x="1241" y="1" rotated="true" width="392" height="286" frameX="-7" frameY="-7" frameWidth="309" frameHeight="412"/>
+    <SubTexture name="ui/dice/hellburn/flame20014" x="1241" y="1" rotated="true" width="392" height="286" frameX="-7" frameY="-7" frameWidth="309" frameHeight="412"/>
+    <SubTexture name="ui/dice/hellburn/flame20015" x="509" y="597" width="288" height="395" frameX="-7" frameY="-3" frameWidth="309" frameHeight="412"/>
+    <SubTexture name="ui/dice/hellburn/flame20016" x="509" y="597" width="288" height="395" frameX="-7" frameY="-3" frameWidth="309" frameHeight="412"/>
+    <SubTexture name="ui/dice/hellburn/flame20017" x="509" y="597" width="288" height="395" frameX="-7" frameY="-3" frameWidth="309" frameHeight="412"/>
+</TextureAtlas>
