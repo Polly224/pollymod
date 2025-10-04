@@ -217,3 +217,4 @@ What,What,2,,,NORMAL|FREE6|MAX1|EVEN,24,,reuseable,noeffect,,,0,NO,NO,excludefro
 _upgraded,,1,,,,,,,,,,0,NO,NO,,,,,,,,,,,,,
 Landlubber's Hack_upgraded,Twice per turn[;] you can [recycle]|any equipment on 1/2/3,1,,,,,BLUE,change_power,change_power,,,0,NO,NO,weakenavoid|excludefromrandomlists,,,e.fulldescription = e.getvar(~ogdescription~);,e.fulldescription = e.getvar(~ogdescription~);,inflictself(~landlubbershack~[;] 2);,,,,,,,
 Glowing Cutlass_upgraded,Do [sword]<d6> + [star]<var:limitcharge>[] damage[;]|[star] = limit charge,1,attack(d + self.limitvalue); sfxdamage(d + self.limitvalue);,,MAX2,,YELLOW,change_power,doublerequirements,,,0,NO,NO,,,inflictself(~limittracker~);,,e.setvar(~redice~[;] []);,,,,,if(e.getvar(~redice~).indexOf(d) != -1 && !e.getvar(~fury~)) { inflictself(~reequippolly~); },,e.setvar(~fury~[;] true);,
+!test,,1,,,,,,,,,,0,NO,NO,,,,,,,,,,,,,
