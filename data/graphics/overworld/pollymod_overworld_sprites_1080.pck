@@ -11,54 +11,11 @@
     <SubTexture name="enemies/polly_01" x="300" y="0" rotated="false" width="150" height="150"/>
     <SubTexture name="enemies/polly_02" x="1050" y="0" rotated="false" width="150" height="150"/>
     <SubTexture name="overworld/polly" x="300" y="0" rotated="false" width="150" height="150"/>
-	<SubTexture name="enemies/gingerbreadman_01" x="450" y="0" rotated="false" width="150" height="150"/>
-    <SubTexture name="enemies/gingerbreadman_02" x="1200" y="0" rotated="false" width="150" height="150"/>
-    <SubTexture name="overworld/gingerbreadman" x="450" y="0" rotated="false" width="150" height="150"/>
-	<SubTexture name="enemies/grinch_01" x="600" y="0" rotated="false" width="150" height="150"/>
-    <SubTexture name="enemies/grinch_02" x="1350" y="0" rotated="false" width="150" height="150"/>
-    <SubTexture name="overworld/grinch" x="600" y="0" rotated="false" width="150" height="150"/>
+	<SubTexture name="enemies/jay_01" x="0" y="300" rotated="false" width="150" height="150"/>
+	<SubTexture name="enemies/jay_02" x="150" y="300" rotated="false" width="150" height="150"/>
+	<SubTexture name="overworld/jay" x="0" y="300" rotated="false" width="150" height="150"/>
 	<SubTexture name="enemies/osa_01" x="0" y="150" width="150" height="150"/>
 	<SubTexture name="enemies/osa_02" x="0" y="150" width="150" height="150"/>
-    <SubTexture name="overworld/johndenver" x="0" y="150" rotated="false" width="150" height="150"/>
-    <SubTexture name="enemies/lightning_01" x="150" y="150" rotated="false" width="150" height="150"/>
-    <SubTexture name="enemies/lightning_02" x="900" y="150" rotated="false" width="150" height="150"/>
-    <SubTexture name="overworld/lightning" x="150" y="150" rotated="false" width="150" height="150"/>
-	<SubTexture name="enemies/mallcop_01" x="300" y="150" rotated="false" width="150" height="150"/>
-    <SubTexture name="enemies/mallcop_02" x="1050" y="150" rotated="false" width="150" height="150"/>
-	<SubTexture name="overworld/mallcop" x="300" y="150" rotated="false" width="150" height="150"/>
-	<SubTexture name="enemies/mariahcarey_01" x="450" y="150" rotated="false" width="150" height="150"/>
-    <SubTexture name="enemies/mariahcarey_02" x="1200" y="150" rotated="false" width="150" height="150"/>
-    <SubTexture name="overworld/mariahcarey" x="450" y="150" rotated="false" width="150" height="150"/>
-	<SubTexture name="enemies/msyeti_01" x="600" y="150" rotated="false" width="150" height="150"/>
-    <SubTexture name="enemies/msyeti_02" x="1350" y="150" rotated="false" width="150" height="150"/>
-    <SubTexture name="overworld/msyeti" x="600" y="150" rotated="false" width="150" height="150"/>
-	<SubTexture name="enemies/nicholas_01" x="0" y="300" rotated="false" width="150" height="150"/>
-    <SubTexture name="enemies/nicholas_02" x="750" y="300" rotated="false" width="150" height="150"/>
-    <SubTexture name="overworld/nicholas" x="0" y="300" rotated="false" width="150" height="150"/>
-	<SubTexture name="enemies/penguin_01" x="150" y="300" rotated="false" width="150" height="150"/>
-    <SubTexture name="enemies/penguin_02" x="900" y="300" rotated="false" width="150" height="150"/>
-    <SubTexture name="overworld/penguin" x="150" y="300" rotated="false" width="150" height="150"/>
-	<SubTexture name="enemies/polarbear_01" x="300" y="300" rotated="false" width="150" height="150"/>
-    <SubTexture name="enemies/polarbear_02" x="1050" y="300" rotated="false" width="150" height="150"/>
-    <SubTexture name="overworld/polarbear" x="300" y="300" rotated="false" width="150" height="150"/>
-	<SubTexture name="enemies/present_01" x="450" y="300" rotated="false" width="150" height="150"/>
-    <SubTexture name="enemies/present_02" x="1200" y="300" rotated="false" width="150" height="150"/>
-    <SubTexture name="overworld/present" x="450" y="300" rotated="false" width="150" height="150"/>
-	<SubTexture name="enemies/rudy_01" x="600" y="300" rotated="false" width="150" height="150"/>
-    <SubTexture name="enemies/rudy_02" x="1350" y="300" rotated="false" width="150" height="150"/>
-    <SubTexture name="overworld/rudy" x="600" y="300" rotated="false" width="150" height="150"/>
-	<SubTexture name="enemies/heatmiser_01" x="0" y="450" rotated="false" width="150" height="150"/>
-    <SubTexture name="enemies/heatmiser_02" x="750" y="450" rotated="false" width="150" height="150"/>
-    <SubTexture name="overworld/heatmiser" x="0" y="450" rotated="false" width="150" height="150"/>
-    <SubTexture name="enemies/snowmiser_01" x="150" y="450" rotated="false" width="150" height="150"/>
-    <SubTexture name="enemies/snowmiser_02" x="900" y="450" rotated="false" width="150" height="150"/>
-    <SubTexture name="overworld/snowmiser" x="150" y="450" rotated="false" width="150" height="150"/>
-	<SubTexture name="enemies/ladyluck_01" x="300" y="450" rotated="false" width="150" height="150"/>
-    <SubTexture name="enemies/ladyluck_02" x="1050" y="450" rotated="false" width="150" height="150"/>
-    <SubTexture name="overworld/ladyluck" x="300" y="450" rotated="false" width="150" height="150"/>
-	<SubTexture name="enemies/conductor_01" x="450" y="450" rotated="false" width="150" height="150"/>
-    <SubTexture name="enemies/conductor_02" x="1200" y="450" rotated="false" width="150" height="150"/>
-    <SubTexture name="overworld/conductor" x="450" y="450" rotated="false" width="150" height="150"/>
 	<SubTexture name="enemies/mummy_01" x="0" y="588" width="114" height="162" frameX="-3" frameY="0" frameWidth="117" frameHeight="162"/>
 	<SubTexture name="enemies/mummy_02" x="119" y="592" width="109" height="158" frameX="0" frameY="-4" frameWidth="117" frameHeight="162"/>
 </TextureAtlas>
