@@ -25956,6 +25956,15 @@
             }
         ]
     },
+    "music_characterselect": {
+        "playsounds": [
+        ],
+        "stopsounds": [
+            {
+                "file": "music/combat/victory"
+            }
+        ]
+    },
     "music_combat1": {
         "playsounds": [
             {
@@ -26205,7 +26214,7 @@
     "music_combat7": {
         "playsounds": [
             {
-                "channel": 1,
+                "channel": 2,
                 "delay": 0,
                 "effect": "",
                 "file": "music/combat/combat7",
