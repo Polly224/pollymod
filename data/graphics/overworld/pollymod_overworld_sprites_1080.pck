@@ -11,6 +11,9 @@
     <SubTexture name="enemies/polly_01" x="300" y="0" rotated="false" width="150" height="150"/>
     <SubTexture name="enemies/polly_02" x="1050" y="0" rotated="false" width="150" height="150"/>
     <SubTexture name="overworld/polly" x="300" y="0" rotated="false" width="150" height="150"/>
+	<SubTexture name="enemies/luckysevens_01" x="300" y="150" rotated="false" width="150" height="150"/>
+	<SubTexture name="enemies/luckysevens_02" x="450" y="150" rotated="false" width="150" height="150"/>
+	<SubTexture name="overworld/luckysevens" x="300" y="150" rotated="false" width="150" height="150"/>
 	<SubTexture name="enemies/jay_01" x="0" y="300" rotated="false" width="150" height="150"/>
 	<SubTexture name="enemies/jay_02" x="150" y="300" rotated="false" width="150" height="150"/>
 	<SubTexture name="overworld/jay" x="0" y="300" rotated="false" width="150" height="150"/>
