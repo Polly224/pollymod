@@ -33,7 +33,7 @@ shuffle(dicemanipstuff);
 gooditems = [defensestuff.pop()];
 otherstuff = [health(), health()];
 goodotherstuff = [
-  shop(shuffle([attackstuff.pop(), "health", passivestuff.pop()]))
+  shop(shuffle([dicemanipstuff.pop(), "health", passivestuff.pop()]))
 ];
 
 addfloor("normal")
