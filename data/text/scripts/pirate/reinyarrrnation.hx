@@ -1,10 +1,22 @@
 var self = args[0];
 var e = args[1];
 var upgraded = args[2];
-var eqlist = upgraded ? self.getvar("randomequipfilter@u") : self.getvar("randomequipfilter");
+var eqlist = upgraded ? (self.spaceleft() > 1 ? self.getvar("bigrandomequipfilter@u") : self.getvar("randomequipfilter@u")) : (self.spaceleft() > 1 ? self.getvar("bigrandomequipfilter") : self.getvar("randomequipfilter"));
 var modifier = upgraded ? "+" : "";
-giveequipment(rand(eqlist) + modifier, e);
-var eq = self.equipment[self.equipment.length - 2];
+var pickedname = rand(eqlist);
+
+var eq = new elements.Equipment(pickedname + modifier);
+_internalexchangeequipment(self, e, eq, -1);
+delay(0.5);
+eq.scriptendturn = "e.animate('fastdestroy'); giveequipment('" + e.name + modifier + "', true, false, e); for(eq in self.equipment){if(eq.name == 'Reinyarrrnation'){eq.x = -50000; eq.finalpos.x = -50000; animateequipmentintoplace(self);}}";
+var temptest = new elements.Equipment(pickedname + modifier);
+if(temptest.size == 2)
+{
+    eq.resize(2);
+    eq.finalpos.y = 630;
+    animateequipmentintoplace(self);
+}
+
 var finalvals = [];
 for (i in eq.slots)
 {
@@ -18,7 +30,7 @@ if (eq.slots[0] == "COUNTDOWN")
 }
 else
 {
-    eq.scriptbeforeexecute += " var ru = true; for(i in 0...e.slots.length){ if(actualdice[i].basevalue + actualdice[i].modifier != e.getvar('redice')[i]) ru = false; } if(ru && !e.getvar('fury')) {inflictself('reequippolly');}";
+    eq.scriptbeforeexecute += " var ru = true; for(i in 0...e.slots.length){ if((e.slots[i] + '1').indexOf('FREE' == -1)) if(actualdice[i].basevalue + actualdice[i].modifier != e.getvar('redice')[i]) ru = false; } if(ru && !e.getvar('fury')) {inflictself('reequippolly');}";
 }
 if (eq.needsdoubles) finalvals[1] = finalvals[0];
 if (eq.needstotal > 0)
