@@ -30,7 +30,7 @@ if (eq.slots[0] == "COUNTDOWN")
 }
 else
 {
-    eq.scriptbeforeexecute += " var ru = true; for(i in 0...e.slots.length){ if((e.slots[i] + '1').indexOf('FREE' == -1)) if(actualdice[i].basevalue + actualdice[i].modifier != e.getvar('redice')[i]) ru = false; } if(ru && !e.getvar('fury')) {inflictself('reequippolly');}";
+    eq.scriptbeforeexecute += "var ru = true;  for(i in 0...e.slots.length){ if((e.slots[i] + 'a').indexOf('FREE') == -1){ if(actualdice[i].basevalue + actualdice[i].modifier != e.getvar('redice')[i]) ru = false; }} if(ru && !e.getvar('fury')) {inflictself('reequippolly');}";
 }
 if (eq.needsdoubles) finalvals[1] = finalvals[0];
 if (eq.needstotal > 0)
