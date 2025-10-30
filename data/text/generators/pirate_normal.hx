@@ -4,7 +4,7 @@ var items = [];
 var gooditems = [];
 var otherstuff = [];
 var goodotherstuff = [];
-var attackstuff = ["Pocket Hook", "Keelhaul", "Pillage", "Charge 'N Load"];
+var attackstuff = ["Pocket Hook", "Keelhaul", "Pillage", "Charge 'N Load", "Scrape"];
 var defensestuff = ["Patch Up", "Which Way Captain?", "Reinforced Leg"];
 var dicemanipstuff = ["Rolling Barrel", "Rocking Waves", "Capsize", "Raft Up"];
 var passivestuff = ["Reinyarrrnation", "Daily Doubloons", "Landlubber's Hack", "Clap of Thunder", "Spray And Pray"];
@@ -71,7 +71,7 @@ gooditems = [pick([defensestuff.pop(), dicemanipstuff.pop()])];
 
 otherstuff = [health(), health()];
 goodotherstuff = [
-  trade(allstuff.concat(["Pirate Hook"]),[strongstuff.pop()]),
+  trade(allstuff.concat(["Pirate Hook", "Anchor", "Swab The Deck"]),[strongstuff.pop()]),
   shop([dicemanipstuff.pop(), "upgrade", passivestuff.pop()])
 ];
 addfloor("normal")
