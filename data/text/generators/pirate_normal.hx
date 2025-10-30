@@ -43,12 +43,14 @@ addfloor("normal")
   .generate();
 
 //Floor 3:
+dicemanipstuff.push("Liar's Dice");
 attackstuff.push("Walk The Plank");
 attackstuff.push("Glowing Cutlass");
+attackstuff.push("Buried Treasure");
+attackstuff.push("Muzzleloading");
 shuffle(dicemanipstuff);
 items = [dicemanipstuff.pop()];
 gooditems = [];
-attackstuff.push("Muzzleloading");
 shuffle(attackstuff);
 
 otherstuff = [
@@ -66,7 +68,6 @@ addfloor("normal")
   
 //Floor 4:
 items = [];
-attackstuff.push("Buried Treasure");
 gooditems = [pick([defensestuff.pop(), dicemanipstuff.pop()])];
 
 otherstuff = [health(), health()];
@@ -81,10 +82,10 @@ addfloor("normal")
 
 //Floor 5:
 items = [];
-gooditems = [attackstuff.pop()];
+gooditems = [strongstuff.pop()];
 otherstuff = [health(), health()];
 goodotherstuff = [
-  shop(shuffle([strongstuff.pop(), "upgrade", strongstuff.pop()])), 
+  shop(shuffle([attackstuff.pop(), "upgrade", strongstuff.pop()])), 
   upgrade()
 ];
 
