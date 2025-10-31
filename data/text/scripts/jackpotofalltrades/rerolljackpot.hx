@@ -148,8 +148,8 @@ for(i in 0...SkillsCount)
 
 /*DEBUG STUFF, COMMENT OUT WHEN PLAYTESTING.*/
 
-/*ChosenJackpotSkills[2] = "Reshuffle";
-ChosenJackpotSkills[1] = "Jimbo's Trick+";
+/*ChosenJackpotSkills[2] = "Uninnate";
+ChosenJackpotSkills[1] = "Uninnate+";
 ChosenJackpotSkills[0] = "The Blue Devil";*/
 
 for (i in 0...SkillsCount)
