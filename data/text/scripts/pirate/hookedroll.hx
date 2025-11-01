@@ -11,9 +11,9 @@ for (eq in self.equipment)
         {
             if (eq.getvar("redice").length > 0 && eq.getvar("redice").length < 6)
             {
-                if (eq.getvar("redice")[0] < 7)
-                {
-                    reusevals = reusevals.concat(eq.getvar("redice"));
+                var tempredice = eq.getvar("redice");
+                for(i in tempredice){
+                    if(i > 0 && i < 7) reusevals.push(i);
                 }
             }
         }
@@ -21,9 +21,9 @@ for (eq in self.equipment)
         {
             if (eq.getvar("retdice").length > 0 && eq.getvar("retdice").length < 6)
             {
-                if (eq.getvar("retdice")[0] < 7)
-                {
-                    reusevals = reusevals.concat(eq.getvar("retdice"));
+                var tempretdice = eq.getvar("retdice");
+                for(i in tempretdice){
+                    if(i > 0 && i < 7) reusevals.push(i);
                 }
             }
         }
