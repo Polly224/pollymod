@@ -34,24 +34,23 @@ function botbarrelcheck(actualdice){
 function inflictreuse(actualdice){
     inflictself("reequippolly");
     botbarrelcheck(actualdice);
-    return true;
+    trace("runs");
 }
 
 function inflictretrigger(actualdice){
     inflictself("retriggerpolly");
     botbarrelcheck(actualdice);
-    return true;
 }
 var reuseguaranteed = false;
 
 if(self.hasstatus("landlubbershack") && (dicevalues.indexOf(1) != -1 || dicevalues.indexOf(2) != -1 || dicevalues.indexOf(3) != -1)) reuseguaranteed = true;
 if(reuseguaranteed){
-    inflictreuse(actualdice);
+    inflictreuse(actualdice); return true;
 } else{
     switch type{
     case "standard":
         if(e.getvar("redice").indexOf(d) != -1 && !e.getvar("fury")) {
-            inflictreuse(actualdice);
+            inflictreuse(actualdice); return true;
         }
 
     case "multipleslots":
@@ -61,14 +60,14 @@ if(reuseguaranteed){
                 reusechck = true;
             }
         } if(reusechck && !e.getvar("fury")) {
-            inflictreuse(actualdice);
+            inflictreuse(actualdice); return true;
         }
 
     case "countdown":
         if(!e.getvar("fury")){
             if(e.dicehistory.length > 0){
                 if(e.getvar("redice").indexOf(e.dicehistory[e.dicehistory.length - 1].basevalue + e.dicehistory[e.dicehistory.length - 1].modifier) != -1){
-                    inflictreuse(actualdice);
+                    inflictreuse(actualdice); return true;
                 }
             }
         }
@@ -84,7 +83,7 @@ if(reuseguaranteed){
                 reusechck = true;
             }
         } if(reusechck && !e.getvar("fury")) {
-            inflictretrigger(actualdice);
+            inflictretrigger(actualdice); return true;
         }
 
     case "manowar":
@@ -96,16 +95,16 @@ if(reuseguaranteed){
                 reusechck = true;
             }
         } if(reusechck && !e.getvar("fury")) {
-            inflictreuse(actualdice);
+            inflictreuse(actualdice); return true;
         }
 
     case "whichwaycaptain":
         if(!e.getvar("fury")) {
             if(e.getvar("retdice").indexOf(d) != -1){
-                inflictretrigger(actualdice);
+                inflictretrigger(actualdice); return true;
             } else{
                 if(e.getvar("redice").indexOf(d) != -1){
-                    inflictreuse(actualdice);
+                    inflictreuse(actualdice); return true;
                 }
             }
         }
@@ -117,28 +116,28 @@ if(reuseguaranteed){
                 if(actualdice[i].basevalue + actualdice[i].modifier != e.getvar('redice')[i]) ru = false; 
             }
         } 
-        if(ru && !e.getvar('fury')) {inflictreuse(actualdice);}
+        if(ru && !e.getvar('fury')) {inflictreuse(actualdice); return true;}
 
     case "reinyarrrnationcountdown":
         if(e.getvar('redice').indexOf(e.dicehistory[e.dicehistory.length - 1].basevalue) != -1 && !e.getvar('fury')){
-            inflictreuse(actualdice);
+            inflictreuse(actualdice); return true;
         }
 
     case "raftup":
         if((e.getvar("redice").indexOf(d) != -1 || d < 7) && !e.getvar("fury")) {
-            inflictreuse(actualdice);
+            inflictreuse(actualdice); return true;
         }
     
     case "reinforcedleg":
         if(!e.getvar("fury")){
             if(e.getvar("redice").indexOf(e.dicehistory[e.dicehistory.length - 1].basevalue + e.dicehistory[e.dicehistory.length - 1].modifier) != -1){
-                inflictreuse(actualdice);
+                inflictreuse(actualdice); return true;
             }
         }
 
     default:
         if(e.getvar("redice").indexOf(d) != -1 && !e.getvar("fury")) {
-            inflictreuse(actualdice);
+            inflictreuse(actualdice); return true;
         }
     }
 }
