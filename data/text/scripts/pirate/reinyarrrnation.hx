@@ -26,11 +26,11 @@ for (i in eq.slots)
 }
 if (eq.slots[0] == "COUNTDOWN")
 {
-    eq.scriptbeforeexecute += "if(e.getvar('redice').indexOf(e.dicehistory[e.dicehistory.length - 1].basevalue) != -1 && !e.getvar('fury')){inflictself('reequippolly'); }";
+    eq.scriptbeforeexecute += "runscript('pirate/reusecheck', [e, actualdice, 'reinyarrrnationcountdown']);";
 }
 else
 {
-    eq.scriptbeforeexecute += "var ru = true;  for(i in 0...e.slots.length){ if((e.slots[i] + 'a').indexOf('FREE') == -1){ if(actualdice[i].basevalue + actualdice[i].modifier != e.getvar('redice')[i]) ru = false; }} if(ru && !e.getvar('fury')) {inflictself('reequippolly');}";
+    eq.scriptbeforeexecute += "runscript('pirate/reusecheck', [e, actualdice, 'reinyarrrnation']);";
 }
 if (eq.needsdoubles) finalvals[1] = finalvals[0];
 if (eq.needstotal > 0)
