@@ -15,6 +15,7 @@ var type;
 if(args.length > 2) type = args[2];
 else type = "standard";
 var self = e.equippedby;
+
 function botbarrelcheck(actualdice){
     var has1 = false;
     var has2 = false;
@@ -31,6 +32,7 @@ function botbarrelcheck(actualdice){
         }
     }
 }
+
 function inflictreuse(actualdice){
     inflictself("reequippolly");
     botbarrelcheck(actualdice);
@@ -43,7 +45,15 @@ function inflictretrigger(actualdice){
 }
 var reuseguaranteed = false;
 
+
 if(self.hasstatus("landlubbershack") && (dicevalues.indexOf(1) != -1 || dicevalues.indexOf(2) != -1 || dicevalues.indexOf(3) != -1)) reuseguaranteed = true;
+for(i in 1...7){
+    if(self.hasstatus("recycleon" + i)){
+        if(dicevalues.indexOf(i) != -1) reuseguaranteed = true;
+        self.decrementstatus("recycleon" + i, true);
+    }
+}
+self.decrementstatus("landlubbershack", true);
 if(reuseguaranteed){
     inflictreuse(actualdice); return true;
 } else{

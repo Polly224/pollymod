@@ -4,7 +4,7 @@ var items = [];
 var gooditems = [];
 var otherstuff = [];
 var goodotherstuff = [];
-var attackstuff = ["Pocket Hook", "Keelhaul", "Pillage", "Charge 'N Load", "Scrape", "Living Storm"];
+var attackstuff = ["Pocket Hook", "Charge 'N Load", "Scrape", "Living Storm"];
 var defensestuff = ["Patch Up", "Which Way Captain?", "Reinforced Leg"];
 var dicemanipstuff = ["Rolling Barrel", "Rocking Waves", "Capsize", "Raft Up"];
 var passivestuff = ["Reinyarrrnation", "Daily Doubloons", "Landlubber's Hack", "Clap of Thunder", "Spray And Pray"];
@@ -30,6 +30,9 @@ addfloor("tiny")
 items = [];
 dicemanipstuff = dicemanipstuff.concat(["Pick Leg"]);
 attackstuff.push("Man O War");
+attackstuff.push("Keelhaul");
+attackstuff.push("Frontloading");
+attackstuff.push("Pillage");
 shuffle(dicemanipstuff);
 gooditems = [defensestuff.pop()];
 otherstuff = [health(), health()];
@@ -82,7 +85,7 @@ addfloor("normal")
 
 //Floor 5:
 items = [];
-gooditems = [strongstuff.pop()];
+gooditems = [dicemanipstuff.pop()];
 otherstuff = [health(), health()];
 goodotherstuff = [
   shop(shuffle([attackstuff.pop(), "upgrade", strongstuff.pop()])), 
