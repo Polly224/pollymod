@@ -40,7 +40,10 @@ var items = [];
 var gooditems = [];
 var otherstuff = [];
 var goodotherstuff = [];
-
+var fightmusic = ["music_combat6"];
+for(i in 0...5){
+  fightmusic.push("music_combat" + i);
+}
 //Floor 1:
 items = [];
 gooditems = [commonlist_basic.pop()];
@@ -50,7 +53,8 @@ goodotherstuff = [];
 addfloor("tiny")
   .additems(items, gooditems)
   .addotherstuff(otherstuff, goodotherstuff)
-  .generate();
+    .setmusic(pick(fightmusic))
+  .generate();;
   
 //Floor 2:
 commonlist_basic = commonlist_basic.concat(floor2basic);
@@ -70,7 +74,8 @@ goodotherstuff = [
 addfloor("normal")
   .additems(items, gooditems)
   .addotherstuff(otherstuff, goodotherstuff)
-  .generate();
+    .setmusic(pick(fightmusic))
+  .generate();;
   
 //Floor 3:
 commonlist_basic = commonlist_basic.concat(floor3basic);
@@ -94,7 +99,8 @@ goodotherstuff = [
 addfloor("normal")
   .additems(items, gooditems)
   .addotherstuff(otherstuff, goodotherstuff)
-  .generate();
+    .setmusic(pick(fightmusic))
+  .generate();;
   
 //Floor 4:
 items = [];
@@ -109,7 +115,8 @@ goodotherstuff = [
 addfloor("normal")
   .additems(items, gooditems)
   .addotherstuff(otherstuff, goodotherstuff)
-  .generate();
+    .setmusic(pick(fightmusic))
+  .generate();;
   
 //Floor 5:
 items = [];
@@ -124,7 +131,8 @@ goodotherstuff = [
 addfloor("big")
   .additems(items, gooditems)
   .addotherstuff(otherstuff, goodotherstuff)
-  .generate();
+    .setmusic(pick(fightmusic))
+  .generate();;
   
 //Floor 6:
 items = [];
@@ -137,10 +145,14 @@ var lastfloor = addfloor("boss");
 if (getfinalboss() == "Drake"){
   items.push(vampireitem.pop());
 }
-
+var musicoptions = ["music_boss_audrey", "music_boss_aoife", "music_boss_beatrice"];
+var pollymodbosses = ["Polly", "Julti", "Lucky Sevens"];
+if(pollymodbosses.indexOf(getfinalboss()) != -1){
+  musicoptions = ["music_combat@pollymod"];
+}
 lastfloor
   .additems(items, gooditems)
   .setlocation('BOSS')
-  .setmusic(pick(["music_boss_audrey", "music_boss_aoife", "music_boss_beatrice"]))
+  .setmusic(pick(musicoptions))
   .addotherstuff(otherstuff, goodotherstuff)
-  .generate();
+  .generate();;

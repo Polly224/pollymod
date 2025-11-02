@@ -15,7 +15,10 @@ shuffle(defensestuff);
 shuffle(passivestuff);
 shuffle(strongstuff);
 var allstuff = attackstuff.concat(defensestuff).concat(dicemanipstuff).concat(passivestuff).concat(strongstuff);
-
+var fightmusic = ["music_combat6"];
+for(i in 0...5){
+  fightmusic.push("music_combat" + i);
+}
 //Floor 1:
 items = [];
 gooditems = [attackstuff.pop()];
@@ -24,6 +27,7 @@ goodotherstuff = [];
 addfloor("tiny")
   .additems(items, gooditems)
   .addotherstuff(otherstuff, goodotherstuff)
+  .setmusic(pick(fightmusic))
   .generate();
   
 //Floor 2:
@@ -43,6 +47,7 @@ goodotherstuff = [
 addfloor("normal")
   .additems(items, gooditems)
   .addotherstuff(otherstuff, goodotherstuff)
+  .setmusic(pick(fightmusic))
   .generate();
 
 //Floor 3:
@@ -67,6 +72,7 @@ goodotherstuff = [
 addfloor("normal")
   .additems(items, gooditems)
   .addotherstuff(otherstuff, goodotherstuff)
+  .setmusic(pick(fightmusic))
   .generate();
   
 //Floor 4:
@@ -81,6 +87,7 @@ goodotherstuff = [
 addfloor("normal")
   .additems(items, gooditems)
   .addotherstuff(otherstuff, goodotherstuff)
+  .setmusic(pick(fightmusic))
   .generate();
 
 //Floor 5:
@@ -95,6 +102,7 @@ goodotherstuff = [
 addfloor("big")
   .additems(items, gooditems)
   .addotherstuff(otherstuff, goodotherstuff)
+  .setmusic(pick(fightmusic))
   .generate();
   
 //Floor 6:
@@ -108,10 +116,14 @@ var lastfloor = addfloor("boss");
 if (getfinalboss() == "Drake"){
   items.push("Wooden Stake");
 }
-
+var musicoptions = ["music_boss_audrey", "music_boss_aoife", "music_boss_beatrice"];
+var pollymodbosses = ["Polly", "Julti", "Lucky Sevens"];
+if(pollymodbosses.indexOf(getfinalboss()) != -1){
+  musicoptions = ["music_combat@pollymod"];
+}
 lastfloor
   .additems(items, gooditems)
   .setlocation('BOSS')
-  .setmusic(pick(["music_boss_audrey", "music_boss_aoife", "music_boss_beatrice"]))
+  .setmusic(pick(musicoptions))
   .addotherstuff(otherstuff, goodotherstuff)
   .generate();
