@@ -36,7 +36,6 @@ function botbarrelcheck(actualdice){
 function inflictreuse(actualdice){
     inflictself("reequippolly");
     botbarrelcheck(actualdice);
-    trace("runs");
 }
 
 function inflictretrigger(actualdice){
