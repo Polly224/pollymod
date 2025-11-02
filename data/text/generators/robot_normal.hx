@@ -41,7 +41,7 @@ var gooditems = [];
 var otherstuff = [];
 var goodotherstuff = [];
 var fightmusic = ["music_combat6"];
-for(i in 0...5){
+for(i in 1...5){
   fightmusic.push("music_combat" + i);
 }
 //Floor 1:

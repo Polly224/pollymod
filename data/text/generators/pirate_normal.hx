@@ -16,7 +16,7 @@ shuffle(passivestuff);
 shuffle(strongstuff);
 var allstuff = attackstuff.concat(defensestuff).concat(dicemanipstuff).concat(passivestuff).concat(strongstuff);
 var fightmusic = ["music_combat6"];
-for(i in 0...5){
+for(i in 1...5){
   fightmusic.push("music_combat" + i);
 }
 //Floor 1:
@@ -77,7 +77,7 @@ addfloor("normal")
   
 //Floor 4:
 items = [];
-gooditems = [pick([defensestuff.pop(), dicemanipstuff.pop()])];
+gooditems = [pick([defensestuff.pop(), attackstuff.pop()])];
 
 otherstuff = [health(), health()];
 goodotherstuff = [
