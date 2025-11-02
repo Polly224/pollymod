@@ -1,0 +1,223 @@
+{
+    "music_combat@pollymod": {
+        "playsounds": [
+            {
+                "channel": 1,
+                "delay": 0,
+                "effect": "",
+                "file": "music/combat/pollymodcombat",
+                "filter": "",
+                "loop": true,
+                "panning": {
+                    "fade": 0,
+                    "max": 0,
+                    "min": 0,
+                    "random": false,
+                    "value": 0
+                },
+                "pitch": {
+                    "fade": 0,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 1
+                },
+                "position": 0,
+                "syncbpm": 0,
+                "tag": "combatmusic",
+                "volume": {
+                    "fade": 2,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 0
+                }
+            }
+        ],
+        "stopsounds": [
+            {
+                "file": "music/title/title"
+            }
+        ]
+    },
+    "_fart": {
+        "playsounds": [
+            {
+                "channel": 0,
+                "delay": 0,
+                "effect": "",
+                "filter": "",
+                "folder": "sfx/fart",
+                "loop": false,
+                "panning": {
+                    "fade": 0,
+                    "max": 0,
+                    "min": 0,
+                    "random": false,
+                    "value": 0
+                },
+                "pitch": {
+                    "fade": 0,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 1
+                },
+                "position": 0,
+                "syncbpm": 0,
+                "tag": "",
+                "volume": {
+                    "fade": 0,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 1
+                }
+            }
+        ]
+    },
+    "_xmult": {
+        "playsounds": [
+            {
+                "channel": 0,
+                "delay": 0,
+                "effect": "",
+                "filter": "",
+                "folder": "sfx/xmult",
+                "loop": false,
+                "panning": {
+                    "fade": 0,
+                    "max": 0,
+                    "min": 0,
+                    "random": false,
+                    "value": 0
+                },
+                "pitch": {
+                    "fade": 0,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 1
+                },
+                "position": 0,
+                "syncbpm": 0,
+                "tag": "",
+                "volume": {
+                    "fade": 0,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 2
+                }
+            }
+        ]
+    },
+    "_loop": {
+        "playsounds": [
+            {
+                "channel": 0,
+                "delay": 0,
+                "effect": "",
+                "filter": "",
+                "folder": "sfx/isat",
+                "loop": false,
+                "panning": {
+                    "fade": 0,
+                    "max": 0,
+                    "min": 0,
+                    "random": false,
+                    "value": 0
+                },
+                "pitch": {
+                    "fade": 0,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 1
+                },
+                "position": 0,
+                "syncbpm": 0,
+                "tag": "",
+                "volume": {
+                    "fade": 0,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 1
+                }
+            }
+        ]
+    },
+    "_leverpull": {
+        "playsounds": [
+            {
+                "channel": 0,
+                "delay": 0,
+                "effect": "",
+                "filter": "",
+                "folder": "sfx/leverpull",
+                "loop": false,
+                "panning": {
+                    "fade": 0,
+                    "max": 0,
+                    "min": 0,
+                    "random": false,
+                    "value": 0
+                },
+                "pitch": {
+                    "fade": 0,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 1
+                },
+                "position": 0,
+                "syncbpm": 0,
+                "tag": "",
+                "volume": {
+                    "fade": 0,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 1.5
+                }
+            }
+        ]
+    },
+    "_hooky": {
+        "playsounds": [
+            {
+                "channel": 0,
+                "delay": 0,
+                "effect": "",
+                "filter": "",
+                "folder": "voiceovers/pirate/personality",
+                "loop": false,
+                "panning": {
+                    "fade": 0,
+                    "max": 0,
+                    "min": 0,
+                    "random": false,
+                    "value": 0
+                },
+                "pitch": {
+                    "fade": 0,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 1
+                },
+                "position": 0,
+                "syncbpm": 0,
+                "tag": "",
+                "volume": {
+                    "fade": 0,
+                    "max": 1,
+                    "min": 0,
+                    "random": false,
+                    "value": 1.5
+                }
+            }
+        ]
+    }
+}

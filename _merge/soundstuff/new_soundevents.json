@@ -74,5 +74,14 @@
                 }
             }
         ]
+    },
+    "music_characterselect": {
+        "playsounds": [
+        ],
+        "stopsounds": [
+            {
+                "file": "music/combat/victory"
+            }
+        ]
     }
 }
