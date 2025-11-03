@@ -17,6 +17,8 @@
 	<SubTexture name="enemies/jay_01" x="0" y="300" rotated="false" width="150" height="150"/>
 	<SubTexture name="enemies/jay_02" x="150" y="300" rotated="false" width="150" height="150"/>
 	<SubTexture name="overworld/jay" x="0" y="300" rotated="false" width="150" height="150"/>
+	<SubTexture name="enemies/tophat_01" x="450" y="0" rotated="false" width="150" height="150"/>
+	<SubTexture name="enemies/tophat_02" x="600" y="0" rotated="false" width="150" height="150"/>
 	<SubTexture name="enemies/osa_01" x="0" y="150" width="150" height="150"/>
 	<SubTexture name="enemies/osa_02" x="0" y="150" width="150" height="150"/>
 	<SubTexture name="enemies/mummy_01" x="0" y="588" width="114" height="162" frameX="-3" frameY="0" frameWidth="117" frameHeight="162"/>

@@ -1,6 +1,5 @@
 var wordcheck = args[0];
 var wordreplace = args[1];
-
 for (eq in self.equipment)
 {
     var index = eq.fulldescription.indexOf(wordcheck);

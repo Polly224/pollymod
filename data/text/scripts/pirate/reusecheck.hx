@@ -43,9 +43,10 @@ function inflictretrigger(actualdice){
     botbarrelcheck(actualdice);
 }
 var reuseguaranteed = false;
-
+var retriggerguaranteed = false;
 
 if(self.hasstatus("landlubbershack") && (dicevalues.indexOf(1) != -1 || dicevalues.indexOf(2) != -1 || dicevalues.indexOf(3) != -1)) reuseguaranteed = true;
+if(self.hasstatus("maroonall")) retriggerguaranteed = true;
 for(i in 1...7){
     if(self.hasstatus("recycleon" + i)){
         if(dicevalues.indexOf(i) != -1) reuseguaranteed = true;
@@ -53,7 +54,9 @@ for(i in 1...7){
     }
 }
 self.decrementstatus("landlubbershack", true);
-if(reuseguaranteed){
+if(retriggerguaranteed){
+    inflictretrigger(actualdice); return true;
+} else if(reuseguaranteed){
     inflictreuse(actualdice); return true;
 } else{
     switch type{
