@@ -16,6 +16,9 @@ if(args.length > 2) type = args[2];
 else type = "standard";
 var self = e.equippedby;
 
+runscript("pirate/defaultreuseset", [self, e]);
+
+/* Checks whether to give dice for Bottomless Barrel*/
 function botbarrelcheck(actualdice){
     var has1 = false;
     var has2 = false;
@@ -42,9 +45,24 @@ function inflictretrigger(actualdice){
     inflictself("retriggerpolly");
     botbarrelcheck(actualdice);
 }
+
+/*Under certain circumstances, the script can bypass the check entirely and simply guarantee a re-use/trigger.*/
 var reuseguaranteed = false;
 var retriggerguaranteed = false;
 
+/*Equipment with a re-use/trigger value of 100 are ones that re-use/trigger on *any* value, such as Scabbarded Stabber.*/
+if(e.getvar("redice").indexOf(100) != -1) reuseguaranteed = true;
+if(e.getvar("retdice").indexOf(100) != -1) retriggerguaranteed = true;
+
+/*Equipment with a re-use/trigger value of 200 can re-use/re-trigger on any *even* value, such as Which Way Captain.*/
+if(e.getvar("redice").indexOf(200) != -1 && d % 2 == 0) reuseguaranteed = true; 
+if(e.getvar("retdice").indexOf(200) != -1 && d % 2 == 0) retriggerguaranteed = true; 
+
+/*Equipment with a re-use/trigger value of 300 can re-use/re-trigger on any *odd* value, such as Which Way Captain's retrigger values.*/
+if(e.getvar("redice").indexOf(300) != -1 && d % 2 != 0) reuseguaranteed = true; 
+if(e.getvar("retdice").indexOf(300) != -1 && d % 2 != 0) retriggerguaranteed = true; 
+
+/*Specific checks for Landlubber's Hack and Marooned Chad*/
 if(self.hasstatus("landlubbershack") && (dicevalues.indexOf(1) != -1 || dicevalues.indexOf(2) != -1 || dicevalues.indexOf(3) != -1)) reuseguaranteed = true;
 if(self.hasstatus("maroonall")) retriggerguaranteed = true;
 for(i in 1...7){
@@ -58,7 +76,7 @@ if(retriggerguaranteed){
     inflictretrigger(actualdice); return true;
 } else if(reuseguaranteed){
     inflictreuse(actualdice); return true;
-} else{
+} else if(e.getvar("redice") != 0 && e.getvar("retdice") != 0){
     switch type{
     case "standard":
         if(e.getvar("redice").indexOf(d) != -1 && !e.getvar("fury")) {

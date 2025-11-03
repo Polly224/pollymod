@@ -11,7 +11,7 @@ storedbonus,Stored_Bonus,jackpot,Bonus Payout will trigger <value> time(s) next 
 storedbonusupgraded,Stored_Bonus+,jackpot,Bonus Payout+ will trigger <value> time(s) next turn.,YES,NO,NO,NO,NO,,,,self.roll_jackpotbonus += getstatusself(~storedbonus~); self.roll_range += getstatusself(~storedbonus~) * 2; adjustrobotcounter(0); removestatusself(~storedbonus~[;] ALL);,,,,,,,
 survivenextturn,Survive_Next_Turn,curse,Gain 1 survive next turn.,NO,NO,NO,NO,NO,,,,inflictself(~survive~[;]1); inflictself(~survivenomorehehe~[;]1); removestatusself(~survivenextturn~);,,,,,,,
 placeholder,Stolen_Innate_1,star,(This should always be replaced! If you're reading this[;] it's a bug!)|(Used with Uninnate+!),NO,NO,NO,NO,NO,runscript(~jackpotofalltrades/uninnate+~[;] [status[;] target]);,,,,,,,,,,
-jackpotshard,Jackpot_Shard,jackpotshard,4 Jackpot Shards combine into an automatic Autoroll.,YES,NO,NO,NO,NO,while(getstatusself(~jackpotshard~) >= 4) { removestatusself(~jackpotshard~[;] 4); inflictself(~manualroll~); },,,,,,,,,,
+jackpotshard,Jackpot_Shard,jackpotshard,4 Jackpot Shards combine into an automatic Autoroll.,YES,NO,NO,NO,NO,,,,,,,,,,,
 iceallnextturn,Frozen_all,ice,Freeze all your dice next turn.,NO,NO,NO,NO,NO,,,inflictself(~ice_all~); removestatusself(~iceallnextturn~);,,,,,,,,
 icenextturn,Frozen,ice,Gain <value> freeze next turn.,YES,NO,NO,NO,NO,,,inflictself(~ice~[;] getstatusself(~icenextturn~)); removestatusself(~icenextturn~[;] ALL);,,,,,,,,
 extrajackpotskill,Bonus_Slot,gold,Your jackpot has <value> extra options. Shouldn't show up! If it does[;] it's buggin... and that ain't thuggin...,YES,NO,NO,YES,NO,/* i might be descending into insanity */,,,,,,,,,,
@@ -49,3 +49,4 @@ losegoldinnate,,,(Shouldn't show up[;] makes Treasure Chest lose [gold]1 gold ev
 placeholder1,Stolen_Innate_2,,(This should always be replaced! If you're reading this[;] it's a bug!)|(Used with Uninnate+!),NO,NO,NO,NO,NO,runscript(~jackpotofalltrades/uninnate+~[;] [status[;] target]);,,,,,,,,,,
 placeholder2,Stolen_Innate_3,,(This should always be replaced! If you're reading this[;] it's a bug!)|(Used with Uninnate+!),NO,NO,NO,NO,NO,runscript(~jackpotofalltrades/uninnate+~[;] [status[;] target]);,,,,,,,,,,
 placeholder3,Stolen_Innate_4,,(This should always be replaced! If you're reading this[;] it's a bug!)|(Used with Uninnate+!),NO,NO,NO,NO,NO,runscript(~jackpotofalltrades/uninnate+~[;] [status[;] target]);,,,,,,,,,,
+weaken@p,Weaken,weaken,Temporarily weakens random equipment.|Equipment becomes less powerful.,NO,NO,NO,NO,NO,,,,,,,,,,,

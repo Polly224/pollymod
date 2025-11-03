@@ -5,6 +5,7 @@ else excludequip = 0;
 var reusevals = [];
 for (eq in self.equipment)
 {
+    runscript("pirate/defaultreuseset", [self, eq]);
     if (eq.ready && eq.shockedsetting <= 0 && eq != excludequip)
     {
         if (eq.varexists("redice"))
