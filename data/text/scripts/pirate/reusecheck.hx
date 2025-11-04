@@ -38,11 +38,14 @@ function botbarrelcheck(actualdice){
 
 function inflictreuse(actualdice){
     inflictself("reequippolly");
+    inflictself("reusecount");
     botbarrelcheck(actualdice);
 }
 
 function inflictretrigger(actualdice){
     inflictself("retriggerpolly");
+    inflictself("reusecount");
+    inflictself("retriggercount");
     botbarrelcheck(actualdice);
 }
 
