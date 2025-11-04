@@ -10,7 +10,7 @@ _internalexchangeequipment(self, e, eq, -1);
 delay(0.5);
 eq.scriptendturn = "e.animate('fastdestroy'); giveequipment('" + e.name + modifier + "', true, false, e);animateequipmentintoplace(self);}}";
 var temptest = new elements.Equipment(pickedname + modifier);
-eq.finalpos.y = e.finalpos.y;
+eq.finalpos = e.finalpos;
 if(!self.isplayer) eq.castdirection *= -1;
 
 var finalvals = [];
