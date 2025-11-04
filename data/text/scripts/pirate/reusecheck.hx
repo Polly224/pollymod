@@ -72,11 +72,12 @@ for(i in 1...7){
     }
 }
 self.decrementstatus("landlubbershack", true);
+
 if(retriggerguaranteed){
     inflictretrigger(actualdice); return true;
 } else if(reuseguaranteed){
     inflictreuse(actualdice); return true;
-} else if(e.getvar("redice") != 0 && e.getvar("retdice") != 0){
+} else if(e.varexists("redice") && e.varexists("retdice")){
     switch type{
     case "standard":
         if(e.getvar("redice").indexOf(d) != -1 && !e.getvar("fury")) {

@@ -2,7 +2,7 @@ var self = args[0];
 var eq = args[1];
 
 /*If the equipment's re-use value doesn't exist, this script checks whether the equipment has default values, and assigns them if so.*/
-if(eq.getvar("redice") == 0){
+if(!eq.varexists("redice")){
     var newredice = [];
     for(i in 1...7){
         if(eq.hastag("ru" + i)){
@@ -14,7 +14,7 @@ if(eq.getvar("redice") == 0){
     if(eq.hastag("ruany")) newredice.push(100);
     eq.setvar("redice", newredice);
 }
-if(eq.getvar("retdice") == 0){
+if(!eq.varexists("retdice")){
     var newretdice = [];
     for(i in 1...7){
         if(eq.hastag("rt" + i)){
