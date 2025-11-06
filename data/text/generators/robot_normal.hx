@@ -146,7 +146,7 @@ if (getfinalboss() == "Drake"){
   items.push(vampireitem.pop());
 }
 var musicoptions = ["music_boss_audrey", "music_boss_aoife", "music_boss_beatrice"];
-var pollymodbosses = ["Polly", "Julti", "Lucky Sevens"];
+var pollymodbosses = loadtext("pollymodbossenemies");
 if(pollymodbosses.indexOf(getfinalboss()) != -1){
   musicoptions = ["music_combat@pollymod"];
 }
