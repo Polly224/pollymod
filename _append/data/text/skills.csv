@@ -23,7 +23,6 @@ Slippery Shoes,Gain [dodge]1 dodge,inflictself(~dodge~); sfx(~_dodge~);
 Salvaging,[95%]Re-use next equipment,inflictself(REEQUIPNEXT); sfx(~_recycle~);
 Uninnate,[90%]Remove the Enemy's Innate,/*storedprizeimmune*/ removestatus(~vampire~); removestatus(~jayinnate~); removestatus(~losegoldinnate~); target.innate = []; sfx(~_thinghappens~); screenshake();
 Lucky Roll,Roll a [dice]7,givedice([7]);
-Dice Fubny,,self.setvar(~dicefubny~[;]1); if (self.dicepool.length > 0) for (mydice in self.dicepool) { if (mydice.basevalue > 10) { mydice.flash += 0.5; } }
 Perfect Spanner,[90%]Combine all dice into one,/*storedprizeimmune*/ var dicenumber = 0; var isblinded = false; for(mydice in self.dicepool){ if(mydice.available()){ dicenumber += mydice.basevalue + mydice.modifier; mydice.removedice(); if(mydice.blind){ isblinded = true; } } } if(dicenumber != 0){ givedice([dicenumber]); self.dicepool[self.dicepool.length - 1].blind = isblinded; }
 Fifths Roll,[80%]Increase jackpot range next turn,inflictself(~jackpotrangeup~);
 Stinger,Do [shock]3 damage,attack(3[;] SHOCK); sfxdamage(3);

@@ -1,6 +1,6 @@
 var skipsetup = false;
 if((self.getvar("illegalactuator") + 1 == "SimpleActuator1") || (target.getvar("illegalactuator") + 1 == "SimpleActuator1")) skipsetup = true;
-if(skipsetup) trace("skipping setup");
+if(skipsetup) var nothing;
 	else {
 	trace("starting description actuator");
 	var tw = new motion.actuators.SimpleActuator(null,1/15,null);
