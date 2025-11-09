@@ -54,7 +54,7 @@ addfloor("tiny")
   .additems(items, gooditems)
   .addotherstuff(otherstuff, goodotherstuff)
     .setmusic(pick(fightmusic))
-  .generate();;
+  .generate();
   
 //Floor 2:
 commonlist_basic = commonlist_basic.concat(floor2basic);
@@ -75,7 +75,7 @@ addfloor("normal")
   .additems(items, gooditems)
   .addotherstuff(otherstuff, goodotherstuff)
     .setmusic(pick(fightmusic))
-  .generate();;
+  .generate();
   
 //Floor 3:
 commonlist_basic = commonlist_basic.concat(floor3basic);
@@ -100,7 +100,7 @@ addfloor("normal")
   .additems(items, gooditems)
   .addotherstuff(otherstuff, goodotherstuff)
     .setmusic(pick(fightmusic))
-  .generate();;
+  .generate();
   
 //Floor 4:
 items = [];
@@ -116,7 +116,7 @@ addfloor("normal")
   .additems(items, gooditems)
   .addotherstuff(otherstuff, goodotherstuff)
     .setmusic(pick(fightmusic))
-  .generate();;
+  .generate();
   
 //Floor 5:
 items = [];
@@ -132,7 +132,7 @@ addfloor("big")
   .additems(items, gooditems)
   .addotherstuff(otherstuff, goodotherstuff)
     .setmusic(pick(fightmusic))
-  .generate();;
+  .generate();
   
 //Floor 6:
 items = [];
@@ -155,4 +155,4 @@ lastfloor
   .setlocation('BOSS')
   .setmusic(pick(musicoptions))
   .addotherstuff(otherstuff, goodotherstuff)
-  .generate();;
+  .generate();
