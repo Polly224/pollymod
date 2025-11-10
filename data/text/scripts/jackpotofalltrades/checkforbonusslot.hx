@@ -17,9 +17,11 @@ if (self.roll_jackpot > 0 && self.getskillcard().skills.length >= 3)
         self.getskillcard().animate('flashandshake');
         sfx('_thinghappens');
     }
-    if((self.getvar('currentjackpotskills').indexOf('The Blue Devil') != -1 || self.getvar('currentjackpotskills').indexOf('The Blue Devil+') != -1) && !self.hasstatus('bluedevilcredits'))
-    {
-        inflictself('bluedevilcredits');
+    if(self.varexists('currentjackpotskills') && self.getvar('currentjackpotskills').length > 0){
+        if((self.getvar('currentjackpotskills').indexOf('The Blue Devil') != -1 || self.getvar('currentjackpotskills').indexOf('The Blue Devil+') != -1) && !self.hasstatus('bluedevilcredits'))
+        {
+            inflictself('bluedevilcredits');
+        }
     }
 }
 if (self.hp <= 0 || self.graphic == null || target == null || target.graphic == null || target.hp <= 0) 
