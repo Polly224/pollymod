@@ -95,7 +95,7 @@ Autoroll+,Jackpot guaranteed[;] roll 1 dice,robotroll(true); givedice();
 Mechanical Toxin+,Inflict [poison]<dicerolled>[yellow]+2[] poison,inflict(~poison~[;]self.roll_totaldice + 1 + 2); sfx(~_poison~);
 Ice Age+,Freeze [ice][yellow]all[] dice,inflict(ICE[;] ALL); sfx(~_ice~);
 Melting Ice+,[95%]Inflict [fire][yellow]2[] and [ice][yellow]2[],inflict(~fire[;]2~); inflict(~ice[;]2~); sfx(~_fire~); sfx(~_ice~);
-Midnight Snake+,[80%]Roll a [dice]6[;] and a [dice]1[;][yellow] and a [dice]7[],givedice([6[;] 1[;] 7]);
+Midnight Snake+,[80%]Roll a [dice]6[;] and a [dice]1[;] [yellow]and a [dice][yellow]7[],givedice([6[;] 1[;] 7]);
 Nanomachines+,Gain [reduce][yellow]3[] reduce,inflictself(~reduce~[;] 3); sfx(~_shield~);
 Perfect Spanner+,[75%]Combine all dice into one[yellow][;] clone result[],/*storedprizeimmune*/ var dicenumber = 0; for(mydice in self.dicepool){ if(mydice.available()){ dicenumber += mydice.basevalue + mydice.modifier; mydice.removedice(); } } if(dicenumber != 0){ givedice([dicenumber[;] dicenumber]); }
 Persona+,Gain [fury][yellow]2[] fury,inflictself(~fury~[;] 2); sfx(~_fury~);

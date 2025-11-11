@@ -11,6 +11,7 @@ if(self.getvar("rsbpressed")){
     var rsbequips = self.getvar("spawnedrsbequips");
     for(eq in rsbequips){
         var dest = new openfl.geom.Point(eq.finalpos.x, eq.finalpos.y + hideoffset);
+        if(eq.hastag("rsbub")) dest = new openfl.geom.Point(-800, eq.finalpos.y);
         var move = new motion.actuators.SimpleActuator(eq, 0.7, dest);
         var s = new elements.DiceyScript("self.equipment.remove(e);");
         s.set("self", self);
@@ -32,13 +33,13 @@ if(self.getvar("rsbpressed")){
         /* First, make the Upgrade button. */
         var eqq = new elements.Equipment("RSBUB");
         self.equipment.push(eqq);
-        eqq.x = self.limitbarfront.x + 290 + 650;
-        eqq.y = self.limitbarfront.y - 237;
+        eqq.x = 650;
+        eqq.y = -125;
         var yoffset = 350;
         eqq.y += yoffset;
         eqq.skills[0].ypos -= yoffset;
         eqq.finalpos = new openfl.geom.Point(eqq.x, eqq.y);
-        eqq.y += 100;
+	    eqq.x -= 400;
         eqq.width = 1;
         eqq.height = 1;
         eqq.equipmentpanel.cardhasimage = false;
