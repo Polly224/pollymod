@@ -1,2 +1,2 @@
 Name,Description,Script
-Robot Roll,Internal function when robot clicks roll,robotroll();
+Robot Roll,Internal function when robot clicks roll,robotroll(); if(self.roll_error && self.getvar(~jackpotonerror~)) adjustrobotcounter(0);
