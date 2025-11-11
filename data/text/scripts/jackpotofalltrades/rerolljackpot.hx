@@ -1,51 +1,41 @@
-var JackpotOptions = getcolumn(loaddata("jackpotofalltrades/leveljackpotskills"), "n" + self.level);
-var RareJackpotOptions = getcolumn(loaddata("jackpotofalltrades/leveljackpotskills"),"r" + self.level);
-var UpgradeAll = false;
-var IsReroll = false;
+var rollableSkills = runscript("jackpotofalltrades/getrollableskills", []);
+var jackpotOptions = rollableSkills[0];
+var rareJackpotOptions = rollableSkills[1];
+var upgradeAll = false;
 var SkillsCount = 3;
 
-if (self.hasstatus("extrajackpotskill"))
+if (self.hasstatus("extrajackpotskill") && !self.hasstatus("bsodtriggered"))
 {
 	SkillsCount += self.getstatus("extrajackpotskill").value;
 }
 
-if(args.length > 0)
-{
-	UpgradeAll = args[0];
-}
+if(args.length > 0) upgradeAll = args[0];
 
-if(args.length == 2)
-{
-	IsReroll = args[1];
-}
-
-
-
-var ChosenJackpotSkills = [];
+var pickedSkills = [];
 
 for(i in 0...SkillsCount)
 {
-	if(rand([1,2,3,4,5,6]) == 1 && RareJackpotOptions.length > 0)
+	if(rand([1,2,3,4,5,6]) == 1 && rareJackpotOptions.length > 0)
 	{
-		var s = rand(RareJackpotOptions);
-        ChosenJackpotSkills.push(s);
-		for(j in 0...RareJackpotOptions.length)
+		var s = rand(rareJackpotOptions);
+        pickedSkills.push(s);
+		for(j in 0...rareJackpotOptions.copy().length)
 		{
-			if (RareJackpotOptions[j] == s)
+			if (rareJackpotOptions.copy()[j] == s)
 			{
-                RareJackpotOptions.remove(s);
+                rareJackpotOptions.remove(s);
             }
 		}
 	}
 	else
 	{
-        var t = rand(JackpotOptions);
-        ChosenJackpotSkills.push(t);
-		for (j in 0...JackpotOptions.length)
+        var t = rand(jackpotOptions);
+        pickedSkills.push(t);
+		for (j in 0...jackpotOptions.copy().length)
 		{
-			if (JackpotOptions[j] == t)
+			if (jackpotOptions.copy()[j] == t)
 			{
-				JackpotOptions.remove(t);
+				jackpotOptions.remove(t);
 			}
 		}
 	}
@@ -53,9 +43,9 @@ for(i in 0...SkillsCount)
 
 for(i in 0...SkillsCount)
 {
-	if (UpgradeAll)
+	if (upgradeAll)
 	{
-		ChosenJackpotSkills[i] += "+";
+		pickedSkills[i] += "+";
 	} 
 	else
 	{
@@ -64,7 +54,7 @@ for(i in 0...SkillsCount)
 			var r = rand([1, 2, 3]);
 			if (r == 1)
 			{
-				ChosenJackpotSkills[i] += "+";
+				pickedSkills[i] += "+";
 			}
 		}
 	}
@@ -72,15 +62,15 @@ for(i in 0...SkillsCount)
 
 /*DEBUG STUFF, COMMENT OUT WHEN PLAYTESTING.*/
 
-/*ChosenJackpotSkills[2] = "Uninnate";
-ChosenJackpotSkills[1] = "Uninnate+";
-ChosenJackpotSkills[0] = "The Blue Devil";*/
+/*pickedSkills[2] = "Stars And Time";
+pickedSkills[1] = "Stars And Time+";
+pickedSkills[0] = "The Blue Devil";*/
 
 for (i in 0...SkillsCount)
 {
-	if (ChosenJackpotSkills[i] == "The 50/50+")
+	if (pickedSkills[i] == "The 50/50+")
 	{
-		ChosenJackpotSkills[i] = "The 75/25";
+		pickedSkills[i] = "The 75/25";
 	}
 }
 
@@ -89,34 +79,23 @@ for (i in 0...SkillsCount)
 /*--- EQUIPMENT/SKILL SPECIFIC FIXES ---*/
 
 /*Ensures that Split Path will only ever show up in the 2nd jackpot slot.*/
-if (ChosenJackpotSkills.indexOf("Split Path") != -1 || ChosenJackpotSkills.indexOf("Split Path+") != -1)
+if (pickedSkills.indexOf("Split Path") != -1 || pickedSkills.indexOf("Split Path+") != -1)
 {
-	var otherAbility = ChosenJackpotSkills[1];
+	var otherAbility = pickedSkills[1];
 	var splitSlot = 0;
 	var skillSet = "";
 
-    for (i in 0...ChosenJackpotSkills.length)
+    for (i in 0...pickedSkills.length)
 	{
-		if (ChosenJackpotSkills[i] == "Split Path" || ChosenJackpotSkills[i] == "Split Path+")
+		if (pickedSkills[i] == "Split Path" || pickedSkills[i] == "Split Path+")
 		{
 			splitSlot = i;
-			skillSet = ChosenJackpotSkills[i];
+			skillSet = pickedSkills[i];
 		}
 	}
 	
-	ChosenJackpotSkills[splitSlot] = otherAbility;
-	ChosenJackpotSkills[1] = skillSet;
-}
-
-/*Ensures that Jamie gets credited if the skill is rolled*/
-if ((ChosenJackpotSkills.indexOf('The Blue Devil') != -1 || ChosenJackpotSkills.indexOf('The Blue Devil+') != -1) && !self.hasstatus("bluedevilcredits") && IsReroll)
-{
-    inflictself("bluedevilcredits");
-}
-
-if (self.hasstatus("bsodtriggered"))
-{
-	ChosenJackpotSkills = [ChosenJackpotSkills[0], ChosenJackpotSkills[1], ChosenJackpotSkills[2]];
+	pickedSkills[splitSlot] = otherAbility;
+	pickedSkills[1] = skillSet;
 }
 
 
@@ -133,16 +112,16 @@ for(i in 0...SkillsCount)
 {
 	if(i < 3)
 	{
-		FirstThreeSkills.push(ChosenJackpotSkills[i]);
+		FirstThreeSkills.push(pickedSkills[i]);
 	}
 	else
 	{
-		BonusSkills.push(ChosenJackpotSkills[i]);
+		BonusSkills.push(pickedSkills[i]);
 	}
 }
 
 
 Rules.jackpotskills = FirstThreeSkills;
 
-self.setvar("currentjackpotskills", ChosenJackpotSkills);
+self.setvar("currentjackpotskills", pickedSkills);
 self.setvar("bonusjackpotskills",  BonusSkills);

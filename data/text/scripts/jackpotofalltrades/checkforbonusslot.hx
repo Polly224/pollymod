@@ -2,6 +2,10 @@
 
 var act = new motion.actuators.SimpleActuator(null, 0.001, null);
 var s = new elements.DiceyScript("
+if (self.hp <= 0 || self.graphic == null || target == null || target.graphic == null || target.hp <= 0) 
+{
+    act._repeat = 0;
+} 
 if (self.roll_jackpot > 0 && self.getskillcard().skills.length >= 3)
 {
     if (self.hasstatus('extrajackpotskill') && self.getskillcard().skills.length < (3 + self.getvar('bonusjackpotskills').length) && self.getskillcard().y == self.getskillcard().finalpos.y && !self.hasstatus('bsodtriggered'))
@@ -23,12 +27,7 @@ if (self.roll_jackpot > 0 && self.getskillcard().skills.length >= 3)
             inflictself('bluedevilcredits');
         }
     }
-}
-if (self.hp <= 0 || self.graphic == null || target == null || target.graphic == null || target.hp <= 0) 
-{
-    trace('stopping actuator for bonus slot');
-    act._repeat = 0;
-} ");
+}");
 act.onRepeat(s.execute, [self, target]);
 act._repeat = -1;
 s.set("act", act);
