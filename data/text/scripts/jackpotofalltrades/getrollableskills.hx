@@ -2,9 +2,11 @@ var returnAllSkills = false;
 var doFilter = true;
 var JackpotOptions = [];
 var RareJackpotOptions = [];
+var level = self.level;
 
 if (args.length > 0) returnAllSkills = args[0];
 if (args.length > 1) doFilter = args[1];
+if (args.length > 2) level = args[2];
 
 if (returnAllSkills)
 {
@@ -15,17 +17,17 @@ if (returnAllSkills)
         {
             if (JackpotOptions.indexOf(s) == -1) JackpotOptions.push(s);
         }
-        skillList = getcolumn(loaddata("jackpotofalltrades/leveljackpotskills"), "r" + i);
-        for (s in skillList)
+        var rareSkillList = getcolumn(loaddata("jackpotofalltrades/leveljackpotskills"), "r" + i);
+        for (s in rareSkillList)
         {
-            if (RareJackpotOptions.indexOf(skill) == -1) RareJackpotOptions.push(skill);
+            if (RareJackpotOptions.indexOf(s) == -1) RareJackpotOptions.push(s);
         }
     }
 }
 else
 {
-    JackpotOptions = getcolumn(loaddata("jackpotofalltrades/leveljackpotskills"), "n" + self.level);
-    RareJackpotOptions = getcolumn(loaddata("jackpotofalltrades/leveljackpotskills"), "r" + self.level);
+    JackpotOptions = getcolumn(loaddata("jackpotofalltrades/leveljackpotskills"), "n" + level);
+    RareJackpotOptions = getcolumn(loaddata("jackpotofalltrades/leveljackpotskills"), "r" + level);
 }
 if (doFilter)
 {

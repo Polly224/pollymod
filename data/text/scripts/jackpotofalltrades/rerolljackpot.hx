@@ -1,5 +1,6 @@
 var rollableSkills = runscript("jackpotofalltrades/getrollableskills", []);
 var jackpotOptions = rollableSkills[0];
+jackpotOptions.push("Reshuffle");
 var rareJackpotOptions = rollableSkills[1];
 var upgradeAll = false;
 var SkillsCount = 3;
