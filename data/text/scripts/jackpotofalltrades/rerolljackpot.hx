@@ -67,14 +67,6 @@ for(i in 0...SkillsCount)
 pickedSkills[1] = "Stars And Time+";
 pickedSkills[0] = "The Blue Devil";*/
 
-for (i in 0...SkillsCount)
-{
-	if (pickedSkills[i] == "The 50/50+")
-	{
-		pickedSkills[i] = "The 75/25";
-	}
-}
-
 
 
 /*--- EQUIPMENT/SKILL SPECIFIC FIXES ---*/

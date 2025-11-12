@@ -1,2 +1,2 @@
 Name,Description,Script
-Robot Roll,Internal function when robot clicks roll,robotroll(); if(self.roll_error && self.getvar(~jackpotonerror~)) adjustrobotcounter(0);
+Robot Roll,Internal function when robot clicks roll,if(self.hasstatus(~pcfans~)){ Rules.playerdicerange([1]); robotroll(); removestatusself(~pcfans~[;] 1); } else{ Rules.playerdicerange([1[;]2[;]3[;]4[;]5[;]6]); robotroll(); } if(self.roll_error && self.getvar(~jackpotonerror~)) adjustrobotcounter(0);
