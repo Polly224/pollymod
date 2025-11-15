@@ -1,5 +1,5 @@
 var hideoffset = 2500;
-if(self.getvar("rsbpressed")){
+if(self.getvar("rsbpressed") == true){
     /* Back to normal code */
     self.setvar("rsbpressed", false);
     for(eq in self.equipment){
@@ -48,6 +48,7 @@ if(self.getvar("rsbpressed")){
 
         /* Then spawn in all the skills. */
         var skilldata = runscript("jackpotofalltrades/getrollableskills");
+        trace(skilldata);
         var spawnx = 0;
         var spawny = 400;
         var counter = 0;
@@ -65,7 +66,7 @@ if(self.getvar("rsbpressed")){
             newequip.setvar("ogdescriptionr", tempuskill.description);
             var colors = ["GRAY", "BLUE", "RED", "GREEN", "YELLOW", "PURPLE", "ORANGE", "BLACK", "PINK"];
             for(c in colors){
-                if(getcolumn(loaddata("jackpotofalltrades/skillcolors"), c).indexOf(skilldata[0][i]) != -1){
+                if(getcolumn(loaddata("jackpotofalltrades/skilldata"), c).indexOf(skilldata[0][i]) != -1){
                     newequip.changecolour(c);
                 }
             }

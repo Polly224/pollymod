@@ -1,33 +1,22 @@
-GRAY,BLUE,RED,GREEN,YELLOW,PURPLE,ORANGE,BLACK,PINK,BACKCAST
-Whoopie Cushion,Melting Ice,Blood Arrow,Basil's Protection,Bonus Payout,Mechanical Toxin,Containment Wave,Botulinum Dose,Uninnate,PC Fans
-Curseathon,PC Fans,Final Countdown,Duplicate,Faulty Wiring,Tri Attack,Cthulhu's Shield,,Ctrl + C,Basil's Protection
-Manual Roll,The Blue Devil,Sniper Shot,Midnight Snake,Slippery Shoes,Used Syringe,Lock Advocate,,Prince's Steal,Cthulhu's Shield
-Stars And Time,Icy Roll,Headshot,Prickly Pear,Fifths Roll,,Guarded Fling,,Borrow,Ctrl + C
-Split Path,Lifeblood,Firey Roll,Double Roll,Stinger,,Suit Up,,Run It Back,Dead Ringer
-Electrocute,Ice Age,Syringe,The 50/50,Dead Ringer,,Nanomachines,,Limit Break,Double Roll
-,,Slingshot,Salvaging,Ka... Ching!,,Stress,,,Dragon's Roll
-,,Last Resort,Lucky Roll,Stored Prize,,Mad Dog's Howl,,,Fifths Roll
-,,Timebomb,The 75/25,,,,,,Final Countdown
-,,Ripper Mode,Perfect Spanner,,,,,,Firey Roll
-,,Blood Arrow,Dragon's Roll,,,,,,Icy Roll
-,,Feed,Sandvich,,,,,,Jimbo's Trick
-,,Persona,Reshuffle,,,,,,Ka... Ching!
-,,Leech,Full Restore,,,,,,Lifeblood
-,,Flamethrower,,,,,,,Limit Break
-,,Debatable Damage,,,,,,,Lucky Roll
-,,Jimbo's Trick,,,,,,,Midnight Snake
-,,,,,,,,,Nanomachines
-,,,,,,,,,Perfect Spanner
-,,,,,,,,,Persona
-,,,,,,,,,Prickly Pear
-,,,,,,,,,Reshuffle
-,,,,,,,,,Ripper Mode
-,,,,,,,,,Run It Back
-,,,,,,,,,Salvaging
-,,,,,,,,,Sandvich
-,,,,,,,,,Slippery Shoes
-,,,,,,,,,Stars And Time
-,,,,,,,,,Stored Prize
-,,,,,,,,,Suit Up
-,,,,,,,,,Timebomb
-,,,,,,,,,Full Restore
+n1,r1,n2,r2,n3,r3,n4,r4,n5,r5,n6,r6
+Midnight Snake,Stored Prize,Midnight Snake,Stored Prize,Midnight Snake,Stored Prize,Midnight Snake,Stored Prize,Mad Dog's Howl,Stored Prize,Mad Dog's Howl,Stored Prize
+Sandvich,Split Path,Sandvich,Split Path,Lucky Roll,Split Path,Headshot,Split Path,Headshot,Split Path,Headshot,Split Path
+Suit Up,Fifths Roll,Suit Up,Fifths Roll,Sniper Shot,Leech,Lock Advocate,Containment Wave,Lock Advocate,Containment Wave,Lock Advocate,Containment Wave
+Slingshot,,Slingshot,Containment Wave,Firey Roll,Containment Wave,Dragon's Roll,Limit Break,Dragon's Roll,Limit Break,Dragon's Roll,Lifeblood
+Syringe,,Syringe,,Whoopie Cushion,Limit Break,Whoopie Cushion,Lifeblood,Whoopie Cushion,Lifeblood,Whoopie Cushion,Uninnate
+Lucky Roll,,Lucky Roll,,Debatable Damage,Lifeblood,Debatable Damage,Uninnate,Debatable Damage,Uninnate,Debatable Damage,Perfect Spanner
+Prickly Pear,,Prickly Pear,,Flamethrower,,Tri Attack,Leech,Tri Attack,Leech,Tri Attack,Ka... Ching!
+Sniper Shot,,Sniper Shot,,Salvaging,,Salvaging,Cthulhu's Shield,Salvaging,Cthulhu's Shield,Salvaging,Stars And Time
+Melting Ice,,Melting Ice,,Slippery Shoes,,Slippery Shoes,Perfect Spanner,Slippery Shoes,Perfect Spanner,Slippery Shoes,Dead Ringer
+Firey Roll,,Firey Roll,,Borrow,,Borrow,Ka... Ching!,Prince's Steal,Ka... Ching!,Prince's Steal,The Blue Devil
+Icy Roll,,Icy Roll,,Electrocute,,Basil's Protection,Stars And Time,Basil's Protection,Stars And Time,Basil's Protection,Botulinum Dose
+Whoopie Cushion,,Whoopie Cushion,,Curseathon,,Curseathon,,Curseathon,Dead Ringer,Curseathon,Run It Back
+Final Countdown,,Debatable Damage,,Used Syringe,,Blood Arrow,,Blood Arrow,The Blue Devil,Blood Arrow,Full Restore
+Faulty Wiring,,Flamethrower,,Leech,,Persona,,Persona,,Persona,
+,,Stress,,Timebomb,,Electrocute,,Timebomb,,Timebomb,
+,,Salvaging,,Ctrl + C,,Timebomb,,Ctrl + C,,Ctrl + C,
+,,Slippery Shoes,,Nanomachines,,Ctrl + C,,Nanomachines,,Nanomachines,
+,,Curseathon,,Ice Age,,Nanomachines,,Ice Age,,Ice Age,
+,,Used Syringe,,PC Fans,,Ice Age,,PC Fans,,PC Fans,
+,,Final Countdown,,,,PC Fans,,Jimbo's Trick,,Jimbo's Trick,
+,,Faulty Wiring,,,,,,Double Roll,,Double Roll,

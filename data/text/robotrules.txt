@@ -2,7 +2,7 @@ Robot functions very similarly to the base-game, except your jackpot skills are 
 randomized and picked from a massive list of 50+ newly made skills at the start of
 every turn! 
 
-Clicking the "ROLLABLE SKILLS" button under your limit break bar
+Clicking the "ROLLABLE SKILLS" button next to the run button
 will show you ever skill you can possibly roll at any given time. 
 This list updates whenever you level up!
 
